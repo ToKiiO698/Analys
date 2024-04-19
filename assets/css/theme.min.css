@@ -31452,3 +31452,60 @@ html[data-bs-theme=dark] .bg-priority-low:checked {
 .input-search-width {
   width: 13.75rem;
 }
+
+.menu-admin {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.facture-compta-comm {
+  background-color: #A0C8FF;
+}
+
+.admin-facture {
+  width: 47rem;
+  background-color: #6CCAFF;
+  margin-left: 50px;
+  margin-right: 50px;
+ 
+}
+.nbr-facture {
+  width: 10rem;
+  background-color: #2E979E;
+  margin-left: 65px;
+  padding-bottom: 100px;
+}
+
+.nbr-facture-txt {
+  color: white;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+}
+
+.nbr-facture-nbr {
+  color: white;
+  font-size: 40px;
+  padding-top: 20px;
+  padding-bottom: -40px;
+}
+
+.facture-btn {
+  background-color: #0998E3;
+  color: white;
+  width: 10rem;
+  margin-left: 345px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.panel-btn {
+  background-color: #0998E3;
+  color: white;
+  width: 10rem;
+  margin-left: 125px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}

@@ -43,3 +43,5 @@ le comercial dois voir que c'est frais a lui
 -equipe (qui a eu chaque role qui a fait quoi)
 -partie conclusion ques que nous a apporter le projet les competence déveloper durant le projets
 ```
+
+ainsi de suite.
