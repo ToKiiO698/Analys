@@ -277,7 +277,7 @@ input[type="text"]:placeholder {
   width: 30%;
 }
 
-.img-size {
-  width: 100%;
-  height: auto;
+.tailleimg{
+  width: 100px;
+  height: 100px;
 }
