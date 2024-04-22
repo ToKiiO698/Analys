@@ -36346,4 +36346,62 @@ html[data-bs-theme="dark"] .bg-priority-low:checked {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+.ticket-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-form h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #555;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.ticket-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #0998e3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.ticket-btn:hover {
+  background-color: #45a049;
+}
 }
