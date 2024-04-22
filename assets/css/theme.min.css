@@ -36249,7 +36249,7 @@ html[data-bs-theme="dark"] .bg-priority-low:checked {
     background-color: #2e979e;
     margin-left: 40;
     margin-right: 6%;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
   }
 
   .nbr-facture-txt {
@@ -36262,8 +36262,8 @@ html[data-bs-theme="dark"] .bg-priority-low:checked {
   .nbr-facture-nbr {
     color: white;
     font-size: 30px;
-    padding-top: 20px;
-    margin-left: 10px;
+
+    margin-left: 45px;
   }
 
   .facture-btn {
@@ -36288,5 +36288,21 @@ html[data-bs-theme="dark"] .bg-priority-low:checked {
   .panel-admin {
     background-color: #a0c8ff;
     margin-top: 30px;
+  }
+
+  .form-admin {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .form-admin-case {
+    background-color: #b82c46;
+  }
+
+  .form-btn {
+    background-color: #0998e3;
+    margin-left: 333px;
   }
 }
