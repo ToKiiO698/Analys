@@ -36313,7 +36313,7 @@ html[data-bs-theme="dark"] .bg-priority-low:checked {
     margin-left: 333px;
   }
 
-  .container {
+  .container-g {
     width: 80%;
     margin: 20px auto;
     padding: 20px;
@@ -36342,6 +36342,8 @@ html[data-bs-theme="dark"] .bg-priority-low:checked {
   text-align: left;
 }
 
-
-
+.btn-facture {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 }
