@@ -3319,25 +3319,18 @@
                 </head>
 
                 <div class="container">
-                  <h2>Tableau Utilisateurs</h2>
-                  <table id="userTable">
-                    <tr>
-                      <th>Nom</th>
-                      <th>Prénom</th>
-                      <th>rôles</th>
+                  <h2 class="text-center">Tableau Utilisateurs</h2>
+                  <table class="table-u" id="userTable">
+                    <tr class="tr-u">
+                      <th class="th-u">Nom</th>
+                      <th class="th-u">Prénom</th>
+                      <th class="th-u">Rôles</th>
+                      <th class="th-u">Supprimer</th>
+                      <th class="th-u">Modifier</th>
                     </tr>
-                    <tr>
-                      <td>
-                        <button onclick="confirmDelete(this)">Supprimer</button>
-                      </td>
-                    </tr>
+                   
                   </table>
-                  <div class="form">
-                    <input type="text" id="firstName" placeholder="Prénom">
-                    <input type="text" id="lastName" placeholder="Nom">
-                    <input type="text" id="roles" placeholder="rôles">
-                    <button onclick="addUser()">Ajouter Utilisateur</button>
-                  </div>
+                  
                 </div>
               </div>
 

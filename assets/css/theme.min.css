@@ -36225,7 +36225,14 @@ html[data-bs-theme="dark"] .bg-priority-low:checked {
   width: 13.75rem;
 }
 
+
+
+
 /*css modifier*/
+
+
+
+
 @media (max-width: 10000px) {
   .menu-admin {
     text-align: center;
@@ -36305,4 +36312,36 @@ html[data-bs-theme="dark"] .bg-priority-low:checked {
     background-color: #0998e3;
     margin-left: 333px;
   }
+
+  .container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-u {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+
+}
+
+.th-u {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.tr-u {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+
+
 }
