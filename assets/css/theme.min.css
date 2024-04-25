@@ -36404,4 +36404,9 @@ html[data-bs-theme="dark"] .bg-priority-low:checked {
 .ticket-btn:hover {
   background-color: #45a049;
 }
+
+.facture-regle {
+  margin-top: 50px;
+  margin-left: 260px;
+}
 }
