@@ -1,20 +1,3 @@
-<?php
-// Démarrer la session
-session_start();
-
-// Supposons que vous ayez stocké le rôle de l'utilisateur lors de la connexion
-// par exemple: $_SESSION["role"] = "admin";
-
-// Vérifier le rôle avant d'accéder à la page
-if ($_SESSION["role"] != "admin") {
-    // Si l'utilisateur n'est pas un admin, rediriger vers la page de connexion
-    header("Location: login.php");
-    exit();
-}
-
-// Le reste de votre code pour la page va ici
-?>
-
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en-US" dir="ltr">
 
@@ -64,6 +47,12 @@ if ($_SESSION["role"] != "admin") {
         userLinkRTL.setAttribute('disabled', true);
       }
     </script>
+    <?php
+    session_start();
+    if ($_SESSION['roles'] != 3) {
+        header('Location: index.php');
+    }
+    ?>
   </head>
 
   <body>
