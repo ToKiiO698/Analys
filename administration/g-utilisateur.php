@@ -3,9 +3,7 @@
 
 
 
-<!-- Mirrored from prium.github.io/falcon/v3.20.0/dashboard/crm.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:07:52 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
 <head>
   <meta charset="utf-8">
@@ -55,6 +53,14 @@
       userLinkRTL.setAttribute('disabled', true);
     }
   </script>
+
+<?php
+    session_start();
+    if ($_SESSION['roles'] != 3) {
+        header('Location: .../index.php');
+    }
+    ?> 
+
 </head>
 
 <body>
@@ -1075,28 +1081,28 @@
                 </a>
                 <ul class="nav collapse show" id="dashboard">
                   <li class="nav-item">
-                    <a class="nav-link" href="../admin.html">
+                    <a class="nav-link" href="../admin.php">
                       <div class="d-flex align-items-center">
                         <span class="nav-link-text ps-1">Acceuil</span>
                       </div>
                     </a><!-- more inner pages-->
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="a-facture.html">
+                    <a class="nav-link" href="a-facture.php">
                       <div class="d-flex align-items-center">
                         <span class="nav-link-text ps-1">Factures</span>
                       </div>
                     </a><!-- more inner pages-->
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../dashboard/a-support.html">
+                    <a class="nav-link" href="../dashboard/a-support.php">
                       <div class="d-flex align-items-center">
                         <span class="nav-link-text ps-1">Support</span>
                       </div>
                     </a><!-- more inner pages-->
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link " href="utilisateur.html">
+                    <a class="nav-link " href="utilisateur.php">
                       <div class="d-flex align-items-center">
                         <span class="nav-link-text ps-1">Utilisateurs</span>
                       </div>
@@ -1104,7 +1110,7 @@
 
                     <ul class="nav collapse show navbar-vertical-content" id="dashboard">
                       <li class="nav-item">
-                        <a class="nav-link active" href="g-utilisateur.html">
+                        <a class="nav-link active" href="g-utilisateur.php">
                           <div class="d-flex align-items-center">
                             <span class="nav-link-text ps-1">Gestion utilisateurs</span>
                           </div>
@@ -1113,7 +1119,7 @@
                       </li>
 
                       <li class="nav-item">
-                        <a class="nav-link" href="n-utilisateur.html">
+                        <a class="nav-link" href="n-utilisateur.php">
                           <div class="d-flex align-items-center">
                             <span class="nav-link-text ps-1">Nouveaux utilisateurs</span>
                           </div>
@@ -3560,6 +3566,5 @@
 </body>
 
 
-<!-- Mirrored from prium.github.io/falcon/v3.20.0/dashboard/crm.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:07:56 GMT -->
 
 </html>
