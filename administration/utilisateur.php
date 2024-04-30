@@ -93,6 +93,14 @@
         userLinkRTL.setAttribute("disabled", true);
       }
     </script>
+
+<?php
+    session_start();
+    if ($_SESSION['roles'] != 1) {
+        header('Location: ../index.php');
+    }
+    ?> 
+
   </head>
 
   <body>
@@ -2346,35 +2354,35 @@
                   </a>
                   <ul class="nav collapse show" id="dashboard">
                     <li class="nav-item">
-                      <a class="nav-link" href="../admin.html">
+                      <a class="nav-link" href="../admin.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Acceuil</span>
                         </div> </a
                       ><!-- more inner pages-->
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="h-facture.html">
+                      <a class="nav-link" href="h-facture.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Factures</span>
                         </div> </a
                       ><!-- more inner pages-->
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="../dashboard/a-support.html">
+                      <a class="nav-link" href="../dashboard/a-support.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Support</span>
                         </div> </a
                       ><!-- more inner pages-->
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" href="utilisateur.html">
+                      <a class="nav-link active" href="utilisateur.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Utilisateurs</span>
                         </div> </a>
 
                         <ul class="nav collapse show navbar-vertical-content" id="dashboard">
                           <li class="nav-item">
-                            <a class="nav-link" href="g-utilisateur.html">
+                            <a class="nav-link" href="g-utilisateur.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Gestion utilisateurs</span>
                               </div> </a>
@@ -2382,7 +2390,7 @@
                           </li>
 
                           <li class="nav-item">
-                            <a class="nav-link" href="n-utilisateur.html">
+                            <a class="nav-link" href="n-utilisateur.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Nouveaux utilisateurs</span>
                               </div> </a>
@@ -7338,11 +7346,11 @@
 
 
                       <div class="col-6">
-                        <a href="dashboard/g-utilisateur.html" class="btn btn-primary panel-btn">Gestion des utilisateurs</a>
+                        <a href="dashboard/g-utilisateur.php" class="btn btn-primary panel-btn">Gestion des utilisateurs</a>
                       </div>
 
                       <div class="col-6">
-                        <a href="dashboard/n-utilisateur.html" class="btn btn-primary panel-btn">Nouveaux utilisateurs</a>
+                        <a href="dashboard/n-utilisateur.php" class="btn btn-primary panel-btn">Nouveaux utilisateurs</a>
                       </div>
 
                     </div>  
