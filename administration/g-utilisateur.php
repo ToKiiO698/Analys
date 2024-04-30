@@ -57,7 +57,7 @@
 <?php
     session_start();
     if ($_SESSION['roles'] != 1) {
-        header('Location: .../index.php');
+        header('Location: ../index.php');
     }
     ?> 
 
