@@ -3353,7 +3353,7 @@
                 © COPYRIGHT 2022-2024
                 <span class="d-none d-sm-inline-block">| </span
                 ><br class="d-sm-none" />
-                2024 &copy; <a href="index.html">Analys</a>
+                2024 &copy; <a href="../index.php">Analys</a>
               </p>
             </div>
             <div class="col-12 col-sm-auto text-center">

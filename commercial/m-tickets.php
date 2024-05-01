@@ -92,6 +92,13 @@
         userLinkRTL.setAttribute("disabled", true);
       }
     </script>
+    <?php
+    session_start();
+    if ($_SESSION['roles'] != 2) {
+        header('Location: ../index.php');
+    }
+    ?> 
+
   </head>
 
   <body>
@@ -610,7 +617,7 @@
                   </a>
                   <ul class="nav collapse show" id="dashboard">
                     <li class="nav-item">
-                      <a class="nav-link" href="../commercial.html">
+                      <a class="nav-link" href="../commercial.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Acceuil</span>
                         </div> </a>
@@ -618,7 +625,7 @@
                     </li>
                       <ul class="nav collapse show navbar-vertical-content" id="dashboard">
                         <li class="nav-item">
-                          <a class="nav-link" href="../commercial/support.html">
+                          <a class="nav-link" href="../commercial/support.php">
                             <div class="d-flex align-items-center">
                               <span class="nav-link-text ps-1">Support</span>
                             </div> </a>
@@ -627,7 +634,7 @@
                         <ul class="nav collapse show " id="dashboard">
 
                           <li class="nav-item">
-                            <a class="nav-link" href="o-tickets.html">
+                            <a class="nav-link" href="o-tickets.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Ouvrir un tickets</span>
                               </div> </a>
@@ -635,7 +642,7 @@
                           </li>
 
                           <li class="nav-item">
-                            <a class="nav-link active" href="m-tickets.html">
+                            <a class="nav-link active" href="m-tickets.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Voir mes tickets</span>
                               </div> </a>
@@ -645,14 +652,14 @@
                       </ul>
                                        
                     <li class="nav-item">
-                      <a class="nav-link" href="facture.html">
+                      <a class="nav-link" href="facture.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Factures</span>
                         </div> </a>
 
                         <ul class="nav collapse show navbar-vertical-content" id="dashboard">
                           <li class="nav-item">
-                            <a class="nav-link" href="a-facture.html">
+                            <a class="nav-link" href="a-facture.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">En attente</span>
                               </div> </a>
@@ -660,7 +667,7 @@
                           </li>
 
                           <li class="nav-item">
-                            <a class="nav-link" href="r-facture.html">
+                            <a class="nav-link" href="r-facture.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Remboursé</span>
                               </div> </a>
@@ -668,7 +675,7 @@
                           </li>
 
                           <li class="nav-item">
-                            <a class="nav-link" href="n-facture.html">
+                            <a class="nav-link" href="n-facture.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Nouvelle facture</span>
                               </div> </a>
@@ -1768,6 +1775,8 @@
               navbarTopCombo.remove(navbarTopCombo);
             }
           </script>
+
+          
         </header>
 
         <div>
