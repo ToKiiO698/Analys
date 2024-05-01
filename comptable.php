@@ -613,7 +613,7 @@
 
                         <ul class="nav collapse show navbar-vertical-content" id="dashboard">
                           <li class="nav-item">
-                            <a class="nav-link" href="comptable/facture-a.html">
+                            <a class="nav-link" href="comptable/facture-a.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">En attente</span>
                               </div> </a>
@@ -621,7 +621,7 @@
                           </li>
 
                           <li class="nav-item">
-                            <a class="nav-link" href="comptable/facture-r.html">
+                            <a class="nav-link" href="comptable/facture-r.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Remboursé</span>
                               </div> </a>
@@ -629,7 +629,7 @@
                           </li>
 
                           <li class="nav-item">
-                            <a class="nav-link" href="comptable/facture-ref.html">
+                            <a class="nav-link" href="comptable/facture-ref.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Refusé</span>
                               </div> </a>
