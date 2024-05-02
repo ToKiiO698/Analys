@@ -37,7 +37,7 @@
         <form action="index.php" method="post">
         <input type="text" name="nom" placeholder="nom" required>
         <input type="password" name="mdp" placeholder="mdp" required>
-        <button type="submit">Login</button>
+        <button type="submit">Connexion</button>
         <?php
         if (isset($_POST['nom']) && isset($_POST['mdp'])) {
             $_nom = $_POST['nom'];
