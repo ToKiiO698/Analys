@@ -1094,8 +1094,24 @@
         <div class="card mb-3">
           <div class="card-body px-xxl-0 pt-4">
             <div class="row g-0">
+            <div
+                class="col-xxl-4 col-md-6 px-4 text-center border-end-md border-bottom border-bottom-xxl-0 pb-4 p-xxl-0 ps-md-0"
+              >
+              <div class="icon-circle icon-circle-success">
+                <span class="fs-7 fas fa-check-circle text-success"></span>
+              </div>
+                <h4 class="mb-1 font-sans-serif">
+                  <span
+                    class="text-700 mx-2"
+                    data-countup='{"endValue":"4968"}' 
+                    >0</span>
+                  <span class="fw-normal text-600">facture remboursé</span>
+                </h4>
+                <a class="btn btn-outline-success btn-sm btn-facture" href="comptable/facture-r.php">Voir les factures remboursé</a>
+                
+              </div>
               <div
-                class="col-xxl-3 col-md-6 px-3 text-center border-end-md border-bottom border-bottom-xxl-0 pb-3 p-xxl-0 ps-md-0"
+                class="col-xxl-4 col-md-6 px-3 text-center border-end-md border-bottom border-bottom-xxl-0 pb-3 p-xxl-0 ps-md-0"
               >
                 <div class="icon-circle icon-circle-primary">
                   <span class="fs-7 fas fa-sword text-primary"></span>
@@ -1111,7 +1127,7 @@
                 
               </div>
               <div
-                class="col-xxl-3 col-md-6 px-3 text-center border-end-md border-bottom border-bottom-xxl-0 pb-3 p-xxl-0 ps-md-0"
+                class="col-xxl-4 col-md-6 px-3 text-center border-end-md border-bottom border-bottom-xxl-0 pb-3 p-xxl-0 ps-md-0"
               >
                 <div class="icon-circle icon-circle-warning">
                   <span class="fs-7 fas fa-dollar-sign text-warning"></span>

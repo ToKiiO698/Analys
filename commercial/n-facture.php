@@ -1777,66 +1777,109 @@
               </div>
 
               <form class="form-admin">
-                <div class="mb-3 ">
+                <div class="row">
+                <div class="col-md-6 ">
                   <label for="id" class="form-label">Prénom/Nom</label>
-                  <input type="id" class="form-control" id="id" aria-describedby="id" placeholder="Frank Lucas">
+                  <input type="editeur" class="form-control" id="editeur" aria-describedby="id" placeholder="Frank Lucas">
                 </div>
 
-                <div class="mb-3">
+                <div class="col-md-6">
                   <label for="mdp" class="form-label">Lieu de facturation</label>
-                  <input type="mdp" class="form-control" id="mdp" placeholder="53 rue ALber Thomas 69003 Lyon">
+                  <input type="mdp" class="form-control" id="addr" placeholder="53 rue ALber Thomas 69003 Lyon">
                 </div>
-
+                </div>
+                <div class="row">
+                  <div class="col-md-3">
                 <div class="mb-3">
                   <label for="mdp" class="form-label">Numéro de facture</label>
-                  <input type="mdp" class="form-control" id="mdp" placeholder="100">
+                  <input type="mdp" class="form-control" id="num_fac" placeholder="100">
                 </div>
-
-                <div class="mb-3">
-                  <label for="mdp" class="form-label">Description</label>
-                  <input type="mdp" class="form-control" id="mdp" placeholder="Main d'oeuvre">
                 </div>
-
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="mb-3">
-                      <label for="quantite" class="form-label">Quantité</label>
-                      <input type="number" class="form-control form-control-sm" id="quantite" placeholder="1,00">
-                  </div>
-              </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="mb-3">
                         <label for="prixUnitaireHT" class="form-label">Prix Unité HT</label>
-                        <input type="number" class="form-control form-control-sm" id="prixUnitaireHT" placeholder="0,00€">
+                        <input type="number" class="form-control form-control-sm" id="ht" placeholder="0,00€">
                     </div>
                 </div>
                 
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="mb-3">
                         <label for="tva" class="form-label">TVA</label>
                         <select class="form-select form-select-sm" id="tva">
-                            <option value="0">0%</option>
-                            <option value="2,1">2,1%</option>
-                            <option value="5,5">5,5%</option>
-                            <option value="10">10%</option>
-                            <option value="20">20%</option>
+                        <?php
+                   $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+                   $data = $db->query('SELECT * FROM tva');
+                    while($row = $data->fetch()){
+                      echo '<option value="'.$row['id'].'">'.$row['taux'].'</option>';
+                    }
+                  ?>
                         </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mb-3">
+                        <label for="prixUnitaireHT" class="form-label">Prix Unité TTC</label>
+                        <input type="number" class="form-control form-control-sm" id="ttc" placeholder="0,00€">
                     </div>
                 </div>
 
             </div>
             
 
-
+            <div class="row">
+             <div class="col-md-6">
                 <div class="mb-3">
                   <label for="date_naissance" class="form-label">Date</label>
-                  <input type="date" class="form-control" id="date_naissance" aria-describedby="date_naissance">
+                  <input type="date" class="form-control" id="date" aria-describedby="date_naissance">
                 </div>
+              </div>
+              <div class="col-md-3">
+              <div class="mb-3">
+                  <label for="mdp" class="form-label">Type de Frais</label>
+                  <select id="type" class="form-select form-select-sm" name="type">
+                  <?php
+                   $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+                   $data = $db->query('SELECT * FROM type_frais');
+                    while($row = $data->fetch()){
+                      echo '<option value="'.$row['id'].'">'.$row['type'].'</option>';
+                    }
+                  ?>
+                  </select>
+                </div>
+                  </div>
+          </div>
 
                 <button type="submit" class="btn btn-primary form-btn">Enregistrer</button>
-                <a href="assets/exemple-facture.pdf" download="exemple-facture.pdf">
-                  <button type="button">Télécharger Facture</button>
-                </a>
+                <?php
+                if (isset($_POST['editeur']) && isset($_POST['addr']) && isset($_POST['num_fac']) && isset($_POST['ht']) && isset($_POST['ttc']) && isset($_POST['tva']) && isset($_POST['date']) && isset($_POST['type'])){
+                  $ed = $_POST['editeur'];
+                  $addr = $_POST['addr'];
+                  $num_fac = $_POST['num_fac'];
+                  $ht = $_POST['ht'];
+                  $ttc = $_POST['ttc'];
+                  $tva = $_POST['tva'];
+                  $date = $_POST['date'];
+                  $type = $_POST['type'];
+
+                  $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+                  $stmt = $db->prepare('INSERT INTO facture (editeur, addr, num_fac, montant_ht, montant_ttc, tva, date_ajout, type_frais) VALUES (:editeur, :addr, :num_fac, :ht, :ttc, :tva, :date, :type)');
+                  $stmt->bindParam(':editeur', $ed);
+                  $stmt->bindParam(':addr', $addr);
+                  $stmt->bindParam(':num_fac', $num_fac);
+                  $stmt->bindParam(':ht', $ht);
+                  $stmt->bindParam(':ttc', $ttc);
+                  $stmt->bindParam(':tva', $tva);
+                  $stmt->bindParam(':date', $date);
+                  $stmt->bindParam(':type', $type);
+                  $stmt->execute();
+
+                  echo '<div class="alert-success alert-dismissible fade show" role="alert">
+                  <strong>Tout fonctionne parfaitement.</strong> Un utilisateur vien dêtre ajouter.
+                  <button type"button" class="btn-close" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+                  </div>';
+                    }
+          ?>
               </form>
 
             </div>
