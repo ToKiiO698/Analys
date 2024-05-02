@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en-US" dir="ltr">
-  <!-- Mirrored from prium.github.io/falcon/v3.20.0/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:10:21 GMT -->
-  <!-- Added by HTTrack --><meta
+<meta
     http-equiv="content-type"
     content="text/html;charset=utf-8"
-  /><!-- /Added by HTTrack -->
+  />
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -518,7 +517,7 @@
                     </li>
                     
                       <li class="nav-item">
-                        <a class="nav-link" href="administration/h-facture.html">
+                        <a class="nav-link" href="administration/h-facture.php">
                           <div class="d-flex align-items-center">
                             <span class="nav-link-text ps-1">Factures</span>
                           </div> </a>
@@ -526,7 +525,7 @@
                       </li>
                     <ul class="nav collapse show" id="dashboard">
                       <li class="nav-item">
-                        <a class="nav-link" href="administration/h-facture.html">
+                        <a class="nav-link" href="administration/h-facture.php">
                           <div class="d-flex align-items-center">
                             <span class="nav-link-text ps-1">Historique facture</span>
                           </div> </a>
@@ -549,7 +548,7 @@
 
                         <ul class="nav collapse show navbar-vertical-content" id="dashboard">
                           <li class="nav-item">
-                            <a class="nav-link" href="administration/g-utilisateur.html">
+                            <a class="nav-link" href="administration/g-utilisateur.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Gestion utilisateurs</span>
                               </div> </a>
@@ -557,7 +556,7 @@
                           </li>
 
                           <li class="nav-item">
-                            <a class="nav-link" href="administration/n-utilisateur.html">
+                            <a class="nav-link" href="administration/n-utilisateur.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Nouveaux utilisateurs</span>
                               </div> </a>
@@ -2583,7 +2582,7 @@
                   </div>
                 </div>
 
-                <a href="administration/h-facture.html" class="btn btn-primary facture-btn">Voir les factures</a>
+                <a href="administration/h-facture.php" class="btn btn-primary facture-btn">Voir les factures</a>
               
               </div>
             </div>
@@ -2602,11 +2601,11 @@
 
 
                       <div class="col-6">
-                        <a href="administration/g-utilisateur.html" class="btn btn-primary panel-btn">Gestion des utilisateurs</a>
+                        <a href="administration/g-utilisateur.php" class="btn btn-primary panel-btn">Gestion des utilisateurs</a>
                       </div>
 
                       <div class="col-6">
-                        <a href="administration/n-utilisateur.html" class="btn btn-primary panel-btn">Nouveaux utilisateurs</a>
+                        <a href="administration/n-utilisateur.php" class="btn btn-primary panel-btn">Nouveaux utilisateurs</a>
                       </div>
 
                     </div>  
@@ -2654,5 +2653,4 @@
     <script src="assets/js/theme.js"></script>
   </body>
 
-  <!-- Mirrored from prium.github.io/falcon/v3.20.0/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:10:22 GMT -->
 </html>
