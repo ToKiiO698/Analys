@@ -1772,7 +1772,37 @@
         <div>
           <h1 class="text-center">Bienvenue dans le menu Commercial !</h1>
         </div>
+        <?php
+// Connexion à la base de données (à adapter avec vos informations de connexion)
+$servername = "localhost";
+$username = "tickets";
+$password = "Gj6nk798@";
+$dbname = "tickets";
 
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Vérifier la connexion
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Récupérer tous les tickets depuis la base de données
+$sql = "SELECT * FROM tickets";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // Afficher les tickets sous forme de liste
+    while($row = $result->fetch_assoc()) {
+        echo "Ticket #" . $row["id"] . " - Titre: " . $row["titre"] . " - État: " . $row["etat"] . "<br>";
+        echo "Message: " . $row["message"] . "<br>";
+        echo "Date de création: " . $row["date_creation"] . "<br><br>";
+    }
+} else {
+    echo "Aucun ticket trouvé.";
+}
+
+$conn->close();
+?>
         <footer class="footer">
           <div class="text-center">
             <div class="col-12 col-sm-auto text-center">
