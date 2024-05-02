@@ -576,31 +576,14 @@
                           <span class="nav-link-text ps-1">Acceuil</span>
                         </div> </a>
                     </li>
-                      <ul class="nav collapse show navbar-vertical-content" id="dashboard">
                         <li class="nav-item">
-                          <a class="nav-link" href="comptable/support.php">
+                          <a class="nav-link" href="dashboard/support.php">
                             <div class="d-flex align-items-center">
                               <span class="nav-link-text ps-1">Support</span>
                             </div> </a>
                           
                         </li>
                         <ul class="nav collapse show " id="dashboard">
-
-                          <li class="nav-item">
-                            <a class="nav-link" href="comptable/o-ticket.php">
-                              <div class="d-flex align-items-center">
-                                <span class="nav-link-text ps-1">Ouvrir un tickets</span>
-                              </div> </a>
-                            
-                          </li>
-
-                          <li class="nav-item">
-                            <a class="nav-link" href="comptable/m-ticket.php">
-                              <div class="d-flex align-items-center">
-                                <span class="nav-link-text ps-1">Voir mes tickets</span>
-                              </div> </a>
-                            
-                          </li>
                         
                       </ul>
                                        
