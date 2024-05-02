@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- ===============================================--><!--    Document Title--><!-- ===============================================-->
-    <title>Commercial - Analys</title>
+    <title>Comptable - Analys</title>
 
     <!-- ===============================================--><!--    Favicons--><!-- ===============================================-->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
@@ -575,7 +575,6 @@
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Acceuil</span>
                         </div> </a>
-                     
                     </li>
                       <ul class="nav collapse show navbar-vertical-content" id="dashboard">
                         <li class="nav-item">

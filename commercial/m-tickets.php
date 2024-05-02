@@ -591,10 +591,10 @@
             }
           </script>
           <div class="d-flex align-items-center">
-            <div class="toggle-icon-wrapper">
+          <div class="toggle-icon-wrapper">
               <button class="btn navbar-toggler-humburger-icon navbar-vertical-toggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
-            </div><a class="navbar-brand" href="index.html">
-              <div class="d-flex align-items-center py-3"><img class="me-2" src="assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span class="font-sans-serif text-primary">falcon</span></div>
+            </div><a class="navbar-brand" href="../commercial.php">
+              <div class="d-flex align-items-center py-3"><img class="me-2" src="../assets/icon/analys.png" alt="" width="40" /><span class="font-sans-serif text-primary">falcon</span></div>
             </a>
           </div>
           <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
@@ -623,33 +623,15 @@
                         </div> </a>
                      
                     </li>
-                      <ul class="nav collapse show navbar-vertical-content" id="dashboard">
+                      
                         <li class="nav-item">
-                          <a class="nav-link" href="../commercial/support.php">
+                          <a class="nav-link" href="../dashboard/support.php">
                             <div class="d-flex align-items-center">
                               <span class="nav-link-text ps-1">Support</span>
                             </div> </a>
                           
-                        </li>
-                        <ul class="nav collapse show " id="dashboard">
-
-                          <li class="nav-item">
-                            <a class="nav-link" href="o-tickets.php">
-                              <div class="d-flex align-items-center">
-                                <span class="nav-link-text ps-1">Ouvrir un tickets</span>
-                              </div> </a>
-                            
-                          </li>
-
-                          <li class="nav-item">
-                            <a class="nav-link active" href="m-tickets.php">
-                              <div class="d-flex align-items-center">
-                                <span class="nav-link-text ps-1">Voir mes tickets</span>
-                              </div> </a>
-                            
-                          </li>
-                        
-                      </ul>
+                        </li>                        
+                      </li>
                                        
                     <li class="nav-item">
                       <a class="nav-link" href="facture.php">
@@ -667,7 +649,7 @@
                           </li>
 
                           <li class="nav-item">
-                            <a class="nav-link" href="r-facture.php">
+                            <a class="nav-link active" href="r-facture.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Remboursé</span>
                               </div> </a>
