@@ -42,7 +42,7 @@
         if (isset($_POST['nom']) && isset($_POST['mdp'])) {
             $_nom = $_POST['nom'];
             $_mdp = $_POST['mdp'];
-            $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'analys', 'gP6y8w!92');
+            $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'root', '');
             $stmt = $db->prepare("SELECT * FROM user WHERE nom = :nom AND mdp = :mdp");
             $stmt->bindParam(':nom', $_nom);
             $stmt->bindParam(':mdp', $_mdp);

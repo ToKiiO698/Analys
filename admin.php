@@ -98,16 +98,6 @@
             container.classList.add("container-fluid");
           }
         </script>
-        <button method="post" name="deconnexion">Deconnexion</button>
-    <?php
-        if (isset($_POST['deconnexion'])) {
-            session_start();
-            $_SESSION = array();
-            session_destroy();
-            header('Location: login.php');
-            exit;
-        }
-        ?>
         <nav
           class="navbar navbar-light navbar-glass navbar-top navbar-expand-lg"
           data-double-top-nav="data-double-top-nav"
@@ -488,15 +478,8 @@
                 ></span>
               </button>
             </div>
-            <a class="navbar-brand" href="admin.html">
-              <div class="d-flex align-items-center py-3">
-                <img
-                  class="me-2"
-                  src="assets/img/icons/spot-illustrations/falcon.png"
-                  alt=""
-                  width="40"
-                /><span class="font-sans-serif text-primary">falcon</span>
-              </div>
+            <a class="navbar-brand" href="admin.php">
+            <div class="d-flex align-items-center py-3"><img class="me-2" src="assets/icon/analys.png" alt="" width="40" /><span class="font-sans-serif text-primary">nalys</span></div>
             </a>
           </div>
           <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
@@ -519,31 +502,14 @@
                   </a>
                   <ul class="nav collapse show" id="dashboard">
                     <li class="nav-item">
-                      <a class="nav-link active" href="admin.html">
+                      <a class="nav-link active" href="admin.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Acceuil</span>
                         </div> </a>
                      
                     </li>
-                    
-                      <li class="nav-item">
-                        <a class="nav-link" href="administration/h-facture.php">
-                          <div class="d-flex align-items-center">
-                            <span class="nav-link-text ps-1">Factures</span>
-                          </div> </a>
-                      
-                      </li>
-                    <ul class="nav collapse show" id="dashboard">
-                      <li class="nav-item">
-                        <a class="nav-link" href="administration/h-facture.php">
-                          <div class="d-flex align-items-center">
-                            <span class="nav-link-text ps-1">Historique facture</span>
-                          </div> </a>
-                        
-                      </li>
-                    </ul>
                     <li class="nav-item">
-                      <a class="nav-link" href="dashboard/a-support.html">
+                      <a class="nav-link" href="dashboard/a-support.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Support</span>
                         </div> </a>
@@ -551,7 +517,7 @@
                     </li>
                     
                     <li class="nav-item">
-                      <a class="nav-link" href="administration/utilisateur.html">
+                      <a class="nav-link" href="administration/utilisateur.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Utilisateurs</span>
                         </div> </a>

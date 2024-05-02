@@ -60,16 +60,6 @@
             container.classList.add('container-fluid');
           }
         </script>
-        <button method="post" name="deconnexion">Deconnexion</button>
-    <?php
-        if (isset($_POST['deconnexion'])) {
-            session_start();
-            $_SESSION = array();
-            session_destroy();
-            header('Location: login.php');
-            exit;
-        }
-        ?>
         <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand-lg" data-double-top-nav="data-double-top-nav" style="display: none;">
           <div class="w-100">
             <div class="d-flex flex-between-center">
@@ -551,7 +541,7 @@
             <div class="toggle-icon-wrapper">
               <button class="btn navbar-toggler-humburger-icon navbar-vertical-toggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
             </div><a class="navbar-brand" href="index.html">
-              <div class="d-flex align-items-center py-3"><img class="me-2" src="assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span class="font-sans-serif text-primary">falcon</span></div>
+              <div class="d-flex align-items-center py-3"><img class="me-2" src="assets/icon/analys.png" alt="" width="40" /><span class="font-sans-serif text-primary">nalys</span></div>
             </a>
           </div>
           <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
@@ -574,7 +564,7 @@
                   </a>
                   <ul class="nav collapse show" id="dashboard">
                     <li class="nav-item">
-                      <a class="nav-link active" href="commercial.html">
+                      <a class="nav-link active" href="commercial.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Acceuil</span>
                         </div> </a>
@@ -582,7 +572,7 @@
                     </li>
                       <ul class="nav collapse show navbar-vertical-content" id="dashboard">
                         <li class="nav-item">
-                          <a class="nav-link" href="dashboard/support.html">
+                          <a class="nav-link" href="dashboard/support.php">
                             <div class="d-flex align-items-center">
                               <span class="nav-link-text ps-1">Support</span>
                             </div> </a>
@@ -591,7 +581,7 @@
                         <ul class="nav collapse show " id="dashboard">
 
                           <li class="nav-item">
-                            <a class="nav-link" href="commercial/o-tickets.html">
+                            <a class="nav-link" href="commercial/o-tickets.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Ouvrir un tickets</span>
                               </div> </a>
@@ -599,7 +589,7 @@
                           </li>
 
                           <li class="nav-item">
-                            <a class="nav-link" href="commercial/m-tickets.html">
+                            <a class="nav-link" href="commercial/m-tickets.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Voir mes tickets</span>
                               </div> </a>
@@ -609,7 +599,7 @@
                       </ul>
                                        
                     <li class="nav-item">
-                      <a class="nav-link" href="commercial/facture.html">
+                      <a class="nav-link" href="commercial/facture.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Factures</span>
                         </div> </a>
