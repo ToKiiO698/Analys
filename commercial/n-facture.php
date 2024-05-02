@@ -1861,11 +1861,12 @@
                   $tva = $_POST['tva'];
                   $date = $_POST['date'];
                   $type = $_POST['type_frais'];
+                  $etat_facture = 3;
 
                   $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
 
-                  $stmt = $db->prepare('INSERT INTO facture (date_ajout, montant_ht, montant_ttc, type_frais, editeur, addr, num_fac, tva) VALUES (:dateV, :ht, :ttc, :type_frais, :editeur, :addr, :num_fac, :tva)');
-                  
+                  $stmt = $db->prepare('INSERT INTO facture (etat_facture,date_ajout, montant_ht, montant_ttc, type_frais, editeur, addr, num_fac, tva) VALUES (:etat_facture, :dateV, :ht, :ttc, :type_frais, :editeur, :addr, :num_fac, :tva)');
+                  $stmt->bindParam(':etat_facture',$etat_facture );
                   $stmt->bindParam(':dateV', $date);
                   $stmt->bindParam(':ht', $ht);
                   $stmt->bindParam(':ttc', $ttc);
@@ -1882,8 +1883,6 @@
                   <button type"button" class="btn-close" data-bs-dismiss="alert"
                     aria-label="Close"></button>
                   </div>';
-                }else{
-                  echo "Fonctionne pas !";
                 }
                     ?>
               </form>
