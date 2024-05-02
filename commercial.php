@@ -2,8 +2,7 @@
 <html data-bs-theme="light" lang="en-US" dir="ltr">
 
   
-<!-- Mirrored from prium.github.io/falcon/v3.20.0/changelog.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:10:08 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -607,7 +606,7 @@
 
                         <ul class="nav collapse show navbar-vertical-content" id="dashboard">
                           <li class="nav-item">
-                            <a class="nav-link" href="commercial/a-facture.html">
+                            <a class="nav-link" href="commercial/a-facture.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">En attente</span>
                               </div> </a>
@@ -615,7 +614,7 @@
                           </li>
 
                           <li class="nav-item">
-                            <a class="nav-link" href="commercial/r-facture.html">
+                            <a class="nav-link" href="commercial/r-facture.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Remboursé</span>
                               </div> </a>
@@ -623,7 +622,7 @@
                           </li>
 
                           <li class="nav-item">
-                            <a class="nav-link" href="commercial/n-facture.html">
+                            <a class="nav-link" href="commercial/n-facture.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Nouvelle Facture</span>
                               </div> </a>
@@ -1108,7 +1107,7 @@
                     >0</span>  
                   <span class="fw-normal text-600">Nombre de facture en attente</span>
                 </h4>
-                <a class="btn btn-outline-primary btn-sm btn-facture" href="commercial/a-facture.html">Voir les factures en attente</a>
+                <a class="btn btn-outline-primary btn-sm btn-facture" href="commercial/a-facture.php">Voir les factures en attente</a>
                 
               </div>
               <div
@@ -1124,10 +1123,10 @@
                     >0</span> 
                   <span class="fw-normal text-600">Nombre de factures remboursé</span>
                 </h4>
-                <a class="btn btn-outline-warning btn-sm btn-facture" href="commercial/r-facture.html">Voir les factures remboursé</a>
+                <a class="btn btn-outline-warning btn-sm btn-facture" href="commercial/r-facture.php">Voir les factures remboursé</a>
               </div>
 
-              <a class="btn btn-outline-primary btn-sm btn-facture" href="commercial/n-facture.html">Nouvelle Facture</a>
+              <a class="btn btn-outline-primary btn-sm btn-facture" href="commercial/n-facture.php">Nouvelle Facture</a>
 
               <div class="row g-0">
                 <div class="col-lg-12 pe-lg-2 mb-6 ">
@@ -1143,11 +1142,11 @@
     
     
                           <div class="col-6">
-                            <a href="commercial/o-tickets.html" class="btn btn-primary panel-btn">Nouveau Ticket</a>
+                            <a href="commercial/o-tickets.php" class="btn btn-primary panel-btn">Nouveau Ticket</a>
                           </div>
     
                           <div class="col-6">
-                            <a href="commercial/m-tickets.html" class="btn btn-primary panel-btn">Mes Tickets</a>
+                            <a href="commercial/m-tickets.php" class="btn btn-primary panel-btn">Mes Tickets</a>
                           </div>
     
                         </div>  
@@ -1190,5 +1189,4 @@
   </body>
 
 
-<!-- Mirrored from prium.github.io/falcon/v3.20.0/changelog.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:10:09 GMT -->
 </html>
