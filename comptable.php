@@ -67,6 +67,16 @@
             container.classList.add('container-fluid');
           }
         </script>
+        <button method="post" name="deconnexion">Deconnexion</button>
+    <?php
+        if (isset($_POST['deconnexion'])) {
+            session_start();
+            $_SESSION = array();
+            session_destroy();
+            header('Location: login.php');
+            exit;
+        }
+        ?>
         <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand-lg" data-double-top-nav="data-double-top-nav" style="display: none;">
           <div class="w-100">
             <div class="d-flex flex-between-center">
