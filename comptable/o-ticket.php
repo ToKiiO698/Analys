@@ -173,6 +173,7 @@
                             </li>
                           
                         </ul>
+                        <form action="traitement_ticket.php" method="post">
                                          
                       <li class="nav-item">
                         <a class="nav-link" href="../comptable.php">
@@ -938,15 +939,15 @@
         </div>
         <div class="ticket-form">
           <h2>Créer un ticket</h2>
-          <form action="#" method="post">
+          <form action="traitement_ticket.php" method="post">
             <div class="form-group">
               <div>
                 <label for="first-name">Prénom :</label>
-                <input type="text" id="first-name" name="first-name" placeholder="Votre prénom...">
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom...">
               </div>
               <div>
                 <label for="first-name">Nom :</label>
-                <input type="text" id="name" name="name" placeholder="Votre nom...">
+                <input type="text" id="nom" name="nom" placeholder="Votre nom...">
               </div>
               <label for="reason">Raison :</label>
               <input type="text" id="raison" name="raison" placeholder="Votre problème...">
