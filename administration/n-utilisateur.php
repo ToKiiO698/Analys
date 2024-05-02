@@ -550,25 +550,27 @@
             }
           </script>
           <div class="d-flex align-items-center">
-            <div class="toggle-icon-wrapper">
-              <button class="btn navbar-toggler-humburger-icon navbar-vertical-toggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
-            </div><a class="navbar-brand" href="../index.html">
-              <div class="d-flex align-items-center py-3"><img class="me-2" src="../assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span class="font-sans-serif text-primary">falcon</span></div>
-            </a>
-          </div>
-          <div class="d-flex align-items-center">
-            <div class="toggle-icon-wrapper">
+          <div class="toggle-icon-wrapper">
               <button
                 class="btn navbar-toggler-humburger-icon navbar-vertical-toggle"
                 data-bs-toggle="tooltip"
                 data-bs-placement="left"
                 title="Toggle Navigation"
               >
-               
+                <span class="navbar-toggle-icon"
+                  ><span class="toggle-line"></span
+                ></span>
               </button>
             </div>
-            <a class="navbar-brand" href="admin.html">
-              
+            <a class="navbar-brand" href="../admin.html">
+              <div class="d-flex align-items-center py-3">
+                <img
+                  class="me-2"
+                  src="../assets/icon/analys.png"
+                  alt=""
+                  width="40"
+                /><span class="font-sans-serif text-primary">nalys</span>
+              </div>
             </a>
           </div>
           <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
@@ -589,31 +591,23 @@
                       ><span class="nav-link-text ps-1">Dashboard</span>
                     </div>
                   </a>
-                  <ul class="nav collapse show" id="admin">
+                  <ul class="nav collapse show" id="dashboard">
                     <li class="nav-item">
                       <a class="nav-link" href="../admin.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Acceuil</span>
                         </div> </a
-                      >
+                      ><!-- more inner pages-->
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="h-facture.php">
-                        <div class="d-flex align-items-center">
-                          <span class="nav-link-text ps-1">Factures</span>
-                        </div> </a>
-                     
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../dashboard/a-support.php">
+                      <a class="nav-link" href="../dashboard/support.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Support</span>
-                        </div> </a>
-                      
+                        </div> </a
+                      ><!-- more inner pages-->
                     </li>
-                    
                     <li class="nav-item">
-                      <a class="nav-link" href="utilisateur.php">
+                      <a class="nav-link active" href="utilisateur.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Utilisateurs</span>
                         </div> </a>
@@ -628,7 +622,7 @@
                           </li>
 
                           <li class="nav-item">
-                            <a class="nav-link active" href="n-utilisateur.php">
+                            <a class="nav-link" href="n-utilisateur.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Nouveaux utilisateurs</span>
                               </div> </a>
@@ -636,6 +630,7 @@
                           </li>
                         </ul>
                     </li>
+                    
                   </ul>
                 </li>
               </ul>

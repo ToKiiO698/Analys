@@ -509,7 +509,7 @@
                      
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="dashboard/a-support.php">
+                      <a class="nav-link" href="dashboard/support.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Support</span>
                         </div> </a>

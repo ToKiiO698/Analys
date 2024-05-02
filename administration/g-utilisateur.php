@@ -1055,85 +1055,92 @@
           }
         </script>
         <div class="d-flex align-items-center">
-          <div class="toggle-icon-wrapper">
-            <button class="btn navbar-toggler-humburger-icon navbar-vertical-toggle" data-bs-toggle="tooltip"
-              data-bs-placement="left" title="Toggle Navigation">
-              <span class="navbar-toggle-icon"><span class="toggle-line"></span></span>
-            </button>
-          </div>
-          <a class="navbar-brand" href="../admin.html">
-            <div class="d-flex align-items-center py-3">
-              <img class="me-2" src="../assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span
-                class="font-sans-serif text-primary">falcon</span>
+        <div class="toggle-icon-wrapper">
+              <button
+                class="btn navbar-toggler-humburger-icon navbar-vertical-toggle"
+                data-bs-toggle="tooltip"
+                data-bs-placement="left"
+                title="Toggle Navigation"
+              >
+                <span class="navbar-toggle-icon"
+                  ><span class="toggle-line"></span
+                ></span>
+              </button>
             </div>
-          </a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
-          <div class="navbar-vertical-content scrollbar">
-            <ul class="navbar-nav flex-column mb-3" id="navbarVerticalNav">
-              <li class="nav-item">
-                <!-- parent pages--><a class="nav-link dropdown-indicator" href="#dashboard" role="button"
-                  data-bs-toggle="collapse" aria-expanded="true" aria-controls="dashboard">
-                  <div class="d-flex align-items-center">
-                    <span class="nav-link-icon"><span class="fas fa-chart-pie"></span></span><span
-                      class="nav-link-text ps-1">Dashboard</span>
-                  </div>
-                </a>
-                <ul class="nav collapse show" id="dashboard">
-                  <li class="nav-item">
-                    <a class="nav-link" href="../admin.php">
-                      <div class="d-flex align-items-center">
-                        <span class="nav-link-text ps-1">Acceuil</span>
-                      </div>
-                    </a><!-- more inner pages-->
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="a-facture.php">
-                      <div class="d-flex align-items-center">
-                        <span class="nav-link-text ps-1">Factures</span>
-                      </div>
-                    </a><!-- more inner pages-->
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="../dashboard/a-support.php">
-                      <div class="d-flex align-items-center">
-                        <span class="nav-link-text ps-1">Support</span>
-                      </div>
-                    </a><!-- more inner pages-->
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link " href="utilisateur.php">
-                      <div class="d-flex align-items-center">
-                        <span class="nav-link-text ps-1">Utilisateurs</span>
-                      </div>
-                    </a>
-
-                    <ul class="nav collapse show navbar-vertical-content" id="dashboard">
-                      <li class="nav-item">
-                        <a class="nav-link active" href="g-utilisateur.php">
-                          <div class="d-flex align-items-center">
-                            <span class="nav-link-text ps-1">Gestion utilisateurs</span>
-                          </div>
-                        </a>
-
-                      </li>
-
-                      <li class="nav-item">
-                        <a class="nav-link" href="n-utilisateur.php">
-                          <div class="d-flex align-items-center">
-                            <span class="nav-link-text ps-1">Nouveaux utilisateurs</span>
-                          </div>
-                        </a>
-
-                      </li>
-                    </ul>
-                  </li>
-
-                </ul>
-              </li>
-            </ul>
+            <a class="navbar-brand" href="../admin.html">
+              <div class="d-flex align-items-center py-3">
+                <img
+                  class="me-2"
+                  src="../assets/icon/analys.png"
+                  alt=""
+                  width="40"
+                /><span class="font-sans-serif text-primary">nalys</span>
+              </div>
+            </a>
           </div>
-        </div>
+          <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
+            <div class="navbar-vertical-content scrollbar">
+              <ul class="navbar-nav flex-column mb-3" id="navbarVerticalNav">
+                <li class="nav-item">
+                  <!-- parent pages--><a
+                    class="nav-link dropdown-indicator"
+                    href="#dashboard"
+                    role="button"
+                    data-bs-toggle="collapse"
+                    aria-expanded="true"
+                    aria-controls="dashboard"
+                  >
+                    <div class="d-flex align-items-center">
+                      <span class="nav-link-icon"
+                        ><span class="fas fa-chart-pie"></span></span
+                      ><span class="nav-link-text ps-1">Dashboard</span>
+                    </div>
+                  </a>
+                  <ul class="nav collapse show" id="dashboard">
+                    <li class="nav-item">
+                      <a class="nav-link" href="../admin.php">
+                        <div class="d-flex align-items-center">
+                          <span class="nav-link-text ps-1">Acceuil</span>
+                        </div> </a
+                      ><!-- more inner pages-->
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../dashboard/support.php">
+                        <div class="d-flex align-items-center">
+                          <span class="nav-link-text ps-1">Support</span>
+                        </div> </a
+                      ><!-- more inner pages-->
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="utilisateur.php">
+                        <div class="d-flex align-items-center">
+                          <span class="nav-link-text ps-1">Utilisateurs</span>
+                        </div> </a>
+
+                        <ul class="nav collapse show navbar-vertical-content" id="dashboard">
+                          <li class="nav-item">
+                            <a class="nav-link" href="g-utilisateur.php">
+                              <div class="d-flex align-items-center">
+                                <span class="nav-link-text ps-1">Gestion utilisateurs</span>
+                              </div> </a>
+                            
+                          </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link" href="n-utilisateur.php">
+                              <div class="d-flex align-items-center">
+                                <span class="nav-link-text ps-1">Nouveaux utilisateurs</span>
+                              </div> </a>
+                            
+                          </li>
+                        </ul>
+                    </li>
+                    
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
       </nav>
       <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand-lg" style="display: none;">
         <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button"
