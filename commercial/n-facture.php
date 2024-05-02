@@ -1776,7 +1776,7 @@
                 </div>
               </div>
 
-              <form class="form-admin">
+              <form class="form-admin" action="ajtproduit.php" method="post">
                 <div class="row">
                 <div class="col-md-6 ">
                   <label for="id" class="form-label">Prénom/Nom</label>
@@ -1862,15 +1862,23 @@
                   $type = $_POST['type'];
 
                   $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
-                  $stmt = $db->prepare('INSERT INTO facture (editeur, addr, num_fac, montant_ht, montant_ttc, tva, date_ajout, type_frais) VALUES (:editeur, :addr, :num_fac, :ht, :ttc, :tva, :date, :type)');
-                  $stmt->bindParam(':editeur', $ed);
-                  $stmt->bindParam(':addr', $addr);
-                  $stmt->bindParam(':num_fac', $num_fac);
+
+                  $stmt = $db->prepare('INSERT INTO facture (date_ajout, montant_ht, montant_ttc, type_frais, editeur, addr, num_fac, tva) VALUES (:dateV, :ht, :ttc, :typeV, :editeur, :addr, :num_fac, :tva)');
+                  
+                  $stmt->bindParam(':dateV', $date);
                   $stmt->bindParam(':ht', $ht);
                   $stmt->bindParam(':ttc', $ttc);
+                  $stmt->bindParam(':typeV', $type);
+                  $stmt->bindParam(':editeur', $ed);
+                
+                  $stmt->bindParam(':addr', $addr);
+                  $stmt->bindParam(':num_fac', $num_fac);
+                  
+                  
                   $stmt->bindParam(':tva', $tva);
-                  $stmt->bindParam(':date', $date);
-                  $stmt->bindParam(':type', $type);
+                  
+                  
+
                   $stmt->execute();
 
                   echo '<div class="alert-success alert-dismissible fade show" role="alert">
@@ -1879,7 +1887,7 @@
                     aria-label="Close"></button>
                   </div>';
                     }
-          ?>
+                    ?>
               </form>
 
             </div>
