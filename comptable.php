@@ -2,8 +2,8 @@
 <html data-bs-theme="light" lang="en-US" dir="ltr">
 
   
-<!-- Mirrored from prium.github.io/falcon/v3.20.0/changelog.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:10:08 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -547,7 +547,7 @@
           <div class="d-flex align-items-center">
             <div class="toggle-icon-wrapper">
               <button class="btn navbar-toggler-humburger-icon navbar-vertical-toggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
-            </div><a class="navbar-brand" href="comptable.html">
+            </div><a class="navbar-brand" href="comptable.php">
               <div class="d-flex align-items-center py-3"><img class="me-2" src="assets/icon/analys.png" alt="" width="40" /><span class="font-sans-serif text-primary">nalys</span></div>
             </a>
           </div>
@@ -571,7 +571,7 @@
                   </a>
                   <ul class="nav collapse show" id="dashboard">
                     <li class="nav-item">
-                      <a class="nav-link active" href="comptable.html">
+                      <a class="nav-link active" href="comptable.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Acceuil</span>
                         </div> </a>
@@ -588,7 +588,7 @@
                         <ul class="nav collapse show " id="dashboard">
 
                           <li class="nav-item">
-                            <a class="nav-link" href="comptable/o-ticket.html">
+                            <a class="nav-link" href="comptable/o-ticket.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Ouvrir un tickets</span>
                               </div> </a>
@@ -596,7 +596,7 @@
                           </li>
 
                           <li class="nav-item">
-                            <a class="nav-link" href="comptable/m-ticket.html">
+                            <a class="nav-link" href="comptable/m-ticket.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Voir mes tickets</span>
                               </div> </a>
@@ -606,7 +606,7 @@
                       </ul>
                                        
                     <li class="nav-item">
-                      <a class="nav-link" href="comptable.html">
+                      <a class="nav-link" href="comptable.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Factures</span>
                         </div> </a>
@@ -649,7 +649,7 @@
         </nav>
         <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand-lg" style="display: none;">
           <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
-          <a class="navbar-brand me-1 me-sm-3" href="index.html">
+          <a class="navbar-brand me-1 me-sm-3" href="index.php">
             <div class="d-flex align-items-center"><img class="me-2" src="assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span class="font-sans-serif text-primary">falcon</span></div>
           </a>
           <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
@@ -1114,7 +1114,7 @@
                     >0</span>
                   <span class="fw-normal text-600">facture remboursé</span>
                 </h4>
-                <a class="btn btn-outline-success btn-sm btn-facture" href="comptable/facture-r.html">Voir les factures remboursé</a>
+                <a class="btn btn-outline-success btn-sm btn-facture" href="comptable/facture-r.php">Voir les factures remboursé</a>
                 
               </div>
               <div
@@ -1129,7 +1129,7 @@
                     >0</span>
                   <span class="fw-normal text-600">facture en attente</span>
                 </h4>
-                <a class="btn btn-outline-primary btn-sm btn-facture" href="comptable/facture-a.html">Voir les factures en attente</a>
+                <a class="btn btn-outline-primary btn-sm btn-facture" href="comptable/facture-a.php">Voir les factures en attente</a>
                 
               </div>
               <div
@@ -1145,7 +1145,7 @@
                     >0</span> <!-- Mettre le prix des factures du moi dernier -->
                   <span class="fw-normal text-600">factures refusé</span>
                 </h4>
-                <a class="btn btn-outline-warning btn-sm btn-facture" href="comptable/facture-ref.html">Voir les factures refusé</a>
+                <a class="btn btn-outline-warning btn-sm btn-facture" href="comptable/facture-ref.php">Voir les factures refusé</a>
               </div>
             <div class="row g-0">
                 <div class="col-lg-12 pe-lg-2 mb-6" style="margin-top: 10px;">
@@ -1159,10 +1159,10 @@
                         </div>
                         <div class="row">
                             <div class="col-6">
-                                <a href="comptable/o-ticket.html" class="btn btn-primary panel-btn">Nouveau Ticket</a>
+                                <a href="comptable/o-ticket.php" class="btn btn-primary panel-btn">Nouveau Ticket</a>
                             </div>
                             <div class="col-6">
-                                <a href="comptable/m-ticket.html" class="btn btn-primary panel-btn">Mes Tickets</a>
+                                <a href="comptable/m-ticket.php" class="btn btn-primary panel-btn">Mes Tickets</a>
                             </div>
                         </div>
                     </div>
@@ -1204,5 +1204,4 @@
   </body>
 
 
-<!-- Mirrored from prium.github.io/falcon/v3.20.0/changelog.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:10:09 GMT -->
 </html>
