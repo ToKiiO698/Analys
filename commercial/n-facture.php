@@ -1776,117 +1776,114 @@
                 </div>
               </div>
 
-              <form class="form-admin" action="ajtproduit.php" method="post">
+              <form class="form-admin" method="POST">
                 <div class="row">
-                <div class="col-md-6 ">
-                  <label for="id" class="form-label">Prénom/Nom</label>
-                  <input type="editeur" class="form-control" id="editeur" aria-describedby="id" placeholder="Frank Lucas">
+                  <!--<div class="col-md-6 ">
+                    <label for="id" class="form-label">Prénom/Nom</label>
+                    <input type="editeur" class="form-control" id="editeur" name="editeur" aria-describedby="id" placeholder="Frank Lucas">
+                  </div>-->
+
+                  <div class="col-md-6">
+                    <label for="mdp" class="form-label">Lieu de facturation</label>
+                    <input type="mdp" class="form-control" id="addr" name="addr" placeholder="53 rue ALber Thomas 69003 Lyon">
+                  </div>
                 </div>
 
-                <div class="col-md-6">
-                  <label for="mdp" class="form-label">Lieu de facturation</label>
-                  <input type="mdp" class="form-control" id="addr" placeholder="53 rue ALber Thomas 69003 Lyon">
-                </div>
-                </div>
                 <div class="row">
                   <div class="col-md-3">
-                <div class="mb-3">
-                  <label for="mdp" class="form-label">Numéro de facture</label>
-                  <input type="mdp" class="form-control" id="num_fac" placeholder="100">
-                </div>
-                </div>
-                <div class="col-md-3">
+                    <div class="mb-3">
+                      <label for="mdp" class="form-label">Numéro de facture</label>
+                      <input type="mdp" class="form-control" id="num_fac" name="num_fac" placeholder="100">
+                    </div>
+
+                  </div>
+                  <div class="col-md-3">
                     <div class="mb-3">
                         <label for="prixUnitaireHT" class="form-label">Prix Unité HT</label>
-                        <input type="number" class="form-control form-control-sm" id="ht" placeholder="0,00€">
+                        <input type="number" class="form-control form-control-sm" id="ht" name="ht" placeholder="0,00€">
                     </div>
                 </div>
                 
                 <div class="col-md-3">
                     <div class="mb-3">
                         <label for="tva" class="form-label">TVA</label>
-                        <select class="form-select form-select-sm" id="tva">
+                        <select class="form-select form-select-sm" id="tva" name="tva">
                         <?php
-                   $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
-                   $data = $db->query('SELECT * FROM tva');
-                    while($row = $data->fetch()){
-                      echo '<option value="'.$row['id'].'">'.$row['taux'].'</option>';
-                    }
-                  ?>
+                          $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+                          $data = $db->query('SELECT * FROM tva');
+                            while($row = $data->fetch()){
+                              echo '<option value="'.$row['id'].'">'.$row['taux'].'</option>';
+                            }
+                          ?>
                         </select>
                     </div>
                 </div>
+
                 <div class="col-md-3">
                     <div class="mb-3">
                         <label for="prixUnitaireHT" class="form-label">Prix Unité TTC</label>
-                        <input type="number" class="form-control form-control-sm" id="ttc" placeholder="0,00€">
+                        <input type="number" class="form-control form-control-sm" id="ttc" name="ttc" placeholder="0,00€">
                     </div>
                 </div>
-
             </div>
             
-
             <div class="row">
-             <div class="col-md-6">
+              <div class="col-md-6">
                 <div class="mb-3">
-                  <label for="date_naissance" class="form-label">Date</label>
-                  <input type="date" class="form-control" id="date" aria-describedby="date_naissance">
+                  <label for="date" class="form-label">Date</label>
+                  <input type="date" class="form-control" id="date" name="date" aria-describedby="date_naissance">
                 </div>
               </div>
               <div class="col-md-3">
-              <div class="mb-3">
-                  <label for="mdp" class="form-label">Type de Frais</label>
-                  <select id="type" class="form-select form-select-sm" name="type">
-                  <?php
-                   $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
-                   $data = $db->query('SELECT * FROM type_frais');
-                    while($row = $data->fetch()){
-                      echo '<option value="'.$row['id'].'">'.$row['type'].'</option>';
-                    }
-                  ?>
+                <div class="mb-3">
+                  <label for="type_frais" class="form-label">Type de Frais</label>
+                  <select class="form-select form-select-sm" id="type_frais" name="type_frais">
+                    <?php
+                      $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+                      $data = $db->query('SELECT * FROM type_frais');
+                        while($row = $data->fetch()){
+                          echo '<option value="'.$row['id_frais'].'">'.$row['type'].'</option>';
+                        }
+                    ?>
                   </select>
                 </div>
-                  </div>
-          </div>
+              </div>
+            </div>
 
                 <button type="submit" class="btn btn-primary form-btn">Enregistrer</button>
                 <?php
-                if (isset($_POST['editeur']) && isset($_POST['addr']) && isset($_POST['num_fac']) && isset($_POST['ht']) && isset($_POST['ttc']) && isset($_POST['tva']) && isset($_POST['date']) && isset($_POST['type'])){
-                  $ed = $_POST['editeur'];
+                if (isset($_POST['addr']) && isset($_POST['num_fac']) && isset($_POST['ht']) && isset($_POST['ttc']) && isset($_POST['tva']) && isset($_POST['date']) && isset($_POST['type_frais'])){
+                  $ed = $_SESSION['roles'];
                   $addr = $_POST['addr'];
                   $num_fac = $_POST['num_fac'];
                   $ht = $_POST['ht'];
                   $ttc = $_POST['ttc'];
                   $tva = $_POST['tva'];
                   $date = $_POST['date'];
-                  $type = $_POST['type'];
+                  $type = $_POST['type_frais'];
+                  $etat_facture = 3;
 
                   $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
 
-                  $stmt = $db->prepare('INSERT INTO facture (date_ajout, montant_ht, montant_ttc, type_frais, editeur, addr, num_fac, tva) VALUES (:dateV, :ht, :ttc, :typeV, :editeur, :addr, :num_fac, :tva)');
-                  
+                  $stmt = $db->prepare('INSERT INTO facture (etat_facture,date_ajout, montant_ht, montant_ttc, type_frais, editeur, addr, num_fac, tva) VALUES (:etat_facture, :dateV, :ht, :ttc, :type_frais, :editeur, :addr, :num_fac, :tva)');
+                  $stmt->bindParam(':etat_facture',$etat_facture );
                   $stmt->bindParam(':dateV', $date);
                   $stmt->bindParam(':ht', $ht);
                   $stmt->bindParam(':ttc', $ttc);
-                  $stmt->bindParam(':typeV', $type);
+                  $stmt->bindParam(':type_frais', $type);
                   $stmt->bindParam(':editeur', $ed);
-                
                   $stmt->bindParam(':addr', $addr);
                   $stmt->bindParam(':num_fac', $num_fac);
-                  
-                  
                   $stmt->bindParam(':tva', $tva);
-                  
-                  
-
+                
                   $stmt->execute();
 
                   echo '<div class="alert-success alert-dismissible fade show" role="alert">
-                  <strong>Tout fonctionne parfaitement.</strong> Un utilisateur vien dêtre ajouter.
+                  <strong>OK.</strong> Une facture vient dêtre ajouté !
                   <button type"button" class="btn-close" data-bs-dismiss="alert"
                     aria-label="Close"></button>
                   </div>';
-                    }
+                }
                     ?>
               </form>
 
