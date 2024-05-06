@@ -1112,14 +1112,14 @@
                       ><!-- more inner pages-->
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" href="utilisateur.php">
+                      <a class="nav-link " href="utilisateur.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Utilisateurs</span>
                         </div> </a>
 
                         <ul class="nav collapse show navbar-vertical-content" id="dashboard">
                           <li class="nav-item">
-                            <a class="nav-link" href="g-utilisateur.php">
+                            <a class="nav-link active" href="g-utilisateur.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Gestion utilisateurs</span>
                               </div> </a>
@@ -3336,7 +3336,7 @@
                     <tr class="tr-u">
                       <th class="th-u">Nom</th>
                       <th class="th-u">Rôles</th>
-                      <th class="th-u">Supprimer</th>
+                      <th class="th-u ">Supprimer</th>
                       <th class="th-u">Modifier</th>
                     </tr>
                     <?php
@@ -3350,8 +3350,8 @@ $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <tr>
         <td><?php echo $user['nom']; ?></td>
         <td><?php echo $user['roles']; ?></td>
-        <td><button <?php echo $user['id']; ?>>Supprimer</button></td>
-        <td><button>Modifier</button></td>
+        <td><button class="btn btn-primary" <?php echo $user['id']; ?>>Supprimer</button></td>
+        <td><a href="m-utilisateur.php" class="btn btn-primary"> Modifier</a></td>
     </tr>
     <?php endforeach; ?>
 
