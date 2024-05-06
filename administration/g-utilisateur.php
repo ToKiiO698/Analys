@@ -3335,11 +3335,25 @@
                   <table class="table-u" id="userTable">
                     <tr class="tr-u">
                       <th class="th-u">Nom</th>
-                      <th class="th-u">Prénom</th>
                       <th class="th-u">Rôles</th>
                       <th class="th-u">Supprimer</th>
                       <th class="th-u">Modifier</th>
                     </tr>
+                    <?php
+    // Connexion à la base de données
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+
+// Requête pour récupérer toutes les données de la table facture
+$stmt = $db->query('SELECT * FROM user');
+$factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($factures as $facture): ?>
+    <tr>
+        <td><?php echo $facture['nom']; ?></td>
+        <td><?php echo $facture['roles']; ?></td>
+        <td><button>Supprimer</button></td>
+        <td><button>Modifier</button></td>
+    </tr>
+    <?php endforeach; ?>
                    
                   </table>
                   
