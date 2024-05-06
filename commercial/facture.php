@@ -2337,21 +2337,19 @@
                   </a>
                   <ul class="nav collapse show" id="dashboard">
                     <li class="nav-item">
-                      <a class="nav-link" href="../commercial.php">
+                      <a class="nav-link active" href="../commercial.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Acceuil</span>
                         </div> </a>
                      
                     </li>
-                      
                         <li class="nav-item">
                           <a class="nav-link" href="../dashboard/support.php">
                             <div class="d-flex align-items-center">
                               <span class="nav-link-text ps-1">Support</span>
                             </div> </a>
                           
-                        </li>                        
-                      </li>
+                        </li>
                                        
                     <li class="nav-item">
                       <a class="nav-link" href="facture.php">
@@ -2369,9 +2367,16 @@
                           </li>
 
                           <li class="nav-item">
-                            <a class="nav-link active" href="r-facture.php">
+                            <a class="nav-link" href="r-facture.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Remboursé</span>
+                              </div> </a>
+                            
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="ref-facture.php">
+                              <div class="d-flex align-items-center">
+                                <span class="nav-link-text ps-1">Refusée</span>
                               </div> </a>
                             
                           </li>
@@ -2379,7 +2384,7 @@
                           <li class="nav-item">
                             <a class="nav-link" href="n-facture.php">
                               <div class="d-flex align-items-center">
-                                <span class="nav-link-text ps-1">Nouvelle facture</span>
+                                <span class="nav-link-text ps-1">Nouvelle Facture</span>
                               </div> </a>
                             
                           </li>

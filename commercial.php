@@ -1124,7 +1124,7 @@
                     class="text-700 mx-2"
                     data-countup='{"endValue":"1054"}'
                     >0</span> 
-                  <span class="fw-normal text-600">Nombre de factures remboursé</span>
+                  <span class="fw-normal text-600">Nombre de factures <br> non-remboursé</span>
                 </h4>
                 <a class="btn btn-outline-warning btn-sm btn-facture" href="commercial/ref-facture.php">Voir les factures refusée</a>
               </div>
