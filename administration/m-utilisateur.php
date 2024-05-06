@@ -2,8 +2,6 @@
 <html data-bs-theme="light" lang="en-US" dir="ltr">
 
   
-<!-- Mirrored from prium.github.io/falcon/v3.20.0/dashboard/e-commerce.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:07:56 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -134,7 +132,7 @@
                       ><!-- more inner pages-->
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" href="utilisateur.php">
+                      <a class="nav-link " href="utilisateur.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Utilisateurs</span>
                         </div> </a>
@@ -152,6 +150,14 @@
                             <a class="nav-link" href="n-utilisateur.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Nouveaux utilisateurs</span>
+                              </div> </a>
+                            
+                          </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link active" href="m-utilisateur.php">
+                              <div class="d-flex align-items-center">
+                                <span class="nav-link-text ps-1">Modifier utilisateur</span>
                               </div> </a>
                             
                           </li>
@@ -191,7 +197,6 @@
                 /><span class="font-sans-serif text-primary">falcon</span>
               </div>
             </a>
-            <h1 class="menu-admin text-center">Bienvenue dans le menu Administrateur !</h1>
           </nav>
           <script>
             var navbarPosition = localStorage.getItem("navbarPosition");
@@ -243,6 +248,34 @@
           </script>
       </div>
     </div>
+
+    <h1 class="menu-admin text-center">Bienvenue dans la modification utilisateur !</h1>
+
+    <form class="form-admin" method="POST" action="n-utilisateur.php">
+                  <div class="mb-3 ">
+                    <label for="id" class="form-label">Identifiant</label>
+                    <input type="id" class="form-control" id="id" aria-describedby="id" name="id">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="mdp" class="form-label">Mot de passe</label>
+                    <input type="mdp" class="form-control" id="mdp" name="mdp">
+                  </div>
+
+                  <div class="mb-3">
+                  <label for="tva" class="form-label">Rôle</label>
+                    <select class="form-select form-select-sm" id="role" name="role">
+                      <?php
+                          $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+                          $data = $db->query('SELECT * FROM roles');
+                            while($row = $data->fetch()){
+                              echo '<option value="'.$row['id_roles'].'">'.$row['nom_roles'].'</option>';
+                            }
+                          ?>
+                    </select>
+                  </div>
+    </form>
+
     <footer class="footer">
       <div class="text-center">
         <div class="col-12 col-sm-auto text-center">
