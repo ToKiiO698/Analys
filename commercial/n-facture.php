@@ -2,8 +2,6 @@
 <html data-bs-theme="light" lang="en-US" dir="ltr">
 
   
-<!-- Mirrored from prium.github.io/falcon/v3.20.0/changelog.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:10:08 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -619,7 +617,7 @@
                   </a>
                   <ul class="nav collapse show" id="dashboard">
                     <li class="nav-item">
-                      <a class="nav-link active" href="../commercial.php">
+                      <a class="nav-link " href="../commercial.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Acceuil</span>
                         </div> </a>
@@ -664,7 +662,7 @@
                           </li>
 
                           <li class="nav-item">
-                            <a class="nav-link" href="n-facture.php">
+                            <a class="nav-link active" href="n-facture.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Nouvelle Facture</span>
                               </div> </a>
@@ -1925,5 +1923,4 @@
   </body>
 
 
-<!-- Mirrored from prium.github.io/falcon/v3.20.0/changelog.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:10:09 GMT -->
 </html>
