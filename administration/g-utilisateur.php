@@ -3345,15 +3345,16 @@ $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
 
 // Requête pour récupérer toutes les données de la table facture
 $stmt = $db->query('SELECT * FROM user');
-$factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    foreach ($factures as $facture): ?>
+$user = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($user as $user): ?>
     <tr>
-        <td><?php echo $facture['nom']; ?></td>
-        <td><?php echo $facture['roles']; ?></td>
-        <td><button>Supprimer</button></td>
+        <td><?php echo $user['nom']; ?></td>
+        <td><?php echo $user['roles']; ?></td>
+        <td><button <?php echo $user['id']; ?>>Supprimer</button></td>
         <td><button>Modifier</button></td>
     </tr>
     <?php endforeach; ?>
+
                    
                   </table>
                   
