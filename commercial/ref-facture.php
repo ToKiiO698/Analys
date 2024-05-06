@@ -2,8 +2,6 @@
 <html data-bs-theme="light" lang="en-US" dir="ltr">
 
   
-<!-- Mirrored from prium.github.io/falcon/v3.20.0/changelog.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:10:08 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -618,7 +616,7 @@
                   </a>
                   <ul class="nav collapse show" id="dashboard">
                     <li class="nav-item">
-                      <a class="nav-link active" href="../commercial.php">
+                      <a class="nav-link " href="../commercial.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Acceuil</span>
                         </div> </a>
@@ -655,7 +653,7 @@
                             
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="ref-facture.php">
+                            <a class="nav-link active" href="ref-facture.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Refusée</span>
                               </div> </a>
@@ -1769,18 +1767,20 @@
           <h1 class="text-center">Bienvenue dans le menu Commercial !</h1>
         </div>
 
-<h2>Liste des factures Refusée</h2>
+<h2 class="text-center">Liste des factures Refusée</h2>
 
-<table>
+<table class="table table-striped table-hover">
+  <thead>
     <tr>
-        <th>Adresse</th>
-        <th>Numéro de facture</th>
-        <th>Montant HT</th>
-        <th>Montant TTC</th>
-        <th>TVA</th>
-        <th>Date</th>
-        <th>Type de frais</th>
+      <th scope="col">Adresse</th>
+      <th scope="col">Num Facture</th>
+      <th scope="col">Montant HT</th>
+      <th scope="col">Montant TTC</th>
+      <th scope="col">TVA</th>
+      <th scope="col">Date</th>
+      <th scope="col">Type Frais</th>
     </tr>
+  </thead>
     
     <?php
     // Connexion à la base de données
@@ -1833,5 +1833,4 @@ $factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </body>
 
 
-<!-- Mirrored from prium.github.io/falcon/v3.20.0/changelog.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:10:09 GMT -->
 </html>
