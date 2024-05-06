@@ -1768,7 +1768,7 @@
           <h1 class="text-center">Bienvenue dans le menu Commercial !</h1>
         </div>
 
-<h2 class=" a-top text-center">Liste des factures en attente</h2>
+<h2 class="text-center">Liste des factures en attente</h2>
 
 <table class="table table-striped table-hover">
   <thead>
