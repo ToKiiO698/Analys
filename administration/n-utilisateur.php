@@ -601,7 +601,7 @@
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Support</span>
                         </div> </a
-                      ><!-- more inner pages-->
+                      ><!-- more inner page-->
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="utilisateur.php">
