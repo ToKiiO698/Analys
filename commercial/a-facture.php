@@ -2,9 +2,6 @@
 <html data-bs-theme="light" lang="en-US" dir="ltr">
 
   
-<!-- Mirrored from prium.github.io/falcon/v3.20.0/changelog.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:10:08 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
-<head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -77,6 +74,8 @@
       rel="stylesheet"
       id="user-style-default"
     />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.6/css/dataTables.dataTables.css" />
+ 
     <script>
       var isRTL = JSON.parse(localStorage.getItem("isRTL"));
       if (isRTL) {
@@ -618,7 +617,7 @@
                   </a>
                   <ul class="nav collapse show" id="dashboard">
                     <li class="nav-item">
-                      <a class="nav-link active" href="../commercial.php">
+                      <a class="nav-link " href="../commercial.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Acceuil</span>
                         </div> </a>
@@ -640,7 +639,7 @@
 
                         <ul class="nav collapse show navbar-vertical-content" id="dashboard">
                           <li class="nav-item">
-                            <a class="nav-link" href="a-facture.php">
+                            <a class="nav-link active" href="a-facture.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">En attente</span>
                               </div> </a>
@@ -1769,18 +1768,20 @@
           <h1 class="text-center">Bienvenue dans le menu Commercial !</h1>
         </div>
 
-<h2>Liste des factures En attente</h2>
+<h2 class=" a-top text-center">Liste des factures en attente</h2>
 
-<table>
+<table class="table table-striped table-hover">
+  <thead>
     <tr>
-        <th>Adresse</th>
-        <th>Numéro de facture</th>
-        <th>Montant HT</th>
-        <th>Montant TTC</th>
-        <th>TVA</th>
-        <th>Date</th>
-        <th>Type de frais</th>
+      <th scope="col">Adresse</th>
+      <th scope="col">Num Facture</th>
+      <th scope="col">Montant HT</th>
+      <th scope="col">Montant TTC</th>
+      <th scope="col">TVA</th>
+      <th scope="col">Date</th>
+      <th scope="col">Type Frais</th>
     </tr>
+  </thead>
     
     <?php
     // Connexion à la base de données
@@ -1830,8 +1831,8 @@ $factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <script src="../../../polyfill.io/v3/polyfill.min58be.js?features=window.scroll"></script>
     <script src="vendors/list.js/list.min.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="https://cdn.datatables.net/2.0.6/js/dataTables.js"></script>
   </body>
 
 
-<!-- Mirrored from prium.github.io/falcon/v3.20.0/changelog.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:10:09 GMT -->
 </html>
