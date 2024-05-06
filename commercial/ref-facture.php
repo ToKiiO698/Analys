@@ -12,7 +12,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Ouvrir un Ticket - Analys</title>
+    <title>Facture en attente - Analys</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -1761,39 +1761,57 @@
         </header>
 
         <div>
-          <h1 class="text-center">Créer votre ticket !</h1>
+          <h1 class="text-center">Bienvenue dans le menu Commercial !</h1>
         </div>
-        <div class="ticket-form">
-          <h2>Créer un ticket</h2>
-          <form action="#" method="post">
-            <div class="form-group">
-              <div>
-                <label for="first-name">Prénom :</label>
-                <input type="text" id="first-name" name="first-name" placeholder="Votre prénom...">
-              </div>
-              <div>
-                <label for="first-name">Nom :</label>
-                <input type="text" id="name" name="name" placeholder="Votre nom...">
-              </div>
-              <label for="reason">Raison :</label>
-              <input type="text" id="raison" name="raison" placeholder="Votre problème...">
-            
-            
-              <label for="role">Rôle :</label>
-                <select name="role" id="role">
-                  <option value="probleme_technique">Commercial</option>
-                  <option value="demande_information">Comptable</option>
-                  
-              </select>
+
+<h2>Liste des factures Refusée</h2>
+
+<table>
+    <tr>
+        <th>Adresse</th>
+        <th>Numéro de facture</th>
+        <th>Montant HT</th>
+        <th>Montant TTC</th>
+        <th>TVA</th>
+        <th>Date</th>
+        <th>Type de frais</th>
+    </tr>
+    
+    <?php
+    // Connexion à la base de données
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+
+// Requête pour récupérer toutes les données de la table facture
+$stmt = $db->query('SELECT * FROM facture, etat_facture WHERE facture.etat_facture = 5');
+$factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($factures as $facture): ?>
+    <tr>
+        <td><?php echo $facture['addr']; ?></td>
+        <td><?php echo $facture['num_fac']; ?></td>
+        <td><?php echo $facture['montant_ht']; ?></td>
+        <td><?php echo $facture['montant_ttc']; ?></td>
+        <td><?php echo $facture['tva']; ?></td>
+        <td><?php echo $facture['date_ajout']; ?></td>
+        <td><?php echo $facture['type_frais']; ?></td>
+    </tr>
+    <?php endforeach; ?>
+</table>
+
+        <footer class="footer">
+          <div class="text-center">
+            <div class="col-12 col-sm-auto text-center">
+              <p class="mb-0 text-600">
+                © COPYRIGHT 2022-2024
+                <span class="d-none d-sm-inline-block">| </span
+                ><br class="d-sm-none" />
+                2024 &copy; <a href="index.html">Analys</a>
+              </p>
             </div>
-            <div class="form-group">
-              <label for="reason-details">Détails :</label>
-              <textarea id="reason-details" name="reason-details" placeholder="Précisez la raison..."></textarea>
+            <div class="col-12 col-sm-auto text-center">
+              <p class="mb-0 text-600">v1.0</p>
             </div>
-            <button type="submit" class="ticket-btn">Envoyer</button>
-          </form>
-        </div>
-        <footer>
+          </div>
+        </footer>
 
 
     <!-- ===============================================--><!--    JavaScripts--><!-- ===============================================-->
@@ -1807,7 +1825,6 @@
     <script src="../../../polyfill.io/v3/polyfill.min58be.js?features=window.scroll"></script>
     <script src="vendors/list.js/list.min.js"></script>
     <script src="assets/js/theme.js"></script>
-          </footer>
   </body>
 
 

@@ -617,61 +617,40 @@
                   </a>
                   <ul class="nav collapse show" id="dashboard">
                     <li class="nav-item">
-                      <a class="nav-link" href="../commercial.php">
+                      <a class="nav-link" href="#">
                         <div class="d-flex align-items-center">
-                          <span class="nav-link-text ps-1">Acceuil</span>
-                        </div> </a>
-                     
+                          <span class="nav-link-text ps-1">Retour</span>
+                        </div>
+                      </a><!-- more inner pages-->
                     </li>
-                      
                         <li class="nav-item">
-                          <a class="nav-link" href="../dashboard/support.php">
+                          <a class="nav-link active" href="#">
                             <div class="d-flex align-items-center">
                               <span class="nav-link-text ps-1">Support</span>
                             </div> </a>
                           
-                        </li>                        
-                      </li>
-                                       
-                    <li class="nav-item">
-                      <a class="nav-link" href="facture.php">
-                        <div class="d-flex align-items-center">
-                          <span class="nav-link-text ps-1">Factures</span>
-                        </div> </a>
-
-                        <ul class="nav collapse show navbar-vertical-content" id="dashboard">
-                          <li class="nav-item">
-                            <a class="nav-link" href="a-facture.php">
-                              <div class="d-flex align-items-center">
-                                <span class="nav-link-text ps-1">En attente</span>
-                              </div> </a>
-                            
-                          </li>
-
-                          <li class="nav-item">
-                            <a class="nav-link active" href="r-facture.php">
-                              <div class="d-flex align-items-center">
-                                <span class="nav-link-text ps-1">Remboursé</span>
-                              </div> </a>
-                            
-                          </li>
-
-                          <li class="nav-item">
-                            <a class="nav-link" href="n-facture.php">
-                              <div class="d-flex align-items-center">
-                                <span class="nav-link-text ps-1">Nouvelle facture</span>
-                              </div> </a>
-                            
-                          </li>
-                        </ul>
-
-                          
-                          
                         </li>
-                    
-                      </li>
-                    </ul>
-                  </li>
+                        <ul class="nav collapse show " id="dashboard">
+
+                          <li class="nav-item">
+                            <a class="nav-link" href="o-tickets.php">
+                              <div class="d-flex align-items-center">
+                                <span class="nav-link-text ps-1">Ouvrir un tickets</span>
+                              </div> </a>
+                            
+                          </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link" href="m-tickets.php">
+                              <div class="d-flex align-items-center">
+                                <span class="nav-link-text ps-1">Voir mes tickets</span>
+                              </div> </a>
+                            
+                          </li>
+                        
+                      </ul>
+                                       
+                    </li>
             </div>
           </div>
         </nav>

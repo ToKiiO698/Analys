@@ -12,7 +12,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Nouvelle Facture - Analys</title>
+    <title>Ouvrir un Ticket - Analys</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -93,13 +93,12 @@
       }
     </script>
 
-    <?php
+<?php
     session_start();
     if ($_SESSION['roles'] != 2) {
         header('Location: ../index.php');
     }
     ?> 
-    
 
   </head>
 
@@ -619,61 +618,40 @@
                   </a>
                   <ul class="nav collapse show" id="dashboard">
                     <li class="nav-item">
-                      <a class="nav-link" href="../commercial.php">
+                      <a class="nav-link" href="#">
                         <div class="d-flex align-items-center">
-                          <span class="nav-link-text ps-1">Acceuil</span>
-                        </div> </a>
-                     
+                          <span class="nav-link-text ps-1">Retour</span>
+                        </div>
+                      </a><!-- more inner pages-->
                     </li>
-                      
                         <li class="nav-item">
-                          <a class="nav-link" href="../dashboard/support.php">
+                          <a class="nav-link active" href="#">
                             <div class="d-flex align-items-center">
                               <span class="nav-link-text ps-1">Support</span>
                             </div> </a>
                           
-                        </li>                        
-                      </li>
-                                       
-                    <li class="nav-item">
-                      <a class="nav-link" href="facture.php">
-                        <div class="d-flex align-items-center">
-                          <span class="nav-link-text ps-1">Factures</span>
-                        </div> </a>
-
-                        <ul class="nav collapse show navbar-vertical-content" id="dashboard">
-                          <li class="nav-item">
-                            <a class="nav-link" href="a-facture.php">
-                              <div class="d-flex align-items-center">
-                                <span class="nav-link-text ps-1">En attente</span>
-                              </div> </a>
-                            
-                          </li>
-
-                          <li class="nav-item">
-                            <a class="nav-link active" href="r-facture.php">
-                              <div class="d-flex align-items-center">
-                                <span class="nav-link-text ps-1">Remboursé</span>
-                              </div> </a>
-                            
-                          </li>
-
-                          <li class="nav-item">
-                            <a class="nav-link" href="n-facture.php">
-                              <div class="d-flex align-items-center">
-                                <span class="nav-link-text ps-1">Nouvelle facture</span>
-                              </div> </a>
-                            
-                          </li>
-                        </ul>
-
-                          
-                          
                         </li>
-                    
-                      </li>
-                    </ul>
-                  </li>
+                        <ul class="nav collapse show " id="dashboard">
+
+                          <li class="nav-item">
+                            <a class="nav-link" href="o-tickets.php">
+                              <div class="d-flex align-items-center">
+                                <span class="nav-link-text ps-1">Ouvrir un tickets</span>
+                              </div> </a>
+                            
+                          </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link" href="m-tickets.php">
+                              <div class="d-flex align-items-center">
+                                <span class="nav-link-text ps-1">Voir mes tickets</span>
+                              </div> </a>
+                            
+                          </li>
+                        
+                      </ul>
+                                       
+                    </li>
             </div>
           </div>
         </nav>
@@ -1762,148 +1740,39 @@
         </header>
 
         <div>
-          <h1 class="text-center">Bienvenue dans le menu Commercial !</h1>
+          <h1 class="text-center">Créer votre ticket !</h1>
         </div>
-
-        <div class="row g-0">
-          <div class="col-lg-12 pe-lg-2 mb-6 ">
-            <div class="card h-lg-100 overflow-hidden facture-compta-comm">
-              <div class="card-header bg-body-tertiary ">
-                <div class="row align-items-center ">
-                  <div class="col ">
-                    <h6 class="mb-0 ">Nouvelle facture | Commercial</h6>
-                  </div>
-                </div>
+        <div class="ticket-form">
+          <h2>Créer un ticket</h2>
+          <form action="#" method="post">
+            <div class="form-group">
+              <div>
+                <label for="first-name">Prénom :</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Votre prénom...">
               </div>
-
-              <form class="form-admin" method="POST">
-                <div class="row">
-                  <!--<div class="col-md-6 ">
-                    <label for="id" class="form-label">Prénom/Nom</label>
-                    <input type="editeur" class="form-control" id="editeur" name="editeur" aria-describedby="id" placeholder="Frank Lucas">
-                  </div>-->
-
-                  <div class="col-md-6">
-                    <label for="mdp" class="form-label">Lieu de facturation</label>
-                    <input type="mdp" class="form-control" id="addr" name="addr" placeholder="53 rue ALber Thomas 69003 Lyon">
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-3">
-                    <div class="mb-3">
-                      <label for="mdp" class="form-label">Numéro de facture</label>
-                      <input type="mdp" class="form-control" id="num_fac" name="num_fac" placeholder="100">
-                    </div>
-
-                  </div>
-                  <div class="col-md-3">
-                    <div class="mb-3">
-                        <label for="prixUnitaireHT" class="form-label">Prix Unité HT</label>
-                        <input type="number" class="form-control form-control-sm" id="ht" name="ht" placeholder="0,00€">
-                    </div>
-                </div>
-                
-                <div class="col-md-3">
-                    <div class="mb-3">
-                        <label for="tva" class="form-label">TVA</label>
-                        <select class="form-select form-select-sm" id="tva" name="tva">
-                        <?php
-                          $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
-                          $data = $db->query('SELECT * FROM tva');
-                            while($row = $data->fetch()){
-                              echo '<option value="'.$row['id'].'">'.$row['taux'].'</option>';
-                            }
-                          ?>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="mb-3">
-                        <label for="prixUnitaireHT" class="form-label">Prix Unité TTC</label>
-                        <input type="number" class="form-control form-control-sm" id="ttc" name="ttc" placeholder="0,00€">
-                    </div>
-                </div>
-            </div>
+              <div>
+                <label for="first-name">Nom :</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom...">
+              </div>
+              <label for="reason">Raison :</label>
+              <input type="text" id="raison" name="raison" placeholder="Votre problème...">
             
-            <div class="row">
-              <div class="col-md-3">
-                <div class="mb-3">
-                  <label for="date" class="form-label">Date</label>
-                  <input type="date" class="form-control" id="date" name="date" aria-describedby="date_naissance">
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="mb-3">
-                  <label for="type_frais" class="form-label">Type de Frais</label>
-                  <select class="form-select form-select-sm" id="type_frais" name="type_frais">
-                    <?php
-                      $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
-                      $data = $db->query('SELECT * FROM type_frais');
-                        while($row = $data->fetch()){
-                          echo '<option value="'.$row['id_frais'].'">'.$row['type'].'</option>';
-                        }
-                    ?>
-                  </select>
-                </div>
-              </div>
+            
+              <label for="role">Rôle :</label>
+                <select name="role" id="role">
+                  <option value="probleme_technique">Commercial</option>
+                  <option value="demande_information">Comptable</option>
+                  
+              </select>
             </div>
-
-                <button type="submit" class="btn btn-primary form-btn">Enregistrer</button>
-                <?php
-                if (isset($_POST['addr']) && isset($_POST['num_fac']) && isset($_POST['ht']) && isset($_POST['ttc']) && isset($_POST['tva']) && isset($_POST['date']) && isset($_POST['type_frais']) ){
-                  $ed = $_SESSION['roles'];
-                  $addr = $_POST['addr'];
-                  $num_fac = $_POST['num_fac'];
-                  $ht = $_POST['ht'];
-                  $ttc = $_POST['ttc'];
-                  $tva = $_POST['tva'];
-                  $date = $_POST['date'];
-                  $type = $_POST['type_frais'];
-                  $etat_facture = 3;
-
-                  $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
-
-                  $stmt = $db->prepare('INSERT INTO facture (etat_facture,date_ajout, montant_ht, montant_ttc, type_frais, editeur, addr, num_fac, tva) VALUES (:etat_facture, :dateV, :ht, :ttc, :type_frais, :editeur, :addr, :num_fac, :tva)');
-                  $stmt->bindParam(':etat_facture',$etat_facture );
-                  $stmt->bindParam(':dateV', $date);
-                  $stmt->bindParam(':ht', $ht);
-                  $stmt->bindParam(':ttc', $ttc);
-                  $stmt->bindParam(':type_frais', $type);
-                  $stmt->bindParam(':editeur', $ed);
-                  $stmt->bindParam(':addr', $addr);
-                  $stmt->bindParam(':num_fac', $num_fac);
-                  $stmt->bindParam(':tva', $tva);
-                
-                  $stmt->execute();
-
-                  echo '<div class="alert-success alert-dismissible fade show" role="alert">
-                  <strong>OK.</strong> Une facture vient dêtre ajouté !
-                  </div>';
-                }
-                    ?>
-              </form>
-
+            <div class="form-group">
+              <label for="reason-details">Détails :</label>
+              <textarea id="reason-details" name="reason-details" placeholder="Précisez la raison..."></textarea>
             </div>
-          </div>
+            <button type="submit" class="ticket-btn">Envoyer</button>
+          </form>
         </div>
-
-        <footer class="footer">
-          <div class="text-center">
-            <div class="col-12 col-sm-auto text-center">
-              <p class="mb-0 text-600">
-                © COPYRIGHT 2022-2024
-                <span class="d-none d-sm-inline-block">| </span
-                ><br class="d-sm-none" />
-                2024 &copy; <a href="index.html">Analys</a>
-              </p>
-            </div>
-            <div class="col-12 col-sm-auto text-center">
-              <p class="mb-0 text-600">v1.0</p>
-            </div>
-          </div>
-        </footer>
+        <footer>
 
 
     <!-- ===============================================--><!--    JavaScripts--><!-- ===============================================-->
@@ -1917,6 +1786,7 @@
     <script src="../../../polyfill.io/v3/polyfill.min58be.js?features=window.scroll"></script>
     <script src="vendors/list.js/list.min.js"></script>
     <script src="assets/js/theme.js"></script>
+          </footer>
   </body>
 
 

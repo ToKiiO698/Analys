@@ -179,7 +179,7 @@
                         <ul class="nav collapse show " id="dashboard">
 
                           <li class="nav-item">
-                            <a class="nav-link" href="../commercial/o-tickets.php">
+                            <a class="nav-link" href="o-tickets.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Ouvrir un tickets</span>
                               </div> </a>
@@ -187,7 +187,7 @@
                           </li>
 
                           <li class="nav-item">
-                            <a class="nav-link" href="../commercial/m-tickets.php">
+                            <a class="nav-link" href="m-tickets.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Voir mes tickets</span>
                               </div> </a>

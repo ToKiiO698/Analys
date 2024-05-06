@@ -570,7 +570,6 @@
                         </div> </a>
                      
                     </li>
-                      <ul class="nav collapse show navbar-vertical-content" id="dashboard">
                         <li class="nav-item">
                           <a class="nav-link" href="dashboard/support.php">
                             <div class="d-flex align-items-center">
@@ -578,25 +577,6 @@
                             </div> </a>
                           
                         </li>
-                        <ul class="nav collapse show " id="dashboard">
-
-                          <li class="nav-item">
-                            <a class="nav-link" href="commercial/o-tickets.php">
-                              <div class="d-flex align-items-center">
-                                <span class="nav-link-text ps-1">Ouvrir un tickets</span>
-                              </div> </a>
-                            
-                          </li>
-
-                          <li class="nav-item">
-                            <a class="nav-link" href="commercial/m-tickets.php">
-                              <div class="d-flex align-items-center">
-                                <span class="nav-link-text ps-1">Voir mes tickets</span>
-                              </div> </a>
-                            
-                          </li>
-                        
-                      </ul>
                                        
                     <li class="nav-item">
                       <a class="nav-link" href="commercial/facture.php">
@@ -617,6 +597,13 @@
                             <a class="nav-link" href="commercial/r-facture.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Remboursé</span>
+                              </div> </a>
+                            
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="commercial/ref-facture.php">
+                              <div class="d-flex align-items-center">
+                                <span class="nav-link-text ps-1">Refusée</span>
                               </div> </a>
                             
                           </li>
@@ -1107,7 +1094,7 @@
                     >0</span>
                   <span class="fw-normal text-600">facture remboursé</span>
                 </h4>
-                <a class="btn btn-outline-success btn-sm btn-facture" href="comptable/facture-r.php">Voir les factures remboursé</a>
+                <a class="btn btn-outline-success btn-sm btn-facture" href="commercial/r-facture.php">Voir les factures remboursé</a>
                 
               </div>
               <div
@@ -1139,7 +1126,7 @@
                     >0</span> 
                   <span class="fw-normal text-600">Nombre de factures remboursé</span>
                 </h4>
-                <a class="btn btn-outline-warning btn-sm btn-facture" href="commercial/r-facture.php">Voir les factures remboursé</a>
+                <a class="btn btn-outline-warning btn-sm btn-facture" href="commercial/ref-facture.php">Voir les factures refusée</a>
               </div>
 
               <a class="btn btn-outline-primary btn-sm btn-facture" href="commercial/n-facture.php">Nouvelle Facture</a>

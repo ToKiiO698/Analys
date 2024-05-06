@@ -1764,6 +1764,39 @@
           <h1 class="text-center">Bienvenue dans le menu Commercial !</h1>
         </div>
 
+<h2>Liste des factures En attente</h2>
+
+<table>
+    <tr>
+        <th>Adresse</th>
+        <th>Numéro de facture</th>
+        <th>Montant HT</th>
+        <th>Montant TTC</th>
+        <th>TVA</th>
+        <th>Date</th>
+        <th>Type de frais</th>
+    </tr>
+    
+    <?php
+    // Connexion à la base de données
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+
+// Requête pour récupérer toutes les données de la table facture
+$stmt = $db->query('SELECT * FROM facture, etat_facture WHERE facture.etat_facture = 3');
+$factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($factures as $facture): ?>
+    <tr>
+        <td><?php echo $facture['addr']; ?></td>
+        <td><?php echo $facture['num_fac']; ?></td>
+        <td><?php echo $facture['montant_ht']; ?></td>
+        <td><?php echo $facture['montant_ttc']; ?></td>
+        <td><?php echo $facture['tva']; ?></td>
+        <td><?php echo $facture['date_ajout']; ?></td>
+        <td><?php echo $facture['type_frais']; ?></td>
+    </tr>
+    <?php endforeach; ?>
+</table>
+
         <footer class="footer">
           <div class="text-center">
             <div class="col-12 col-sm-auto text-center">
