@@ -610,13 +610,13 @@
                   </a>
                   <ul class="nav collapse show" id="dashboard">
                     <li class="nav-item">
-                      <a class="nav-link active" href="comptable.php">
+                      <a class="nav-link active" href="../comptable.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Acceuil</span>
                         </div> </a>
                     </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="dashboard/support.php">
+                          <a class="nav-link" href="../dashboard/support.php">
                             <div class="d-flex align-items-center">
                               <span class="nav-link-text ps-1">Support</span>
                             </div> </a>
@@ -627,14 +627,14 @@
                       </ul>
                                        
                     <li class="nav-item">
-                      <a class="nav-link" href="comptable.php">
+                      <a class="nav-link" href="../comptable.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Factures</span>
                         </div> </a>
 
                         <ul class="nav collapse show navbar-vertical-content" id="dashboard">
                           <li class="nav-item">
-                            <a class="nav-link" href="comptable/facture-a.php">
+                            <a class="nav-link" href="facture-a.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">En attente</span>
                               </div> </a>
@@ -642,7 +642,7 @@
                           </li>
 
                           <li class="nav-item">
-                            <a class="nav-link" href="comptable/facture-r.php">
+                            <a class="nav-link" href="facture-r.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Remboursé</span>
                               </div> </a>
@@ -650,7 +650,7 @@
                           </li>
 
                           <li class="nav-item">
-                            <a class="nav-link" href="comptable/facture-ref.php">
+                            <a class="nav-link" href="facture-ref.php">
                               <div class="d-flex align-items-center">
                                 <span class="nav-link-text ps-1">Refusé</span>
                               </div> </a>
