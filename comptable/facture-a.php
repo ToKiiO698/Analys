@@ -1752,59 +1752,37 @@
           </script>
         </header>
 
-        <div>
-          <h1 class="text-center">Bienvenue dans la page factures en attentes !</h1>
-        </div>
-        <h5>Cette page répertorie toutes les factures sont en attentes</h5>
-        <p>Factures en attentes</p>
+        <h2>Liste des factures En attente</h2>
 
-        <table class="table table-striped">
-  <thead>
+<table>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Factures</th>
-      <th scope="col">Date</th>
-      <th scope="col">Validation</th>
+        <th>Adresse</th>
+        <th>Numéro de facture</th>
+        <th>Montant HT</th>
+        <th>Montant TTC</th>
+        <th>TVA</th>
+        <th>Date</th>
+        <th>Type de frais</th>
     </tr>
-  </thead>
-  <tbody class="table-group-divider">
+    
+    <?php
+    // Connexion à la base de données
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+
+// Requête pour récupérer toutes les données de la table facture
+$stmt = $db->query('SELECT * FROM facture, etat_facture WHERE facture.etat_facture = 3');
+$factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($factures as $facture): ?>
     <tr>
-      <th scope="row">1</th>
-      <td>1326</td>
-      <td>30/04/2024</td>
-      <td>attente</td>
+        <td><?php echo $facture['addr']; ?></td>
+        <td><?php echo $facture['num_fac']; ?></td>
+        <td><?php echo $facture['montant_ht']; ?></td>
+        <td><?php echo $facture['montant_ttc']; ?></td>
+        <td><?php echo $facture['tva']; ?></td>
+        <td><?php echo $facture['date_ajout']; ?></td>
+        <td><?php echo $facture['type_frais']; ?></td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>1321</td>
-      <td>20/04/2024</td>
-      <td>attente</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>1318</td>
-      <td>15/04/2024</td>
-      <td>attente</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>1315</td>
-      <td>13/04/2024</td>
-      <td>attente</td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>1311</td>
-      <td>10/04/2024</td>
-      <td>attente</td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td>1306</td>
-      <td>06/04/2024</td>
-      <td>attente</td>
-    </tr>
-  </tbody>
+    <?php endforeach; ?>
 </table>
 
         <footer class="footer">
