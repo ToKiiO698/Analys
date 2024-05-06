@@ -591,100 +591,82 @@
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
-              <div class="navbar-vertical-content scrollbar">
-                <ul class="navbar-nav flex-column mb-3" id="navbarVerticalNav">
-                  <li class="nav-item">
-                    <!-- parent pages--><a
-                      class="nav-link dropdown-indicator"
-                      href="#dashboard"
-                      role="button"
-                      data-bs-toggle="collapse"
-                      aria-expanded="true"
-                      aria-controls="dashboard"
-                    >
-                      <div class="d-flex align-items-center">
-                        <span class="nav-link-icon"
-                          ><span class="fas fa-chart-pie"></span></span
-                        ><span class="nav-link-text ps-1">Dashboard</span>
-                      </div>
-                    </a>
-                    <ul class="nav collapse show" id="dashboard">
-                      <li class="nav-item">
-                        <a class="nav-link active" href="../comptable.php">
-                          <div class="d-flex align-items-center">
-                            <span class="nav-link-text ps-1">Acceuil</span>
-                          </div> </a>
-                       
-                      </li>
+            <div class="navbar-vertical-content scrollbar">
+              <ul class="navbar-nav flex-column mb-3" id="navbarVerticalNav">
+                <li class="nav-item">
+                  <!-- parent pages--><a
+                    class="nav-link dropdown-indicator"
+                    href="#dashboard"
+                    role="button"
+                    data-bs-toggle="collapse"
+                    aria-expanded="true"
+                    aria-controls="dashboard"
+                  >
+                    <div class="d-flex align-items-center">
+                      <span class="nav-link-icon"
+                        ><span class="fas fa-chart-pie"></span></span
+                      ><span class="nav-link-text ps-1">Dashboard</span>
+                    </div>
+                  </a>
+                  <ul class="nav collapse show" id="dashboard">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="comptable.php">
+                        <div class="d-flex align-items-center">
+                          <span class="nav-link-text ps-1">Acceuil</span>
+                        </div> </a>
+                    </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="dashboard/support.php">
+                            <div class="d-flex align-items-center">
+                              <span class="nav-link-text ps-1">Support</span>
+                            </div> </a>
+                          
+                        </li>
+                        <ul class="nav collapse show " id="dashboard">
+                        
+                      </ul>
+                                       
+                    <li class="nav-item">
+                      <a class="nav-link" href="comptable.php">
+                        <div class="d-flex align-items-center">
+                          <span class="nav-link-text ps-1">Factures</span>
+                        </div> </a>
+
                         <ul class="nav collapse show navbar-vertical-content" id="dashboard">
                           <li class="nav-item">
-                            <a class="nav-link" href="support.php">
+                            <a class="nav-link" href="comptable/facture-a.php">
                               <div class="d-flex align-items-center">
-                                <span class="nav-link-text ps-1">Support</span>
+                                <span class="nav-link-text ps-1">En attente</span>
                               </div> </a>
                             
                           </li>
-                          <ul class="nav collapse show " id="dashboard">
-  
-                            <li class="nav-item">
-                              <a class="nav-link" href="o-ticket.php">
-                                <div class="d-flex align-items-center">
-                                  <span class="nav-link-text ps-1">Ouvrir un tickets</span>
-                                </div> </a>
-                              
-                            </li>
-  
-                            <li class="nav-item">
-                              <a class="nav-link" href="m-ticket.php">
-                                <div class="d-flex align-items-center">
-                                  <span class="nav-link-text ps-1">Voir mes tickets</span>
-                                </div> </a>
-                              
-                            </li>
-                          
-                        </ul>
-                                         
-                      <li class="nav-item">
-                        <a class="nav-link" href="../comptable.php">
-                          <div class="d-flex align-items-center">
-                            <span class="nav-link-text ps-1">Factures</span>
-                          </div> </a>
-  
-                          <ul class="nav collapse show navbar-vertical-content" id="dashboard">
-                            <li class="nav-item">
-                              <a class="nav-link" href="facture-a.php">
-                                <div class="d-flex align-items-center">
-                                  <span class="nav-link-text ps-1">En attente</span>
-                                </div> </a>
-                              
-                            </li>
-  
-                            <li class="nav-item">
-                              <a class="nav-link" href="facture-r.php">
-                                <div class="d-flex align-items-center">
-                                  <span class="nav-link-text ps-1">Remboursé</span>
-                                </div> </a>
-                              
-                            </li>
-  
-                            <li class="nav-item">
-                              <a class="nav-link" href="facture-ref.php">
-                                <div class="d-flex align-items-center">
-                                  <span class="nav-link-text ps-1">Refusé</span>
-                                </div> </a>
-                              
-                            </li>
-                          </ul>
-  
-                            
+
+                          <li class="nav-item">
+                            <a class="nav-link" href="comptable/facture-r.php">
+                              <div class="d-flex align-items-center">
+                                <span class="nav-link-text ps-1">Remboursé</span>
+                              </div> </a>
                             
                           </li>
-                      
+
+                          <li class="nav-item">
+                            <a class="nav-link" href="comptable/facture-ref.php">
+                              <div class="d-flex align-items-center">
+                                <span class="nav-link-text ps-1">Refusé</span>
+                              </div> </a>
+                            
+                          </li>
+                        </ul>
+
+                          
+                          
                         </li>
-                      </ul>
-                    </li>
-              </div>
+                    
+                      </li>
+                    </ul>
+                  </li>
             </div>
+          </div>
         </nav>
         <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand-lg" style="display: none;">
           <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
