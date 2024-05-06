@@ -615,7 +615,7 @@
                   </a>
                   <ul class="nav collapse show" id="dashboard">
                     <li class="nav-item">
-                      <a class="nav-link" href="../commercial.php">
+                      <a class="nav-link" href="#">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Retour</span>
                         </div>
