@@ -1778,6 +1778,7 @@
                   </div>
                 </div>
               </div>
+              
 
               <form class="form-admin" method="POST" enctype="multipart/form-data">
                 <div class="row">
