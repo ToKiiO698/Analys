@@ -3343,8 +3343,23 @@
     </tr>
   </thead>
   <tbody>
-    
-    <?php
+
+
+  <?php
+    // Vérifie si l'ID de l'utilisateur est passé en paramètre
+    if (isset($_POST['id'])) {
+        $userId = $_POST['id'];
+
+        // Connexion à la base de données
+        $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+
+        // Préparation et exécution de la requête de suppression
+        $stmt = $db->prepare('DELETE FROM user WHERE id = :id');
+        $stmt->bindParam(':id', $userId);
+        $stmt->execute();
+    }
+
+
     // Connexion à la base de données
     $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
 
@@ -3361,6 +3376,42 @@
     <?php endforeach; ?>
   </tbody>
 </table>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Sélectionne tous les boutons de classe 'delete-btn'
+    const deleteButtons = document.querySelectorAll('.delete-btn');
+
+    // Ajoute un gestionnaire d'événements click à chaque bouton
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const userId = this.getAttribute('data-id');
+
+            // Envoi de la requête AJAX
+            fetch('g-utilisateur.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: 'id=' + encodeURIComponent(userId)
+            })
+            .then(response => {
+                // Gérer la réponse de la requête
+                if (response.ok) {
+                    // Recharger la page ou mettre à jour l'affichage après suppression
+                    window.location.reload(); // Recharge la page actuelle
+                } else {
+                    console.error('Erreur lors de la suppression de l\'utilisateur');
+                }
+            })
+            .catch(error => {
+                console.error('Erreur lors de la suppression de l\'utilisateur:', error);
+            });
+        });
+    });
+});
+</script>
 
 <!-- Inclure les fichiers JavaScript de DataTables -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
