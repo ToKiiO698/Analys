@@ -1900,13 +1900,9 @@
 
               <?php
 
-<<<<<<< HEAD
                 require './bdd.php';
 
                 if(isset($_FILES['file']))[
-=======
-                if(isset($_FILES['file'])){
->>>>>>> 45e2134742307a002df109aae6e1bebd38e4bbb0
                   $tmpName = $_FILES['file']['tmp_name'];
                   $name = $_FILES['file']['name'];
                   $size = $_FILES['file']['size'];
