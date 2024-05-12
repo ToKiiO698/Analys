@@ -1779,7 +1779,7 @@
                 </div>
               </div>
 
-              <form class="form-admin" method="POST">
+              <form class="form-admin" method="POST" enctype="multipart/form-data">
                 <div class="row">
                   <!--<div class="col-md-6 ">
                     <label for="id" class="form-label">Prénom/Nom</label>
@@ -1851,30 +1851,6 @@
                   </select>
                 </div>
               </div>
-              <div class="col-md-3">
-                <div class="mb-3">
-                <label for="file">Joindre un fichier</label>
-                <input type="file" name="file" id="file">
-                <?php
-                if (isset($_FILES["file"]) && $_FILES["file"]["error"] == UPLOAD_ERR_OK) {
-                  // Spécifier l'emplacement où vous souhaitez enregistrer les fichiers téléchargés
-                  $upload_directory = "../assets/facture/";
-          
-                  // Récupérer le nom du fichier téléchargé
-                  $filename = $_FILES["file"]["name"];
-          
-                  // Déplacer le fichier téléchargé vers le répertoire de destination
-                  if (move_uploaded_file($_FILES["file"]["tmp_name"], $upload_directory . $filename)) {
-                      echo "Le fichier $filename a été téléchargé avec succès.";
-                  } else {
-                      echo "Une erreur s'est produite lors du téléchargement du fichier.";
-                  }
-              } else {
-                  echo "Erreur: Veuillez sélectionner un fichier à télécharger.";
-              }
-                ?>
-                </div>
-              </div>
             </div>
 
                 <button type="submit" class="btn btn-primary form-btn">Enregistrer</button>
@@ -1911,7 +1887,11 @@
                   <strong>OK.</strong> Une facture vient dêtre ajouté !
                   </div>';
                 }
-<<<<<<< HEAD
+
+                    ?>
+              </form>
+
+              <?php
 
                 if(isset($_FILES['file']))[
                   $tmpName = $_FILES['file']['tmp_name'];
@@ -1921,23 +1901,30 @@
 
                   $tabExtension = explode('.', $name);
                   $extension = strtolower(end($tabExtension));
-                
+
                   //Extension accepter
                   $extensions = ['pdf'];
+
                   if(in_array($extension, $extensions)){
+                  
+                    // Permet de générer un nom unique du genre : 5f586bf96dcd38.73540086
+                    $uniqueName = uniqid('', true);
+                    // Rajoute l'extension au nom unique
+                    $file = $uniqueName.".".$extension;
+
                     move_uploaded_file($tmpName, './facture/'.$name);
+
+                    $req = $db->prepare('INSERT INTO file VALUES (?)');
+                    $req->execute([$file]);
+
                   }
                   else{
                     echo "Mauvaise extension";
                   }
 
                 ]
-                
+              ?>
 
-=======
->>>>>>> 4f5d2d289eed2ad0f6ca9bf6cba1c62aefeedab8
-                    ?>
-              </form>
 
             </div>
           </div>
