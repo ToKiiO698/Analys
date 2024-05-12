@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en-US" dir="ltr">
-  <!-- Mirrored from prium.github.io/falcon/v3.20.0/dashboard/lms.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:07:58 GMT -->
-  <!-- Added by HTTrack --><meta
+  <meta
     http-equiv="content-type"
     content="text/html;charset=utf-8"
   /><!-- /Added by HTTrack -->
@@ -5681,5 +5680,5 @@
     <script src="../assets/js/theme.js"></script>
   </body>
 
-  <!-- Mirrored from prium.github.io/falcon/v3.20.0/dashboard/lms.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:07:59 GMT -->
+
 </html>
