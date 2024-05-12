@@ -1851,12 +1851,34 @@
                   </select>
                 </div>
               </div>
+              <div class="col-md-3">
+                <div class="mb-3">
+                <label for="file">Joindre un fichier</label>
+                <input type="file" name="file" id="file">
+                <?php
+                if (isset($_FILES["file"]) && $_FILES["file"]["error"] == UPLOAD_ERR_OK) {
+                  // Spécifier l'emplacement où vous souhaitez enregistrer les fichiers téléchargés
+                  $upload_directory = "../assets/facture/";
+          
+                  // Récupérer le nom du fichier téléchargé
+                  $filename = $_FILES["file"]["name"];
+          
+                  // Déplacer le fichier téléchargé vers le répertoire de destination
+                  if (move_uploaded_file($_FILES["file"]["tmp_name"], $upload_directory . $filename)) {
+                      echo "Le fichier $filename a été téléchargé avec succès.";
+                  } else {
+                      echo "Une erreur s'est produite lors du téléchargement du fichier.";
+                  }
+              } else {
+                  echo "Erreur: Veuillez sélectionner un fichier à télécharger.";
+              }
+                ?>
+                </div>
+              </div>
             </div>
 
                 <button type="submit" class="btn btn-primary form-btn">Enregistrer</button>
 
-                <label for="file">Joindre un fichier (.pdf)</label>
-                <input type="file" name="file">
 
                 <?php
                 if (isset($_POST['addr']) && isset($_POST['num_fac']) && isset($_POST['ht']) && isset($_POST['ttc']) && isset($_POST['tva']) && isset($_POST['date']) && isset($_POST['type_frais']) ){
@@ -1889,6 +1911,7 @@
                   <strong>OK.</strong> Une facture vient dêtre ajouté !
                   </div>';
                 }
+<<<<<<< HEAD
 
                 if(isset($_FILES['file']))[
                   $tmpName = $_FILES['file']['tmp_name'];
@@ -1911,6 +1934,8 @@
                 ]
                 
 
+=======
+>>>>>>> 4f5d2d289eed2ad0f6ca9bf6cba1c62aefeedab8
                     ?>
               </form>
 
