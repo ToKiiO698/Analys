@@ -3343,6 +3343,7 @@
     </tr>
   </thead>
   <tbody>
+    
     <?php
     // Connexion à la base de données
     $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
@@ -3354,7 +3355,7 @@
       <tr>
         <td><?php echo $user['nom']; ?></td>
         <td><?php echo $user['roles']; ?></td>
-        <td><button class="btn btn-primary delete-btn" data-id="<?php echo $user['id']; ?>">Supprimer</button></td>
+        <td><button type="submit" class="btn btn-primary delete-btn" data-id="<?php echo $user['id']; ?>">Supprimer</button></td>
         <td><a href="m-utilisateur.php?id=<?php echo $user['id']; ?>" class="btn btn-primary">Modifier</a></td>
       </tr>
     <?php endforeach; ?>

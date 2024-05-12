@@ -1900,6 +1900,8 @@
 
               <?php
 
+                require './bdd.php';
+
                 if(isset($_FILES['file'])){
                   $tmpName = $_FILES['file']['tmp_name'];
                   $name = $_FILES['file']['name'];
@@ -1920,6 +1922,9 @@
                     $file = $uniqueName.".".$extension;
 
                     move_uploaded_file($tmpName, '../assets/facture/'.$name);
+
+                    $req = $db->prepare('INSERT INTO facture (justificatif) VALUES (name)');
+                    $req->execute([$facture]);
 
                   }
                   else{
