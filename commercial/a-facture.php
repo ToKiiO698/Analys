@@ -1785,7 +1785,8 @@
     $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
 
     // Requête pour récupérer toutes les données de la table facture
-    $stmt = $db->query('SELECT * FROM facture, etat_facture WHERE facture.etat_facture = 3');
+    // Requête pour récupérer toutes les données de la table facture
+$stmt = $db->query('SELECT f.addr, f.tva, f.type_frais, f.id_facture, f.date_ajout, f.montant_ht, f.montant_ttc, f.justificatif, f.num_fac FROM facture f INNER JOIN etat_facture e ON f.etat_facture = e.id_etat WHERE f.etat_facture = 3');
     $factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($factures as $facture): ?>
       <tr>

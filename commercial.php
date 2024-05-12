@@ -1091,8 +1091,24 @@
                   <span
                     class="text-700 mx-2"
                     data-countup='{"endValue":"4968"}' 
-                    >0</span>
-                  <span class="fw-normal text-600">facture remboursé</span>
+                    ><?php
+// Connexion à la base de données
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+
+// Nom de la table à compter
+$table_name = 'facture';
+
+// Requête pour compter le nombre de lignes dans la table
+$stmt = $db->query("SELECT COUNT(*) AS count FROM $table_name WHERE etat_facture = 4");
+$count = $stmt->fetch(PDO::FETCH_ASSOC)['count'];
+
+echo "$count";
+?>
+
+                  
+                  
+                  </span>
+                  <span class="fw-normal text-600">facture(s) remboursé</span>
                 </h4>
                 <a class="btn btn-outline-success btn-sm btn-facture" href="commercial/r-facture.php">Voir les factures remboursé</a>
                 
@@ -1107,8 +1123,20 @@
                   <span
                     class="text-700 mx-2"
                     data-countup='{"endValue":"4968"}' 
-                    >0</span>  
-                  <span class="fw-normal text-600">Nombre de facture en attente</span>
+                    ><?php
+// Connexion à la base de données
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+
+// Nom de la table à compter
+$table_name = 'facture';
+
+// Requête pour compter le nombre de lignes dans la table
+$stmt = $db->query("SELECT COUNT(*) AS count FROM $table_name WHERE etat_facture = 3");
+$count = $stmt->fetch(PDO::FETCH_ASSOC)['count'];
+
+echo "$count";
+?></span>  
+                  <span class="fw-normal text-600">facture(s) en attente</span>
                 </h4>
                 <a class="btn btn-outline-primary btn-sm btn-facture" href="commercial/a-facture.php">Voir les factures en attente</a>
                 
@@ -1123,8 +1151,20 @@
                   <span
                     class="text-700 mx-2"
                     data-countup='{"endValue":"1054"}'
-                    >0</span> 
-                  <span class="fw-normal text-600">Nombre de factures <br> non-remboursé</span>
+                    ><?php
+// Connexion à la base de données
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+
+// Nom de la table à compter
+$table_name = 'facture';
+
+// Requête pour compter le nombre de lignes dans la table
+$stmt = $db->query("SELECT COUNT(*) AS count FROM $table_name WHERE etat_facture = 5");
+$count = $stmt->fetch(PDO::FETCH_ASSOC)['count'];
+
+echo "$count";
+?></span> 
+                  <span class="fw-normal text-600">facture(s) non-remboursé</span>
                 </h4>
                 <a class="btn btn-outline-warning btn-sm btn-facture" href="commercial/ref-facture.php">Voir les factures refusée</a>
               </div>
