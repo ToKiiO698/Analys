@@ -1924,7 +1924,7 @@
                     move_uploaded_file($tmpName, '../assets/facture/'.$name);
 
                     $req = $db->prepare('INSERT INTO facture (justificatif) VALUES (name)');
-                    $req->execute([$file]);
+                    $req->execute([$facture]);
 
                   }
                   else{
