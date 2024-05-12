@@ -1854,6 +1854,11 @@
             </div>
 
                 <button type="submit" class="btn btn-primary form-btn">Enregistrer</button>
+
+                <label for="file">Joindre un fichier (.pdf)</label>
+                <input type="file" name="file">
+                <button type="submit">Ajouter</button>
+
                 <?php
                 if (isset($_POST['addr']) && isset($_POST['num_fac']) && isset($_POST['ht']) && isset($_POST['ttc']) && isset($_POST['tva']) && isset($_POST['date']) && isset($_POST['type_frais']) ){
                   $ed = $_SESSION['roles'];
