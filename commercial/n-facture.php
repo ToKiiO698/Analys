@@ -1890,23 +1890,26 @@
                   </div>';
                 }
 
-                $tmpName = $_FILES['file']['tmp_name'];
-                $name = $_FILES['file']['name'];
-                $size = $_FILES['file']['size'];
-                $error = $_FILES['file']['error'];
+                if(isset($_FILES['file']))[
+                  $tmpName = $_FILES['file']['tmp_name'];
+                  $name = $_FILES['file']['name'];
+                  $size = $_FILES['file']['size'];
+                  $error = $_FILES['file']['error'];
 
-                $tabExtension = explode('.', $name);
-                $extension = strtolower(end($tabExtension));
+                  $tabExtension = explode('.', $name);
+                  $extension = strtolower(end($tabExtension));
                 
-                //Tableau des extensions que l'on accepte
-                $extensions = ['pdf'];
-                if(in_array($extension, $extensions)){
-                  move_uploaded_file($tmpName, './upload/'.$name);
-                }
-                else{
-                  echo "Mauvaise extension";
-                }
-                
+                  //Extension accepter
+                  $extensions = ['pdf'];
+                  if(in_array($extension, $extensions)){
+                    move_uploaded_file($tmpName, './facture/'.$name);
+                  }
+                  else{
+                    echo "Mauvaise extension";
+                  }
+
+                ]
+
                     ?>
               </form>
 
