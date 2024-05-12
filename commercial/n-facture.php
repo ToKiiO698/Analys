@@ -1851,12 +1851,34 @@
                   </select>
                 </div>
               </div>
+              <div class="col-md-3">
+                <div class="mb-3">
+                <label for="file">Joindre un fichier</label>
+                <input type="file" name="file" id="file">
+                <?php
+                if (isset($_FILES["file"]) && $_FILES["file"]["error"] == UPLOAD_ERR_OK) {
+                  // Spécifier l'emplacement où vous souhaitez enregistrer les fichiers téléchargés
+                  $upload_directory = "../assets/facture/";
+          
+                  // Récupérer le nom du fichier téléchargé
+                  $filename = $_FILES["file"]["name"];
+          
+                  // Déplacer le fichier téléchargé vers le répertoire de destination
+                  if (move_uploaded_file($_FILES["file"]["tmp_name"], $upload_directory . $filename)) {
+                      echo "Le fichier $filename a été téléchargé avec succès.";
+                  } else {
+                      echo "Une erreur s'est produite lors du téléchargement du fichier.";
+                  }
+              } else {
+                  echo "Erreur: Veuillez sélectionner un fichier à télécharger.";
+              }
+                ?>
+                </div>
+              </div>
             </div>
 
                 <button type="submit" class="btn btn-primary form-btn">Enregistrer</button>
 
-                <label for="file">Joindre un fichier (.pdf)</label>
-                <input type="file" name="file">
 
                 <?php
                 if (isset($_POST['addr']) && isset($_POST['num_fac']) && isset($_POST['ht']) && isset($_POST['ttc']) && isset($_POST['tva']) && isset($_POST['date']) && isset($_POST['type_frais']) ){
@@ -1889,24 +1911,6 @@
                   <strong>OK.</strong> Une facture vient dêtre ajouté !
                   </div>';
                 }
-
-                $tmpName = $_FILES['file']['tmp_name'];
-                $name = $_FILES['file']['name'];
-                $size = $_FILES['file']['size'];
-                $error = $_FILES['file']['error'];
-
-                $tabExtension = explode('.', $name);
-                $extension = strtolower(end($tabExtension));
-                
-                //Tableau des extensions que l'on accepte
-                $extensions = ['pdf'];
-                if(in_array($extension, $extensions)){
-                  move_uploaded_file($tmpName, './upload/'.$name);
-                }
-                else{
-                  echo "Mauvaise extension";
-                }
-                
                     ?>
               </form>
 
