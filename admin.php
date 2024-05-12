@@ -2539,7 +2539,19 @@
                   
                   
                   </span>
-                  <span class="fw-normal text-600">Administrateurs</span>
+                  <span class="fw-normal text-600"><?php
+// Connexion à la base de données
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+
+// Nom de la table à compter
+$table_name = 'user';
+
+// Requête pour compter le nombre de lignes dans la table
+$stmt = $db->query("SELECT COUNT(*) AS count FROM $table_name WHERE roles = 1");
+$count = $stmt->fetch(PDO::FETCH_ASSOC)['count'];
+
+echo "$count Administrateur(s)";
+?></span>
                 </h4>
                 
               </div>
@@ -2553,7 +2565,19 @@
                     class="text-700 mx-2"
                     data-countup='{"endValue":"4968"}' 
                     ></span>  
-                  <span class="fw-normal text-600">Comptables</span>
+                  <span class="fw-normal text-600"><?php
+// Connexion à la base de données
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+
+// Nom de la table à compter
+$table_name = 'user';
+
+// Requête pour compter le nombre de lignes dans la table
+$stmt = $db->query("SELECT COUNT(*) AS count FROM $table_name WHERE roles = 2");
+$count = $stmt->fetch(PDO::FETCH_ASSOC)['count'];
+
+echo "$count Comptable(s)";
+?></span>
                 </h4>
                 
               </div>
@@ -2567,11 +2591,22 @@
                     class="text-700 mx-2"
                     data-countup='{"endValue":"1054"}'
                     ></span> 
-                  <span class="fw-normal text-600"> Commercials</span>
+                  <span class="fw-normal text-600"> <?php
+// Connexion à la base de données
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+
+// Nom de la table à compter
+$table_name = 'user';
+
+// Requête pour compter le nombre de lignes dans la table
+$stmt = $db->query("SELECT COUNT(*) AS count FROM $table_name WHERE roles = 3");
+$count = $stmt->fetch(PDO::FETCH_ASSOC)['count'];
+
+echo "$count Commercial(s)";
+?></span>
                 </h4>
               </div>
 
-                <a href="administration/h-facture.php" class="btn btn-primary facture-btn">Voir les factures</a>
               
               </div>
          

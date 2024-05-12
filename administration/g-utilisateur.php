@@ -1068,7 +1068,7 @@
                 ></span>
               </button>
             </div>
-            <a class="navbar-brand" href="../admin.html">
+            <a class="navbar-brand" href="../admin.php">
               <div class="d-flex align-items-center py-3">
                 <img
                   class="me-2"
