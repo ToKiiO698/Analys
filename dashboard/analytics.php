@@ -2,8 +2,7 @@
 <html data-bs-theme="light" lang="en-US" dir="ltr">
 
   
-<!-- Mirrored from prium.github.io/falcon/v3.20.0/dashboard/analytics.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:07:49 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -3303,5 +3302,4 @@
   </body>
 
 
-<!-- Mirrored from prium.github.io/falcon/v3.20.0/dashboard/analytics.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:07:52 GMT -->
 </html>
