@@ -1923,10 +1923,13 @@
 
                     move_uploaded_file($tmpName, '../assets/facture/'.$name);
 
+                    $req = $db->prepare('INSERT INTO file (name) VALUES (?)');
+                    $req->execute([$file]);
+
                   }
                   else{
                     echo "Mauvaise extension";
-                  }}
+                  }
                 ?>
                 </div>
               </div>
