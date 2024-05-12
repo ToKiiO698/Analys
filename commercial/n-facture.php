@@ -1852,6 +1852,12 @@
                   </select>
                 </div>
               </div>
+              <div class="col-md-3">
+                <div class="mb-3">
+                <label for="file">Fichier</label>
+        <input type="file" name="file">
+                </div>
+              </div>
             </div>
 
                 <button type="submit" class="btn btn-primary form-btn">Enregistrer</button>
@@ -1894,9 +1900,13 @@
 
               <?php
 
+<<<<<<< HEAD
                 require './bdd.php';
 
                 if(isset($_FILES['file']))[
+=======
+                if(isset($_FILES['file'])){
+>>>>>>> 45e2134742307a002df109aae6e1bebd38e4bbb0
                   $tmpName = $_FILES['file']['tmp_name'];
                   $name = $_FILES['file']['name'];
                   $size = $_FILES['file']['size'];
@@ -1915,10 +1925,7 @@
                     // Rajoute l'extension au nom unique
                     $file = $uniqueName.".".$extension;
 
-                    move_uploaded_file($tmpName, './facture/'.$name);
-
-                    $req = $db->prepare('INSERT INTO file VALUES (?)');
-                    $req->execute([$file]);
+                    move_uploaded_file($tmpName, '../assets/facture/'.$name);
 
                   }
                   else{
@@ -1928,39 +1935,6 @@
                 </div>
               </div>
             </div>
-
-                <button type="submit" class="btn btn-primary form-btn">Enregistrer</button>
-
-
-                <?php
-                if (isset($_POST['addr']) && isset($_POST['num_fac']) && isset($_POST['ht']) && isset($_POST['ttc']) && isset($_POST['tva']) && isset($_POST['date']) && isset($_POST['type_frais']) && isset($_POST['file'])){
-                  $ed = $_SESSION['roles'];
-                  $addr = $_POST['addr'];
-                  $num_fac = $_POST['num_fac'];
-                  $ht = $_POST['ht'];
-                  $ttc = $_POST['ttc'];
-                  $tva = $_POST['tva'];
-                  $date = $_POST['date'];
-                  $type = $_POST['type_frais'];
-                  $etat_facture = 3;
-                  $justificatif = $_FILES['file']['name'];
-
-                  $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
-
-                  $stmt = $db->prepare('INSERT INTO facture (etat_facture,date_ajout, montant_ht, montant_ttc, type_frais, editeur, addr, num_fac, tva, justificatif) VALUES (:etat_facture, :dateV, :ht, :ttc, :type_frais, :editeur, :addr, :num_fac, :tva, :justificatif)');
-                  $stmt->bindParam(':etat_facture',$etat_facture );
-                  $stmt->bindParam(':dateV', $date);
-                  $stmt->bindParam(':ht', $ht);
-                  $stmt->bindParam(':ttc', $ttc);
-                  $stmt->bindParam(':type_frais', $type);
-                  $stmt->bindParam(':editeur', $ed);
-                  $stmt->bindParam(':addr', $addr);
-                  $stmt->bindParam(':num_fac', $num_fac);
-                  $stmt->bindParam(':tva', $tva);
-                  $stmt->bindParam(':justificatif', $justificatif);
-
-                ]
-              ?>
 
 
             </div>
