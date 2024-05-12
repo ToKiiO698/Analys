@@ -2520,52 +2520,66 @@
           <div class="row g-0">
             <div class="col-lg-12 pe-lg-2 mb-6 ">
               <div class="card h-lg-100 overflow-hidden facture-compta-comm">
-                <div class="card-header bg-body-tertiary ">
-                  <div class="row align-items-center ">
-                    <div class="col ">
-                      <h6 class="mb-0 ">Facture | Admin</h6>
-                    </div>
-                  </div>
-                </div>
+                
 
-                <div class="card admin-facture" >
-                  <div class="card-body">
-                    <div class="container">
-                      <div class="row">
+                <div class="card mb-3">
+          <div class="card-body px-xxl-0 pt-4">
+            <div class="row g-0">
+            <div
+                class="col-xxl-4 col-md-6 px-4 text-center border-end-md border-bottom border-bottom-xxl-0 pb-4 p-xxl-0 ps-md-0"
+              >
+              <div class="icon-circle icon-circle-success">
+<img src="data:image/png;base64,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">              </div>
+                <h4 class="mb-1 font-sans-serif">
+                  <span
+                    class="text-700 mx-2"
+                    data-countup='{"endValue":"4968"}' 
+                    >
 
-                            <div class="card text-white col-mb-4 nbr-facture">
-                              <div class="card-header">Nombre de facture du moi :</div>
-                              <div class="card-body">
-                                <p class="card-text nbr-facture-nbr">100</p> <!-- Mettre le php -->
-                              </div>
-                            </div>
-
-                            <div class="card text-white col-mb-4 nbr-facture">
-                              <div class="card-header">Nombre de facture payé :</div>
-                              <div class="card-body">
-                                <p class="card-text nbr-facture-nbr">50</p> <!-- Mettre le php -->
-                              </div>
-                            </div>
-
-                            <div class="card text-white col-mb-4 nbr-facture">
-                              <div class="card-header">Nombre de facture impayé :</div>
-                              <div class="card-body">
-                                <p class="card-text nbr-facture-nbr">20</p> <!-- Mettre le php -->
-                              </div>
-                            </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  
+                  
+                  </span>
+                  <span class="fw-normal text-600">Administrateurs</span>
+                </h4>
+                
+              </div>
+              <div
+                class="col-xxl-4 col-md-6 px-3 text-center border-end-md border-bottom border-bottom-xxl-0 pb-3 p-xxl-0 ps-md-0"
+              >
+                <div class="icon-circle icon-circle-primary">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAECElEQVR4nO1ZXWhcRRSeRq0/1Sr6IKK2FQJp78xN1IAICgHRIghSqLG1UH0Q+6J50FCSe87CfRIFEQR98c0fEKFUaUHUJ8G0DYg+mIai0vy4e85dowGtUalYvHLunU2Xmp/ezczdJeSDgeXu3e/MN3Nmzs8qtYENbKBUdA/9cLWJ+BED9IZGHtdA0xroTwM0NjiYXqE6HnHaFSINaqQZg5wuNTQmB1Unoy+euckAf7E4YaDpbEcg2RtA9T6DPJR9B7SgkU8ZoA/kWd9IfYfqFOwcpVs08EQ+UeZs1eO0q/mdgTi9Ulzr/7tE/xrgI8FotVu1F+kmg3zcrvZkGNfuWOnt/piv00h3hkgPG+DXDPK8/e05eabaBY38rF3deZlgiy75juU4HwDdrcpGEE9uNkCzMokA+anWmdJNGultuzNn+g99fZUqE3IW8oPNE5eeiaLYHs9co5G/z/lqT6syYZA+E8MhJIdc8AVIz9hd+UqVBfFtDfSPAf47iKs3u+C8/8XqtRrpD7nJ+qB6uyoDBmqP2evzhFtePpbtcsQHXPKuYJBetoHvFZe8GgjtuXtdlQEDdDQzGNF+l7wakr32nBx1ybu8QaTT+UHne13yBsgP2gzhpPKOOO3SyH+JwZ7Dv9zgkjoYrXZbIWdd8i5tbIS32UicuObuH5m60V4ivyvf0BE/kKfkPO6ae0CSy4ybLijfCCq1J6yxj3zwa4lPyKmIUj5xsbbgt7zwAy1k+Vs8d73yCY30qo0h6In/Z+HfCbO3+eC/aAjo42xHInrSB79B+jFbqEqyS/mEBv5ODPVGdeOFH+mbfKGSAeULcj3KYZQh9YgPGwb4SF7j0PM++HMjEQ3bGHJ8TTzAJ5frtJhWBtBYoQlo5N/y1UoeXZMQlyIwH8UmAPRpI2DJZw10OMDaQ9JJaUVI0QVwxiW5lQF6LxNyafMN+Fc5qBrpzdVK37YLacBEP90qpalMWoorDTTXLCqIkkAVNN6qGxmHi5IhrFBPY6fk83LvSRnbsULCTAR/u+hmWf+XXpJYI+6YXduVWp9GBgNU7xjXakCib+5efN4KmJIuiJebZhm0zCWBUCPta25aS+dDI70vHRX56yCo0OMG+ENpuGVJINA5aaka5Hc18u62Cukdrm+R67bZNeR/D+kShpVquBbjS+2SKfhsdatx2mWAX2hkpdaFpGYfkv5WEQFtE9Idz281QJ83udAJcY1WJr+SEK9c2/N+7Lh1oTlT4T0uDF+WcZdcUgFaEdO9WL+rCHnHuFYocUHSdaQLuyp0j0sRpQoxiy1R/sS1iFWNF8RqQrKgFiA/V5R4zcZdckkmWyT3aXWU4Vpj60KIb5R6/frEuhNiPLipKlWI4zOokb78D+TcY2lRHp6BAAAAAElFTkSuQmCC">               </div>
+                <h4 class="mb-1 font-sans-serif">
+                  <span
+                    class="text-700 mx-2"
+                    data-countup='{"endValue":"4968"}' 
+                    ></span>  
+                  <span class="fw-normal text-600">Comptables</span>
+                </h4>
+                
+              </div>
+              <div
+                class="col-xxl-4 col-md-6 px-3 text-center border-end-md border-bottom border-bottom-xxl-0 pb-3 p-xxl-0 ps-md-0"
+              >
+                <div class="icon-circle icon-circle-warning">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACV0lEQVR4nO1ZzW7UQAy2QOXSwoMUbpU4QOzAoVdEEfAKVVGhwAt4lkMF9Al65VfiMah4ANoKti08AVwg41W5EOSdhN0DbWY3ZHeymk/KzR77G/9MZANERETURs6L53pMdy3jG2HqWkYrhvImPqtnM3XF4Gu1qbbrMwAAYbplDX1tynEPYl+kQys1ogBnhOn50KEfhenBT04W863l+f9yS/+yu7U8nz25elEMbQjj7l/7jE/Vp5EPLElYxmMxuDrWITWR62WadM354MiMnE4liV4nSWHKyDi9NiCT3PRS0uIa1ASuQiAQpnv9yzV4lG8vzVUqaKcoa2Ia6XQS8nd3zorBvSIqt6EK1tBbRyS5D4FBGB86IvSqUtgaOlBh7U4QGDLXzZRIt1LYGsxUOOd0AQLDt2dXzhd1klUKl30bAoX4+neaoDX0YWIvusGdxohM+vcEQiBSaaimDxCJQIxIu1NLZqXYpQ1EYEx9X0gkMoQYkTamlsxKscusEIEx9X0hkcgQYkTamFrS9mK3BncmRcIyvm+MSAgQX/9CHgd958sXCiI/2j2g4/SS94BON0UF6w0IDD2mx44IvvAfYjPuBjfEZtr3HmL31wq67upHJV2DQCCM60U3O/RaK/SVOrRSKB3rkgWmjKxD162hX5bptzDdGElZ11wlGV2yaGhhKumE60qiKPLNMZehjoz7cE/3Ezrab7I155wuuO6UPCproojEZq2a1Z2drrsm/Xsigxf+cOR0OvGWtpfmtFPopkgMfi4fzUYcN5gJ4ycx9FJtehd2REQEnIY/TYHj6nejBBAAAAAASUVORK5CYII=">                </div>
+                <h4 class="mb-1 font-sans-serif">
+                  <span
+                    class="text-700 mx-2"
+                    data-countup='{"endValue":"1054"}'
+                    ></span> 
+                  <span class="fw-normal text-600"> Commercials</span>
+                </h4>
+              </div>
 
                 <a href="administration/h-facture.php" class="btn btn-primary facture-btn">Voir les factures</a>
               
               </div>
-            </div>
+         
+              </div>
           </div>
           <div class="row g-0">
             <div class="col-lg-12 pe-lg-2 mb-6 ">
-              <div class="card h-lg-100 overflow-hidden facture-compta-comm">
+              <div class="card h-lg-100 overflow-hidden facture-compta-commE  ">
                 <div class="card-header bg-body-tertiary ">
                   <div class="row align-items-center ">
                     <div class="col ">
@@ -2590,6 +2604,9 @@
               
               </div>
             </div>
+          </div>
+
+          </div>
           </div>
 
           <!-- ===============================================--><!--    Footer--><!-- ===============================================-->
