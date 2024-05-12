@@ -3343,6 +3343,7 @@
     </tr>
   </thead>
   <tbody>
+    
     <?php
     // Connexion à la base de données
     $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
@@ -3360,30 +3361,6 @@
     <?php endforeach; ?>
   </tbody>
 </table>
-<?php
-// Vérifiez si l'ID de l'utilisateur à supprimer a été envoyé via la méthode POST
-if(isset($_POST['data-id'])) {
-    // Connexion à la base de données
-    $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
-
-    // Récupérer l'ID de l'utilisateur à supprimer
-    $userId = $_POST['data-id'];
-
-    // Requête SQL pour supprimer l'utilisateur de la base de données
-    $stmt = $db->prepare('DELETE FROM user WHERE id = :id');
-    $stmt->bindParam(':id', $userId);
-    
-    // Exécuter la requête
-    if ($stmt->execute()) {
-        echo "L'utilisateur a été supprimé avec succès.";
-    } else {
-        echo "Une erreur s'est produite lors de la suppression de l'utilisateur.";
-    }
-} else {
-    // Si l'ID de l'utilisateur n'a pas été envoyé, afficher un message d'erreur
-    echo "Erreur: ID de l'utilisateur manquant.";
-}
-?>
 
 <!-- Inclure les fichiers JavaScript de DataTables -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
