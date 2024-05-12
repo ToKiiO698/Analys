@@ -1894,6 +1894,8 @@
 
               <?php
 
+                require './bdd.php';
+
                 if(isset($_FILES['file']))[
                   $tmpName = $_FILES['file']['tmp_name'];
                   $name = $_FILES['file']['name'];
