@@ -1856,64 +1856,7 @@
                 <label for="file">Joindre un fichier</label>
                 <input type="file" name="file" id="file">
                 <?php
-                if (isset($_FILES["file"]) && $_FILES["file"]["error"] == UPLOAD_ERR_OK) {
-                  // Spécifier l'emplacement où vous souhaitez enregistrer les fichiers téléchargés
-                  $upload_directory = "../assets/facture/";
-          
-                  // Récupérer le nom du fichier téléchargé
-                  $filename = $_FILES["file"]["name"];
-          
-                  // Déplacer le fichier téléchargé vers le répertoire de destination
-                  if (move_uploaded_file($_FILES["file"]["tmp_name"], $upload_directory . $filename)) {
-                      echo "Le fichier $filename a été téléchargé avec succès.";
-                  } else {
-                      echo "Une erreur s'est produite lors du téléchargement du fichier.";
-                  }
-              } else {
-                  echo "Erreur: Veuillez sélectionner un fichier à télécharger.";
-              }
-                ?>
-                </div>
-              </div>
-            </div>
-
-                <button type="submit" class="btn btn-primary form-btn">Enregistrer</button>
-
-
-                <?php
-                if (isset($_POST['addr']) && isset($_POST['num_fac']) && isset($_POST['ht']) && isset($_POST['ttc']) && isset($_POST['tva']) && isset($_POST['date']) && isset($_POST['type_frais']) ){
-                  $ed = $_SESSION['roles'];
-                  $addr = $_POST['addr'];
-                  $num_fac = $_POST['num_fac'];
-                  $ht = $_POST['ht'];
-                  $ttc = $_POST['ttc'];
-                  $tva = $_POST['tva'];
-                  $date = $_POST['date'];
-                  $type = $_POST['type_frais'];
-                  $etat_facture = 3;
-
-                  $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
-
-                  $stmt = $db->prepare('INSERT INTO facture (etat_facture,date_ajout, montant_ht, montant_ttc, type_frais, editeur, addr, num_fac, tva) VALUES (:etat_facture, :dateV, :ht, :ttc, :type_frais, :editeur, :addr, :num_fac, :tva)');
-                  $stmt->bindParam(':etat_facture',$etat_facture );
-                  $stmt->bindParam(':dateV', $date);
-                  $stmt->bindParam(':ht', $ht);
-                  $stmt->bindParam(':ttc', $ttc);
-                  $stmt->bindParam(':type_frais', $type);
-                  $stmt->bindParam(':editeur', $ed);
-                  $stmt->bindParam(':addr', $addr);
-                  $stmt->bindParam(':num_fac', $num_fac);
-                  $stmt->bindParam(':tva', $tva);
-                
-                  $stmt->execute();
-
-                  echo '<div class="alert-success alert-dismissible fade show" role="alert">
-                  <strong>OK.</strong> Une facture vient dêtre ajouté !
-                  </div>';
-                }
-<<<<<<< HEAD
-
-                if(isset($_FILES['file']))[
+                if(isset($_FILES['file'])){
                   $tmpName = $_FILES['file']['tmp_name'];
                   $name = $_FILES['file']['name'];
                   $size = $_FILES['file']['size'];
@@ -1925,17 +1868,54 @@
                   //Extension accepter
                   $extensions = ['pdf'];
                   if(in_array($extension, $extensions)){
-                    move_uploaded_file($tmpName, './facture/'.$name);
+                    move_uploaded_file($tmpName, '../assets/facture/'.$name);
                   }
                   else{
                     echo "Mauvaise extension";
-                  }
+                  }}
+                ?>
+                </div>
+              </div>
+            </div>
 
-                ]
+                <button type="submit" class="btn btn-primary form-btn">Enregistrer</button>
+
+
+                <?php
+                if (isset($_POST['addr']) && isset($_POST['num_fac']) && isset($_POST['ht']) && isset($_POST['ttc']) && isset($_POST['tva']) && isset($_POST['date']) && isset($_POST['type_frais']) && isset($_POST['file'])){
+                  $ed = $_SESSION['roles'];
+                  $addr = $_POST['addr'];
+                  $num_fac = $_POST['num_fac'];
+                  $ht = $_POST['ht'];
+                  $ttc = $_POST['ttc'];
+                  $tva = $_POST['tva'];
+                  $date = $_POST['date'];
+                  $type = $_POST['type_frais'];
+                  $etat_facture = 3;
+                  $justificatif = $_FILES['file']['name'];
+
+                  $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+
+                  $stmt = $db->prepare('INSERT INTO facture (etat_facture,date_ajout, montant_ht, montant_ttc, type_frais, editeur, addr, num_fac, tva, justificatif) VALUES (:etat_facture, :dateV, :ht, :ttc, :type_frais, :editeur, :addr, :num_fac, :tva, :justificatif)');
+                  $stmt->bindParam(':etat_facture',$etat_facture );
+                  $stmt->bindParam(':dateV', $date);
+                  $stmt->bindParam(':ht', $ht);
+                  $stmt->bindParam(':ttc', $ttc);
+                  $stmt->bindParam(':type_frais', $type);
+                  $stmt->bindParam(':editeur', $ed);
+                  $stmt->bindParam(':addr', $addr);
+                  $stmt->bindParam(':num_fac', $num_fac);
+                  $stmt->bindParam(':tva', $tva);
+                  $stmt->bindParam(':justificatif', $justificatif);
+
                 
+                  $stmt->execute();
 
-=======
->>>>>>> 4f5d2d289eed2ad0f6ca9bf6cba1c62aefeedab8
+                  echo '<div class="alert-success alert-dismissible fade show" role="alert">
+                  <strong>OK.</strong> Une facture vient dêtre ajouté !
+                  </div>';
+                }
+
                     ?>
               </form>
 
