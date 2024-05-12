@@ -1093,7 +1093,19 @@
                   <span
                     class="text-700 mx-2"
                     data-countup='{"endValue":"4968"}' 
-                    >0</span>
+                    ><?php
+// Connexion à la base de données
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+
+// Nom de la table à compter
+$table_name = 'facture';
+
+// Requête pour compter le nombre de lignes dans la table
+$stmt = $db->query("SELECT COUNT(*) AS count FROM $table_name WHERE etat_facture = 4");
+$count = $stmt->fetch(PDO::FETCH_ASSOC)['count'];
+
+echo "$count";
+?></span>
                   <span class="fw-normal text-600">facture remboursé</span>
                 </h4>
                 <a class="btn btn-outline-success btn-sm btn-facture" href="comptable/facture-r.php">Voir les factures remboursé</a>
@@ -1108,7 +1120,19 @@
                   <span
                     class="text-700 mx-2"
                     data-countup='{"endValue":"4968"}' 
-                    >0</span>
+                    ><?php
+// Connexion à la base de données
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+
+// Nom de la table à compter
+$table_name = 'facture';
+
+// Requête pour compter le nombre de lignes dans la table
+$stmt = $db->query("SELECT COUNT(*) AS count FROM $table_name WHERE etat_facture = 3");
+$count = $stmt->fetch(PDO::FETCH_ASSOC)['count'];
+
+echo "$count";
+?></span>
                   <span class="fw-normal text-600">facture en attente</span>
                 </h4>
                 <a class="btn btn-outline-primary btn-sm btn-facture" href="comptable/facture-a.php">Voir les factures en attente</a>
@@ -1124,7 +1148,19 @@
                   <span
                     class="text-700 mx-2"
                     data-countup='{"endValue":"1054"}'
-                    >0</span> <!-- Mettre le prix des factures du moi dernier -->
+                    ><?php
+// Connexion à la base de données
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+
+// Nom de la table à compter
+$table_name = 'facture';
+
+// Requête pour compter le nombre de lignes dans la table
+$stmt = $db->query("SELECT COUNT(*) AS count FROM $table_name WHERE etat_facture = 5");
+$count = $stmt->fetch(PDO::FETCH_ASSOC)['count'];
+
+echo "$count";
+?></span> <!-- Mettre le prix des factures du moi dernier -->
                   <span class="fw-normal text-600">factures refusé</span>
                 </h4>
                 <a class="btn btn-outline-warning btn-sm btn-facture" href="comptable/facture-ref.php">Voir les factures refusé</a>
