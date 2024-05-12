@@ -1902,7 +1902,7 @@
 
                 require './bdd.php';
 
-                if(isset($_FILES['file']))[
+                if(isset($_FILES['file'])){
                   $tmpName = $_FILES['file']['tmp_name'];
                   $name = $_FILES['file']['name'];
                   $size = $_FILES['file']['size'];
@@ -1923,13 +1923,13 @@
 
                     move_uploaded_file($tmpName, '../assets/facture/'.$name);
 
-                    $req = $db->prepare('INSERT INTO file (name) VALUES (?)');
+                    $req = $db->prepare('INSERT INTO facture (justificatif) VALUES (name)');
                     $req->execute([$file]);
 
                   }
                   else{
                     echo "Mauvaise extension";
-                  }
+                  }}
                 ?>
                 </div>
               </div>
