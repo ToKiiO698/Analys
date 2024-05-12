@@ -1857,7 +1857,6 @@
 
                 <label for="file">Joindre un fichier (.pdf)</label>
                 <input type="file" name="file">
-                <button type="submit">Ajouter</button>
 
                 <?php
                 if (isset($_POST['addr']) && isset($_POST['num_fac']) && isset($_POST['ht']) && isset($_POST['ttc']) && isset($_POST['tva']) && isset($_POST['date']) && isset($_POST['type_frais']) ){
@@ -1889,6 +1888,23 @@
                   echo '<div class="alert-success alert-dismissible fade show" role="alert">
                   <strong>OK.</strong> Une facture vient dêtre ajouté !
                   </div>';
+                }
+
+                $tmpName = $_FILES['file']['tmp_name'];
+                $name = $_FILES['file']['name'];
+                $size = $_FILES['file']['size'];
+                $error = $_FILES['file']['error'];
+
+                $tabExtension = explode('.', $name);
+                $extension = strtolower(end($tabExtension));
+                
+                //Tableau des extensions que l'on accepte
+                $extensions = ['pdf'];
+                if(in_array($extension, $extensions)){
+                  move_uploaded_file($tmpName, './upload/'.$name);
+                }
+                else{
+                  echo "Mauvaise extension";
                 }
                     ?>
               </form>
