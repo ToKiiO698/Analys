@@ -39,6 +39,7 @@
       href="../assets/img/favicons/favicon.ico"
     />
     <link rel="manifest" href="../assets/img/favicons/manifest.json" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <meta
       name="msapplication-TileImage"
       content="../assets/img/favicons/mstile-150x150.png"
@@ -1753,26 +1754,28 @@
 
         <h2>Liste des factures remboursé</h2>
 
-<table>
+        <table id="factureTable" class="display">
+  <thead>
     <tr>
-        <th>Adresse</th>
-        <th>Numéro de facture</th>
-        <th>Montant HT</th>
-        <th>Montant TTC</th>
-        <th>TVA</th>
-        <th>Date</th>
-        <th>Type de frais</th>
+      <th>Adresse</th>
+      <th>Numéro de facture</th>
+      <th>Montant HT</th>
+      <th>Montant TTC</th>
+      <th>TVA</th>
+      <th>Date</th>
+      <th>Type de frais</th>
     </tr>
-    
+  </thead>
+  <tbody>
     <?php
     // Connexion à la base de données
-$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+    $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
 
-// Requête pour récupérer toutes les données de la table facture
-$stmt = $db->query('SELECT * FROM facture, etat_facture WHERE facture.etat_facture = 4');
-$factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // Requête pour récupérer toutes les données de la table facture
+    $stmt = $db->query('SELECT * FROM facture, etat_facture WHERE facture.etat_facture = 4');
+    $factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($factures as $facture): ?>
-    <tr>
+      <tr>
         <td><?php echo $facture['addr']; ?></td>
         <td><?php echo $facture['num_fac']; ?></td>
         <td><?php echo $facture['montant_ht']; ?></td>
@@ -1780,9 +1783,21 @@ $factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <td><?php echo $facture['tva']; ?></td>
         <td><?php echo $facture['date_ajout']; ?></td>
         <td><?php echo $facture['type_frais']; ?></td>
-    </tr>
+      </tr>
     <?php endforeach; ?>
+  </tbody>
 </table>
+
+<!-- Inclure les fichiers JavaScript de DataTables -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+<script>
+  // Initialiser DataTables sur la table avec l'identifiant "factureTable"
+  $(document).ready(function() {
+    $('#factureTable').DataTable();
+  });
+</script>
 
         <footer class="footer">
           <div class="text-center">

@@ -38,6 +38,7 @@
   <link href="../assets/css/theme.min.css" rel="stylesheet" id="style-default">
   <link href="../assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
   <link href="../assets/css/user.min.css" rel="stylesheet" id="user-style-default">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
   <script>
     var isRTL = JSON.parse(localStorage.getItem('isRTL'));
     if (isRTL) {
@@ -3332,31 +3333,44 @@
 
                 <div class="container-g">
                   <h2 class="text-center">Tableau Utilisateurs</h2>
-                  <table class="table-u" id="userTable">
-                    <tr class="tr-u">
-                      <th class="th-u">Nom</th>
-                      <th class="th-u">Rôles</th>
-                      <th class="th-u ">Supprimer</th>
-                      <th class="th-u">Modifier</th>
-                    </tr>
-                    <?php
-    // Connexion à la base de données
-$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
-
-// Requête pour récupérer toutes les données de la table facture
-$stmt = $db->query('SELECT * FROM user');
-$user = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    foreach ($user as $user): ?>
+                  <table id="userTable" class="display">
+  <thead>
     <tr>
+      <th>Nom</th>
+      <th>Rôles</th>
+      <th>Supprimer</th>
+      <th>Modifier</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php
+    // Connexion à la base de données
+    $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+
+    // Requête pour récupérer toutes les données de la table user
+    $stmt = $db->query('SELECT * FROM user');
+    $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($users as $user): ?>
+      <tr>
         <td><?php echo $user['nom']; ?></td>
         <td><?php echo $user['roles']; ?></td>
-        <td><button class="btn btn-primary" <?php echo $user['id']; ?>>Supprimer</button></td>
-        <td><a href="m-utilisateur.php" class="btn btn-primary"> Modifier</a></td>
-    </tr>
+        <td><button class="btn btn-primary delete-btn" data-id="<?php echo $user['id']; ?>">Supprimer</button></td>
+        <td><a href="m-utilisateur.php?id=<?php echo $user['id']; ?>" class="btn btn-primary">Modifier</a></td>
+      </tr>
     <?php endforeach; ?>
+  </tbody>
+</table>
 
-                   
-                  </table>
+<!-- Inclure les fichiers JavaScript de DataTables -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+<script>
+  // Initialiser DataTables sur la table avec l'identifiant "userTable"
+  $(document).ready(function() {
+    $('#userTable').DataTable();
+  });
+</script>
                   
                 </div>
               </div>
