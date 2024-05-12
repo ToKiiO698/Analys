@@ -75,6 +75,7 @@
       rel="stylesheet"
       id="user-style-default"
     />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <script>
       var isRTL = JSON.parse(localStorage.getItem("isRTL"));
       if (isRTL) {
@@ -1766,18 +1767,7 @@
         <div>
           <h1 class="text-center">Bienvenue dans le menu Commercial !</h1>
         </div>
-        <?php
-// Connexion à la base de données
-$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
-
-// Requête pour récupérer toutes les données de la table facture
-$stmt = $db->query('SELECT * FROM facture, etat_facture WHERE facture.etat_facture = 4');
-$factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
-?>
-
-<h2 class="text-center">Liste des factures Remboursé</h2>
-
-<table class="table table-striped table-hover">
+        <table id="factureTable" class="table table-striped table-hover">
   <thead>
     <tr>
       <th scope="col">Adresse</th>
@@ -1789,8 +1779,16 @@ $factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <th scope="col">Type Frais</th>
     </tr>
   </thead>
-    <?php foreach ($factures as $facture): ?>
-    <tr>
+  <tbody>
+    <?php
+    // Connexion à la base de données
+    $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+
+    // Requête pour récupérer toutes les données de la table facture
+    $stmt = $db->query('SELECT * FROM facture, etat_facture WHERE facture.etat_facture = 4');
+    $factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($factures as $facture): ?>
+      <tr>
         <td><?php echo $facture['addr']; ?></td>
         <td><?php echo $facture['num_fac']; ?></td>
         <td><?php echo $facture['montant_ht']; ?></td>
@@ -1798,9 +1796,21 @@ $factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <td><?php echo $facture['tva']; ?></td>
         <td><?php echo $facture['date_ajout']; ?></td>
         <td><?php echo $facture['type_frais']; ?></td>
-    </tr>
+      </tr>
     <?php endforeach; ?>
+  </tbody>
 </table>
+
+<!-- Inclure les fichiers JavaScript de DataTables -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+<script>
+  // Initialiser DataTables sur la table avec l'identifiant "factureTable"
+  $(document).ready(function() {
+    $('#factureTable').DataTable();
+  });
+</script>
 
 </body>
 
