@@ -1760,12 +1760,13 @@
                   $id = $_POST['id'];
                   $mdp = $_POST['mdp'];
                   $role = $_POST['role'];
+                  $mdp2 = password_hash($mdp, PASSWORD_DEFAULT);
 
                   $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
 
                   $stmt = $db->prepare('INSERT INTO user (nom, mdp, roles) VALUES (:id, :mdp, :role)');
                   $stmt->bindParam(':id',$id );
-                  $stmt->bindParam(':mdp', $mdp);
+                  $stmt->bindParam(':mdp', $mdp2);
                   $stmt->bindParam(':role', $role);
                 
                   $stmt->execute();

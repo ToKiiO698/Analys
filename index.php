@@ -40,7 +40,7 @@
             <div class="col-md-12">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label index-f">Identifiant :</label>
-            <input type="password" class="form-control" name="nom" required>
+            <input type="mail" class="form-control" name="nom" required>
           </div>
           </div>
           </div>
@@ -54,33 +54,45 @@
         </div>
           <button type="submit" class="btn btn-primary index-btn">Comnexion</button>
         <?php
-        if (isset($_POST['nom']) && isset($_POST['mdp'])) {
-            $_nom = $_POST['nom'];
-            $_mdp = $_POST['mdp'];
-            $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'root', '');
-            $stmt = $db->prepare("SELECT * FROM user WHERE nom = :nom AND mdp = :mdp");
-            $stmt->bindParam(':nom', $_nom);
-            $stmt->bindParam(':mdp', $_mdp);
-            $stmt->execute();
-            foreach ($stmt as $row) {
-                $_SESSION['nom'] = $row['nom'];
-                $_SESSION['mdp'] = $row['mdp'];
-                $_SESSION['roles'] = $row['roles'];
-                if ($_SESSION['nom'] == $_nom && $_SESSION['mdp'] == $_mdp) {
-                    if ($_SESSION['roles'] == 1) {
-                        header('Location: admin.php');
-                    } elseif ($_SESSION['roles'] == 2) {
-                        header('Location: commercial.php');
-                    } elseif ($_SESSION['roles'] == 3) {
-                        header('Location: comptable.php');
-                    }
-                    else {
-                        echo 'Erreur';
-                    }
-                }
-            }
-        }   
-        ?>
+
+if (isset($_POST['nom']) && isset($_POST['mdp'])) {
+    $_nom = $_POST['nom'];
+    $_mdp = $_POST['mdp'];
+
+    $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'root', '');
+
+    // Préparez une requête pour sélectionner l'utilisateur en fonction de son nom
+    $stmt = $db->prepare("SELECT * FROM user WHERE nom = :nom");
+    $stmt->bindParam(':nom', $_nom);
+    $stmt->execute();
+
+    // Récupérez la première ligne de résultat
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    // Vérifiez si l'utilisateur existe et si le mot de passe correspond
+    if ($row && password_verify($_mdp, $row['mdp'])) {
+        $_SESSION['nom'] = $row['nom'];
+        $_SESSION['roles'] = $row['roles'];
+
+        // Redirection en fonction du rôle de l'utilisateur
+        if ($_SESSION['roles'] == 1) {
+            header('Location: admin.php');
+            exit(); // Assurez-vous de terminer le script après une redirection
+        } elseif ($_SESSION['roles'] == 2) {
+            header('Location: commercial.php');
+            exit();
+        } elseif ($_SESSION['roles'] == 3) {
+            header('Location: comptable.php');
+            exit();
+        } else {
+            echo 'Erreur';
+        }
+    } else {
+        echo 'Nom d\'utilisateur ou mot de passe incorrect.';
+    }
+}
+?>
+
         </form>
         
       </div>
