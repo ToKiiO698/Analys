@@ -626,7 +626,7 @@
           </script>
         </header>
 
-        <h2 class="text-center">Liste des factures en attente</h2>
+        <h2 class="text-center">Liste des factures refusé</h2>
 
 <table id="factureTable" class="table table-striped table-hover">
   <thead>
