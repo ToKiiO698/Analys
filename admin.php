@@ -510,21 +510,8 @@
                   </a>
                   <li class="nav-item">
                         <button type="submit" name="logout12" id="logout12"><div class="d-flex align-items-center">
-                        <span class="nav-link-text ps-1">Déconnexion</span>
+                        <span class="nav-link-text ps-1"><a href="assets/supprime.php">Déconnexion</a></span>
                         </div> </button>
-                        <?php
-                      
-
-                      if (isset($_POST['logout12'])) {
-                          
-                          // Détruire la session
-                          session_destroy();
-
-                          // Rediriger vers la page de connexion ou d'accueil
-                          header("Location: index.php");
-                          exit;
-                      }
-                    ?>
                         </li>
                   <ul class="nav collapse show" id="dashboard">
                     <li class="nav-item">
