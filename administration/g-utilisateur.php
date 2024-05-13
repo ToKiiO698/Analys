@@ -2922,7 +2922,7 @@
         $userId = $_POST['id'];
 
         // Connexion à la base de données
-        $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+        $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
 
         // Préparation et exécution de la requête de suppression
         $stmt = $db->prepare('DELETE FROM user WHERE id = :id');
@@ -2932,7 +2932,7 @@
 
 
     // Connexion à la base de données
-    $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+    $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
 
     // Requête pour récupérer toutes les données de la table user
     $stmt = $db->query('SELECT * FROM user');

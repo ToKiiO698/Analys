@@ -2888,7 +2888,7 @@ if(isset($_GET['id'])) {
     $id = $_GET['id'];
 
     // Connexion à la base de données
-    $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+    $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
 
     // Requête SQL pour récupérer les informations de l'utilisateur
     $requete = $db->prepare("SELECT * FROM user WHERE id = :id");

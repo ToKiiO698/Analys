@@ -1,8 +1,8 @@
 <?php
 // Paramètres de connexion à la base de données
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "qcrxdvrj";
+$password = "5nKa4$54f@a7w";
 $dbname = "analys";
 
 // Créer une connexion à la base de données

@@ -1091,7 +1091,7 @@
                   <label for="tva" class="form-label">Rôle</label>
                     <select class="form-select form-select-sm" id="role" name="role">
                       <?php
-                          $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+                          $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
                           $data = $db->query('SELECT * FROM roles');
                             while($row = $data->fetch()){
                               echo '<option value="'.$row['id_roles'].'">'.$row['nom_roles'].'</option>';
@@ -1110,7 +1110,7 @@
                   $role = $_POST['role'];
                   $mdp2 = password_hash($mdp, PASSWORD_DEFAULT);
 
-                  $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+                  $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
 
                   $stmt = $db->prepare('INSERT INTO user (nom, mdp, roles) VALUES (:id, :mdp, :role)');
                   $stmt->bindParam(':id',$id );

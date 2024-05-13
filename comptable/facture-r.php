@@ -1107,7 +1107,7 @@
   </thead>
   <tbody>
   <?php
-require '../commercial/bdd.php'; // Connexion à la base de données
+require './bdd.php'; // Connexion à la base de données
 
 $stmt = $db->query('SELECT f.addr, f.date_ajout, f.num_fac, f.montant_ht, f.montant_ttc, 
                    tva.taux as nom_tva, 

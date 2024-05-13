@@ -1513,7 +1513,7 @@
                         <label for="tva" class="form-label">TVA</label>
                         <select class="form-select form-select-sm" id="tva" name="tva">
                         <?php
-                          $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+                          $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'qcrxdvrj', '5nKa4$54f@a7w');
                           $data = $db->query('SELECT * FROM tva');
                             while($row = $data->fetch()){
                               echo '<option value="'.$row['id'].'">'.$row['taux'].'</option>';
@@ -1543,7 +1543,7 @@
                   <label for="type_frais" class="form-label">Type de Frais</label>
                   <select class="form-select form-select-sm" id="type_frais" name="type_frais">
                     <?php
-                      $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+                      $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'qcrxdvrj', '5nKa4$54f@a7w');
                       $data = $db->query('SELECT * FROM type_frais');
                         while($row = $data->fetch()){
                           echo '<option value="'.$row['id_frais'].'">'.$row['type'].'</option>';
@@ -1585,7 +1585,7 @@
                   $extensions = ['pdf'];
                   $maxSize = 400000;
 
-                  $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+                  $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'qcrxdvrj', '5nKa4$54f@a7w');
                   if (in_array($extension, $extensions) && $size <= $maxSize && $error == 0) {
         $uniqueName = uniqid('', true);
         $file = $uniqueName . "." . $extension;

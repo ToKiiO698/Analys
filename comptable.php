@@ -1095,7 +1095,7 @@
                     data-countup='{"endValue":"4968"}' 
                     ><?php
 // Connexion à la base de données
-$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
 
 // Nom de la table à compter
 $table_name = 'facture';
@@ -1122,7 +1122,7 @@ echo "$count";
                     data-countup='{"endValue":"4968"}' 
                     ><?php
 // Connexion à la base de données
-$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
 
 // Nom de la table à compter
 $table_name = 'facture';
@@ -1150,7 +1150,7 @@ echo "$count";
                     data-countup='{"endValue":"1054"}'
                     ><?php
 // Connexion à la base de données
-$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
 
 // Nom de la table à compter
 $table_name = 'facture';

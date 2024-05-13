@@ -1313,7 +1313,7 @@
   </thead>
   <tbody>
   <?php
-  require '../commercial/bdd.php'; // Connexion à la base de données
+  require './bdd.php'; // Connexion à la base de données
 
   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $factureId = $_POST['facture_id'];
