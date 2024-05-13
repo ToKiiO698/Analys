@@ -1813,12 +1813,12 @@ $stmt = $db->query('SELECT f.addr, f.tva, f.type_frais, f.id_facture, f.date_ajo
         <?php
         // Connexion à la base de données et récupération des clients
         $db = new mysqli('localhost', 'root', '', 'analys');
-        $query = "SELECT * FROM clients";
+        $query = "SELECT * FROM facture";
         $result = $db->query($query);
 
         // Affichage des clients avec lien pour afficher la facture
         while ($row = $result->fetch_assoc()) {
-            echo '<li><a href="javascript:void(0);" onclick="showInvoice(' . $row['id'] . ');">' . $row['nom'] . '</a></li>';
+            echo '<li><a href="javascript:void(0);" onclick="showInvoice(' . $row['id'] . ');">' . $row['editeur'] . '</a></li>';
         }
 
         $db->close();
