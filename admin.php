@@ -506,13 +506,33 @@
                         ><span class="fas fa-chart-pie"></span></span
                       ><span class="nav-link-text ps-1">Dashboard</span>
                     </div>
+                    
                   </a>
+                  <li class="nav-item">
+                        <button type="submit" name="logout12" id="logout12"><div class="d-flex align-items-center">
+                        <span class="nav-link-text ps-1">Déconnexion</span>
+                        </div> </button>
+                        <?php
+                      
+
+                      if (isset($_POST['logout12'])) {
+                          
+                          // Détruire la session
+                          session_destroy();
+
+                          // Rediriger vers la page de connexion ou d'accueil
+                          header("Location: index.php");
+                          exit;
+                      }
+                    ?>
+                        </li>
                   <ul class="nav collapse show" id="dashboard">
                     <li class="nav-item">
                       <a class="nav-link active" href="admin.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Acceuil</span>
                         </div> </a>
+                        
                      
                     </li>
                     <li class="nav-item">
@@ -545,28 +565,8 @@
                               </div> </a>
                             
                           </li>
-
-                       
-                        </ul>
-                        <li class="nav-item">
-                        <button type="submit" name="logout12"><div class="d-flex align-items-center">
-                        <span class="nav-link-text ps-1">Déconnexion</span>
-                        </div> </button>
-                    <?php
-                      
-
-                      if (isset($_POST['logout12'])) {
-                          
-                          // Détruire la session
-                          session_destroy();
-
-                          // Rediriger vers la page de connexion ou d'accueil
-                          header("Location: index.php");
-                          exit;
-                      }
-                    ?>
-                    </li>
-                  </ul>
+          </ul>
+   
                 </li>
               </ul>
 
