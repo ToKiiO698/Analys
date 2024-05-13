@@ -1598,42 +1598,51 @@
                     ?>
               </form>
 
-              <?php
-
-                require './bdd.php';
-
-                if(isset($_FILES['file'])){
-                  $tmpName = $_FILES['file']['tmp_name'];
-                  $name = $_FILES['file']['name'];
-                  $size = $_FILES['file']['size'];
-                  $error = $_FILES['file']['error'];
-
-                  $tabExtension = explode('.', $name);
-                  $extension = strtolower(end($tabExtension));
-
-                  //Extension accepter
-                  $extensions = ['pdf'];
-
-                  if(in_array($extension, $extensions)){
-                  
-                    // Permet de générer un nom unique du genre : 5f586bf96dcd38.73540086
-                    $uniqueName = uniqid('', true);
-                    // Rajoute l'extension au nom unique
-                    $file = $uniqueName.".".$extension;
-
-                    move_uploaded_file($tmpName, '../assets/facture/'.$name);
-
-                    $req = $db->prepare('INSERT INTO facture (justificatif) VALUES (name)');
-                    $req->execute([$facture]);
-
-                  }
-                  else{
-                    echo "Mauvaise extension";
-                  }}
-                ?>
+              
                 </div>
               </div>
             </div>
+            <?php
+
+require './bdd.php';
+
+if(isset($_FILES['file'])){
+    $tmpName = $_FILES['file']['tmp_name'];
+    $name = $_FILES['file']['name'];
+    $size = $_FILES['file']['size'];
+    $error = $_FILES['file']['error'];
+
+    $tabExtension = explode('.', $name);
+    $extension = strtolower(end($tabExtension));
+
+    $extensions = ['pdf'];
+    $maxSize = 400000;
+
+    if(in_array($extension, $extensions) && $size <= $maxSize && $error == 0){
+
+        $uniqueName = uniqid('', true);
+        //uniqid génère quelque chose comme ca : 5f586bf96dcd38.73540086
+        $file = $uniqueName.".".$extension;
+        //$file = 5f586bf96dcd38.73540086.jpg
+
+        move_uploaded_file($tmpName, '../assets/facture/'.$file);
+
+        $req = $db->prepare('INSERT INTO file (name) VALUES (?)');
+        $req->execute([$file]);
+
+        echo "Image enregistrée";
+    }
+    else{
+        echo "Une erreur est survenue";
+    }
+}
+
+?>
+
+
+
+
+
 
 
             </div>
