@@ -84,6 +84,13 @@
         userLinkRTL.setAttribute("disabled", true);
       }
     </script>
+
+<?php
+    session_start();
+    if ($_SESSION['roles'] != 1) {
+        header('Location: index.php');
+    }
+    ?>
   </head>
 
   <body>
