@@ -1483,6 +1483,8 @@
       <th scope="col">TVA</th>
       <th scope="col">Date</th>
       <th scope="col">Type Frais</th>
+      <th scope="col">editeur</th>
+      <th scope="col">nom_facture</th>
     </tr>
   </thead>
   <tbody>
@@ -1492,7 +1494,7 @@
 
     // Requête pour récupérer toutes les données de la table facture
     // Requête pour récupérer toutes les données de la table facture
-$stmt = $db->query('SELECT f.addr, f.tva, f.type_frais, f.id_facture, f.date_ajout, f.montant_ht, f.montant_ttc, f.justificatif, f.num_fac FROM facture f INNER JOIN etat_facture e ON f.etat_facture = e.id_etat WHERE f.etat_facture = 3');
+$stmt = $db->query('SELECT f.addr, f.tva, f.type_frais, f.id_facture, f.date_ajout, f.montant_ht, f.montant_ttc, f.justificatif, f.num_fac, f.editeur, f.nom_facture FROM facture f INNER JOIN etat_facture e ON f.etat_facture = e.id_etat WHERE f.etat_facture = 3');
     $factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($factures as $facture): ?>
       <tr>
@@ -1503,6 +1505,8 @@ $stmt = $db->query('SELECT f.addr, f.tva, f.type_frais, f.id_facture, f.date_ajo
         <td><?php echo $facture['tva']; ?></td>
         <td><?php echo $facture['date_ajout']; ?></td>
         <td><?php echo $facture['type_frais']; ?></td>
+        <td><?php echo $facture['editeur']; ?></td>
+        <td><?php echo $facture['nom_facture']; ?></td>
       </tr>
     <?php endforeach; ?>
   </tbody>
