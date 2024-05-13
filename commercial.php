@@ -46,6 +46,13 @@
         userLinkRTL.setAttribute('disabled', true);
       }
     </script>
+
+<?php
+    session_start();
+    if ($_SESSION['roles'] != 2) {
+        header('Location: index.php');
+    }
+    ?>
   </head>
 
   <body>
@@ -579,7 +586,7 @@
                         </li>
                                        
                     <li class="nav-item">
-                      <a class="nav-link" href="commercial/facture.php">
+                      <a class="nav-link" href="commercial/n-facture.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Factures</span>
                         </div> </a>

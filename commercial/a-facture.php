@@ -639,7 +639,7 @@
                         </li>
                                        
                     <li class="nav-item">
-                      <a class="nav-link" href="facture.php">
+                      <a class="nav-link" href="n-facture.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Factures</span>
                         </div> </a>

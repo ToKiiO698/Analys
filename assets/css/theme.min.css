@@ -36411,4 +36411,13 @@ html[data-bs-theme="dark"] .bg-priority-low:checked {
     margin-left: 260px;
   }
 
+  .index-f{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .index-btn {
+    margin-bottom: 50px;
+  }
+
 }
