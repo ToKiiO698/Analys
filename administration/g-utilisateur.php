@@ -1045,6 +1045,10 @@
             </ul>
           </div>
         </div>
+        <button type="submit" name="logout12" id="logout12" class="btn btn-danger decos"><div class="d-flex align-items-center">
+                        <span class="nav-link-text ps-1"><a href="assets/supprime.php" class="btn btn-danger ">Déconnexion</a></span>
+                        </div> </button>
+
       </nav>
       <nav class="navbar navbar-light navbar-vertical navbar-expand-xl" style="display: none">
         <script>
@@ -3258,6 +3262,7 @@
               </div>
             </li>
           </ul>
+          
         </nav>
 
         <script>
@@ -3311,7 +3316,7 @@
                   </div><img class="ms-n4 d-md-none d-lg-block" src="../assets/img/illustrations/crm-line-chart.png"
                     alt="" width="150" />
                 </div>
-
+                
               </div>
             </div>
           </div>

@@ -508,11 +508,7 @@
                     </div>
                     
                   </a>
-                  <li class="nav-item">
-                        <button type="submit" name="logout12" id="logout12"><div class="d-flex align-items-center">
-                        <span class="nav-link-text ps-1"><a href="assets/supprime.php">Déconnexion</a></span>
-                        </div> </button>
-                        </li>
+
                   <ul class="nav collapse show" id="dashboard">
                     <li class="nav-item">
                       <a class="nav-link active" href="admin.php">
@@ -2460,6 +2456,7 @@
             class="navbar navbar-light navbar-glass navbar-top navbar-expand"
             style="display: none"
           >
+          
             <button
               class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3"
               type="button"
@@ -2472,8 +2469,9 @@
               <span class="navbar-toggle-icon"
                 ><span class="toggle-line"></span
               ></span>
+              
             </button>
-            <a class="navbar-brand me-1 me-sm-3" href="admin.html">
+            <a class="navbar-brand me-1 me-sm-3" href="admin.php">
               <div class="d-flex align-items-center">
                 <img
                   class="me-2"
@@ -2481,9 +2479,17 @@
                   alt=""
                   width="40"
                 /><span class="font-sans-serif text-primary">falcon</span>
+                
               </div>
             </a>
             <h1 class="menu-admin text-center">Bienvenue dans le menu Administrateur !</h1>
+
+            <button type="submit" name="logout12" id="logout12" class="btn btn-danger decos"><div class="d-flex align-items-center">
+                        <span class="nav-link-text ps-1"><a href="assets/supprime.php" class="btn btn-danger ">Déconnexion</a></span>
+                        </div> </button>
+                         
+                        
+
           </nav>
           <script>
             var navbarPosition = localStorage.getItem("navbarPosition");
@@ -2661,9 +2667,7 @@ echo "$count Commercial(s)";
           </div>
           </div>
 
-          <form action="logout.php" method="post">
-    <button type="submit" name="logout">Déconnexion</button>
-</form>
+          
 
 
           <!-- ===============================================--><!--    Footer--><!-- ===============================================-->
