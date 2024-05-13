@@ -1812,7 +1812,7 @@ $stmt = $db->query('SELECT f.addr, f.tva, f.type_frais, f.id_facture, f.date_ajo
     <ul>
         <?php
         // Connexion à la base de données et récupération des clients
-        $db = new mysqli('localhost', 'username', 'password', 'nom_base_de_donnees');
+        $db = new mysqli('localhost', 'root', '', 'analys');
         $query = "SELECT * FROM clients";
         $result = $db->query($query);
 
