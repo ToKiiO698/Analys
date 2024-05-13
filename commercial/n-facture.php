@@ -1632,14 +1632,14 @@ if (isset($_FILES['file'])) {
             $factureId = $db->lastInsertId();
 
             // Retourner le chemin du fichier de la facture
-            echo json_encode(['success' => true, 'facture_id' => $factureId, 'file_path' => $uploadPath]);
+            echo json_encode(['OK' => true, 'facture_id' => $factureId, 'file_path' => $uploadPath]);
             exit; // Arrêter l'exécution du script après avoir renvoyé la réponse
         } else {
-            echo json_encode(['success' => false, 'message' => "Erreur lors de l'enregistrement du fichier"]);
+            echo json_encode(['OK' => false, 'message' => "Erreur lors de l'enregistrement du fichier"]);
             exit; // Arrêter l'exécution du script après avoir renvoyé la réponse
         }
     } else {
-        echo json_encode(['success' => false, 'message' => "Format de fichier non supporté ou taille de fichier trop grande"]);
+        echo json_encode(['OK' => false, 'message' => "Format de fichier non supporté ou taille de fichier trop grande"]);
         exit; // Arrêter l'exécution du script après avoir renvoyé la réponse
     }
 }
