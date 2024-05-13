@@ -48,7 +48,7 @@
     <script>
         function showInvoice(editeur) {
             // Rediriger vers le script PHP avec le client_id sélectionné
-            window.location.href = 'fetch_invoice.php?editeur=' + editeur;
+            window.location.href = 'recup_facture.php?editeur=' + editeur;
         }
     </script>
 
@@ -1818,7 +1818,7 @@ $stmt = $db->query('SELECT f.addr, f.tva, f.type_frais, f.id_facture, f.date_ajo
 
         // Affichage des clients avec lien pour afficher la facture
         while ($row = $result->fetch_assoc()) {
-            echo '<li><a href="javascript:void(0);" onclick="showInvoice(' . $row['id'] . ');">' . $row['editeur'] . '</a></li>';
+            echo '<li><a href="javascript:void(0);" onclick="showInvoice(' . $row['id_facture'] . ');">' . $row['editeur'] . '</a></li>';
         }
 
         $db->close();
