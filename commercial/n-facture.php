@@ -1603,10 +1603,9 @@
               </div>
             </div>
             <?php
-
 require './bdd.php';
 
-if(isset($_FILES['file'])){
+if (isset($_FILES['file'])) {
     $tmpName = $_FILES['file']['tmp_name'];
     $name = $_FILES['file']['name'];
     $size = $_FILES['file']['size'];
@@ -1618,26 +1617,35 @@ if(isset($_FILES['file'])){
     $extensions = ['pdf'];
     $maxSize = 400000;
 
-    if(in_array($extension, $extensions) && $size <= $maxSize && $error == 0){
-
+    if (in_array($extension, $extensions) && $size <= $maxSize && $error == 0) {
         $uniqueName = uniqid('', true);
-        //uniqid génère quelque chose comme ca : 5f586bf96dcd38.73540086
-        $file = $uniqueName.".".$extension;
-        //$file = 5f586bf96dcd38.73540086.jpg
+        $file = $uniqueName . "." . $extension;
+        $uploadPath = '../assets/facture/' . $file;
 
-        move_uploaded_file($tmpName, '../assets/facture/'.$file);
+        // Déplacer le fichier téléchargé vers le répertoire des factures
+        if (move_uploaded_file($tmpName, $uploadPath)) {
+            // Enregistrement du nom du fichier dans la base de données
+            $req = $db->prepare('INSERT INTO file (name) VALUES (?)');
+            $req->execute([$file]);
 
-        $req = $db->prepare('INSERT INTO file (name) VALUES (?)');
-        $req->execute([$file]);
+            // Récupérer l'ID de la dernière facture insérée
+            $factureId = $db->lastInsertId();
 
-        echo "Image enregistrée";
-    }
-    else{
-        echo "Une erreur est survenue";
+            // Retourner le chemin du fichier de la facture
+            echo json_encode(['success' => true, 'facture_id' => $factureId, 'file_path' => $uploadPath]);
+            exit; // Arrêter l'exécution du script après avoir renvoyé la réponse
+        } else {
+            echo json_encode(['success' => false, 'message' => "Erreur lors de l'enregistrement du fichier"]);
+            exit; // Arrêter l'exécution du script après avoir renvoyé la réponse
+        }
+    } else {
+        echo json_encode(['success' => false, 'message' => "Format de fichier non supporté ou taille de fichier trop grande"]);
+        exit; // Arrêter l'exécution du script après avoir renvoyé la réponse
     }
 }
-
 ?>
+
+
 
 
 

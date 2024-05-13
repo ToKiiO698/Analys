@@ -1509,21 +1509,22 @@ $stmt = $db->query('SELECT f.addr, f.tva, f.type_frais, f.id_facture, f.date_ajo
 </table>
 
 <h1>Liste des Clients</h1>
-    <ul>
+<ul>
         <?php
-        // Connexion à la base de données et récupération des clients
-        $db = new mysqli('localhost', 'root', '', 'analys');
-        $query = "SELECT * FROM facture";
+        // Connexion à la base de données
+        require './bdd.php';
+
+        // Récupération des clients depuis la base de données
+        $query = "SELECT * FROM file";
         $result = $db->query($query);
 
-        // Affichage des clients avec lien pour afficher la facture
-        while ($row = $result->fetch_assoc()) {
-            echo '<li><a href="javascript:void(0);" onclick="showInvoice(' . $row['id_facture'] . ');">' . $row['editeur'] . '</a></li>';
+        // Affichage des clients avec liens vers leurs factures
+        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+            echo '<li><a href="recup_facture_file.php?editeur=' . $row['id'] . '">' . $row['name'] . '</a></li>';
         }
-
-        $db->close();
         ?>
     </ul>
+
 
 <!-- Inclure les fichiers JavaScript de DataTables -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

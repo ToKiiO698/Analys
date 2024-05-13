@@ -1,33 +1,25 @@
 <?php
-// Vérifier si le paramètre editeur est présent
+// Inclusion du fichier de connexion à la base de données
+require './bdd.php';
+
+// Vérifie si le editeur est présent dans la requête GET
 if (isset($_GET['editeur'])) {
     $editeur = intval($_GET['editeur']);
 
-    // Connexion à la base de données
-    $db = new mysqli('localhost', 'root', '', 'analys');
+    // Requête pour récupérer la facture du client
+    $query = "SELECT * FROM facture WHERE editeur = ?";
+    $stmt = $db->prepare($query);
+    $stmt->execute([$editeur]);
+    $facture = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    // Requête pour récupérer la facture du client avec l'URL de l'image
-    $query = "SELECT * FROM facture WHERE editeur = $editeur";
-    $result = $db->query($query);
-
-    // Affichage de l'image de la facture
-    if ($result && $result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $url_image = $row['justificatif'];
-
-        echo '<h2>Facture de ' . $row['date'] . '</h2>';
-        echo '<p>Montant: ' . $row['montant'] . '</p>';
-        
-        // Afficher l'image de la facture
-        echo '<img src="' . $justificatif . '" alt="Facture">';
-
-        // Afficher d'autres détails de la facture selon vos besoins
+    if ($facture) {
+        // Afficher le nom de la facture (ou l'URL si c'est un fichier)
+        echo '<h2>Facture de ' . $facture['editeur'] . '</h2>';
+        // Vous pouvez afficher d'autres détails de la facture ici
     } else {
         echo 'Aucune facture trouvée pour ce client.';
     }
-
-    $db->close();
 } else {
-    echo 'Paramètre client_id (editeur) manquant.';
+    echo 'Paramètre client manquant.';
 }
 ?>
