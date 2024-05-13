@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en-US" dir="ltr">
 
-  
+  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -45,6 +45,12 @@
     <meta name="theme-color" content="#ffffff" />
     <script src="../assets/js/config.js"></script>
     <script src="../vendors/simplebar/simplebar.min.js"></script>
+    <script>
+        function showInvoice(editeur) {
+            // Rediriger vers le script PHP avec le client_id sélectionné
+            window.location.href = 'fetch_invoice.php?editeur=' + editeur;
+        }
+    </script>
 
     <!-- ===============================================-->
     <!--    Stylesheets-->
@@ -1801,6 +1807,23 @@ $stmt = $db->query('SELECT f.addr, f.tva, f.type_frais, f.id_facture, f.date_ajo
     <?php endforeach; ?>
   </tbody>
 </table>
+
+<h1>Liste des Clients</h1>
+    <ul>
+        <?php
+        // Connexion à la base de données et récupération des clients
+        $db = new mysqli('localhost', 'username', 'password', 'nom_base_de_donnees');
+        $query = "SELECT * FROM clients";
+        $result = $db->query($query);
+
+        // Affichage des clients avec lien pour afficher la facture
+        while ($row = $result->fetch_assoc()) {
+            echo '<li><a href="javascript:void(0);" onclick="showInvoice(' . $row['id'] . ');">' . $row['nom'] . '</a></li>';
+        }
+
+        $db->close();
+        ?>
+    </ul>
 
 <!-- Inclure les fichiers JavaScript de DataTables -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
