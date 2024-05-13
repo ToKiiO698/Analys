@@ -1603,6 +1603,7 @@
               </div>
             </div>
             <?php
+
 require './bdd.php';
 
 if(isset($_FILES['file'])){
@@ -1614,38 +1615,33 @@ if(isset($_FILES['file'])){
     $tabExtension = explode('.', $name);
     $extension = strtolower(end($tabExtension));
 
-    // Extensions autorisées
-    $extensionsAutorisees = ['pdf'];
+    $extensions = ['pdf'];
+    $maxSize = 400000;
 
-    if(in_array($extension, $extensionsAutorisees)){
+    if(in_array($extension, $extensions) && $size <= $maxSize && $error == 0){
 
-        // Générer un nom unique pour le fichier
         $uniqueName = uniqid('', true);
-        $file = $uniqueName . '.' . $extension;
+        //uniqid génère quelque chose comme ca : 5f586bf96dcd38.73540086
+        $file = $uniqueName.".".$extension;
+        //$file = 5f586bf96dcd38.73540086.jpg
 
-        // Déplacer le fichier téléchargé vers le dossier cible
-        move_uploaded_file($tmpName, '../assets/facture/' . $file);
+        move_uploaded_file($tmpName, '../assets/facture/'.$file);
 
-        // Préparer les données pour l'insertion dans la base de données
-        $fileContent = file_get_contents('../assets/facture/' . $file); // Lire le contenu du fichier
+        $req = $db->prepare('INSERT INTO file (name) VALUES (?)');
+        $req->execute([$file]);
 
-        // Requête SQL pour insérer le fichier dans la base de données
-        $req = $db->prepare('INSERT INTO facture (justificatif, extension, contenu) VALUES (?, ?, ?)');
-        $req->bindParam(1, $file);
-        $req->bindParam(2, $extension);
-        $req->bindParam(3, $fileContent, PDO::PARAM_LOB); // Utiliser PDO::PARAM_LOB pour les données BLOB
-
-        if($req->execute()){
-            echo "Fichier ajouté avec succès dans la base de données.";
-        } else {
-            echo "Erreur lors de l'insertion du fichier dans la base de données.";
-        }
-
-    } else {
-        echo "Mauvaise extension de fichier. Veuillez télécharger un fichier PDF.";
+        echo "Image enregistrée";
+    }
+    else{
+        echo "Une erreur est survenue";
     }
 }
+
 ?>
+
+
+
+
 
 
 
