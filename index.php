@@ -36,15 +36,22 @@
           />
         </div>
         <form action="index.php" method="post">
+          <div class="row">
+            <div class="col-md-12">
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Identifiant :</label>
-            <input type="password" class="form-control index-f" name="nom" required>
+            <label for="exampleInputEmail1" class="form-label index-f">Identifiant :</label>
+            <input type="password" class="form-control" name="nom" required>
           </div>
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-md-12">
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label index-f">Mot de passe :</label>
             <input type="password" class="form-control" name="mdp" required></br>
           </div>
-
+          </div>
+        </div>
           <button type="submit" class="btn btn-primary index-btn">Comnexion</button>
         <?php
         if (isset($_POST['nom']) && isset($_POST['mdp'])) {
