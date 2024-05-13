@@ -545,11 +545,34 @@
                               </div> </a>
                             
                           </li>
+
+                       
                         </ul>
+                        <li class="nav-item">
+                        <button type="submit" name="logout12"><div class="d-flex align-items-center">
+                        <span class="nav-link-text ps-1">Déconnexion</span>
+                        </div> </button>
+                    <?php
+                      
+
+                      if (isset($_POST['logout12'])) {
+                          
+                          // Détruire la session
+                          session_destroy();
+
+                          // Rediriger vers la page de connexion ou d'accueil
+                          header("Location: index.php");
+                          exit;
+                      }
+                    ?>
                     </li>
                   </ul>
                 </li>
               </ul>
+
+              
+                    
+                      
             </div>
           </div>
         </nav>
@@ -2650,6 +2673,11 @@ echo "$count Commercial(s)";
 
           </div>
           </div>
+
+          <form action="logout.php" method="post">
+    <button type="submit" name="logout">Déconnexion</button>
+</form>
+
 
           <!-- ===============================================--><!--    Footer--><!-- ===============================================-->
 
