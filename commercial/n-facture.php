@@ -1603,16 +1603,14 @@
             // Récupérer l'ID de la dernière facture insérée
             $factureId = $db->lastInsertId();
 
-             // Retourner le chemin du fichier de la facture
-             echo json_encode('OK');
-             exit; // Arrêter l'exécution du script après avoir renvoyé la réponse
-         } else {
-             echo json_encode(['Erreur' => false, 'message' => "Erreur lors de l'enregistrement du fichier"]);
-             exit; // Arrêter l'exécution du script après avoir renvoyé la réponse
-         }
-     } else {
-         echo json_encode(['Erreur' => false, 'message' => "Format de fichier non supporté ou taille de fichier trop grande"]);
-     }
+            // Retourner le chemin du fichier de la facture
+            echo json_encode(['OK' => true, 'facture_id' => $factureId, 'file_path' => $uploadPath]); 
+        } else {
+            echo json_encode(['OK' => false, 'message' => "Erreur lors de l'enregistrement du fichier"]);
+        }
+    } else {
+        echo json_encode(['OK' => false, 'message' => "Format de fichier non supporté ou taille de fichier trop grande"]);
+    }
 
                   $stmt = $db->prepare('INSERT INTO facture (etat_facture,date_ajout, montant_ht, montant_ttc, type_frais, editeur, addr, num_fac, tva, nom_facture) VALUES (:etat_facture, :dateV, :ht, :ttc, :type_frais, :editeur, :addr, :num_fac, :tva, :nom_facture)');
                   $stmt->bindParam(':etat_facture',$etat_facture );
