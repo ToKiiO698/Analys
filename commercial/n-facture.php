@@ -1604,10 +1604,6 @@
             $factureId = $db->lastInsertId();
 
             // Retourner le chemin du fichier de la facture
-            echo json_encode(['OK' => true, 'facture_id' => $factureId, 'file_path' => $uploadPath]); 
-        } else {
-            echo json_encode(['OK' => false, 'message' => "Erreur lors de l'enregistrement du fichier"]);
-        }
     } else {
         echo json_encode(['OK' => false, 'message' => "Format de fichier non supporté ou taille de fichier trop grande"]);
     }
