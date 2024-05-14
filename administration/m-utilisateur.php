@@ -3303,17 +3303,18 @@
                   </div>
 
                   <div class="mb-3">
-                  <label for="tva" class="form-label">Rôle</label>
-                    <select class="form-select form-select-sm" id="role" name="role">
-                      <?php
-                          $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
-                          $data = $db->query('SELECT * FROM roles');
-                            while($row = $data->fetch()){
-                              echo '<option value="'.$row['id_roles'].'">'.$row['nom_roles'].'</option>';
-                            }
-                          ?>
-                    </select>
-                  </div>
+    <label for="role" class="form-label">Rôle</label>
+    <select class="form-select form-select-sm" id="role" name="role">
+        <?php
+        $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'qcrxdvrj', '5nKa4$54f@a7w');
+        $data = $db->query('SELECT * FROM roles');
+        while($row = $data->fetch()){
+            echo '<option value="'.$row['nom_roles'].'">'.$row['nom_roles'].'</option>'; // Utiliser 'nom_roles' pour la valeur et l'affichage
+        }
+        ?>
+    </select>
+</div>
+
     </form>
 
     <footer class="footer">
