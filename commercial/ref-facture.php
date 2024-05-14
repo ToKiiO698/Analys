@@ -1467,7 +1467,7 @@
         </header>
 
         <div>
-          <h1 class="text-center">Bienvenue dans le menu Commercial !</h1>
+        <h2 class="text-center">Liste des factures en attente</h2>
         </div>
 
 <h2 class="text-center">Liste des factures Refusée</h2>
