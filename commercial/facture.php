@@ -138,7 +138,7 @@
                     src="../assets/img/icons/spot-illustrations/falcon.png"
                     alt=""
                     width="40"
-                  /><span class="font-sans-serif text-primary">falcon</span>
+                  /><span class="font-sans-serif text-primary">nalys</span>
                 </div>
               </a>
               <ul class="navbar-nav align-items-center d-none d-lg-block">
