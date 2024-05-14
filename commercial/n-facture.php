@@ -118,7 +118,7 @@
             <div class="d-flex flex-between-center">
               <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDoubleTop" aria-controls="navbarDoubleTop" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
               <a class="navbar-brand me-1 me-sm-3" href="index.html">
-                <div class="d-flex align-items-center"><img class="me-2" src="assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span class="font-sans-serif text-primary">nalys</span></div> 
+                <div class="d-flex align-items-center"><img class="me-2" src="assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span class="font-sans-serif text-primary">falcon</span></div>
               </a>
               <ul class="navbar-nav align-items-center d-none d-lg-block">
                 <li class="nav-item">
@@ -1594,14 +1594,14 @@
         $file = $uniqueName . "." . $extension;
         $uploadPath = '../assets/facture/' . $file;
 
-        // Initialisation de la réponse sous forme de tableau
-$response = [];
+        // Déplacer le fichier téléchargé vers le répertoire des factures
+        if (move_uploaded_file($tmpName, $uploadPath)) {
+            // Enregistrement du nom du fichier dans la base de données
+            $req = $db->prepare('INSERT INTO file (name) VALUES (?)');
+            $req->execute([$file]);
 
-if ($fileSupported && $fileSizeOK) { // Assurez-vous que les variables $fileSupported et $fileSizeOK sont correctement définies avant cette condition
-    if (move_uploaded_file($tmpName, $uploadPath)) {
-        // Enregistrement du nom du fichier dans la base de données
-        $req = $db->prepare('INSERT INTO file (name) VALUES (?)');
-        $req->execute([$file]);
+            // Récupérer l'ID de la dernière facture insérée
+            $factureId = $db->lastInsertId();
 
              // Retourner le chemin du fichier de la facture
              echo json_encode(['OK']);
