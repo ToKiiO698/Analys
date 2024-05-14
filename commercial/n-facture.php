@@ -1605,7 +1605,7 @@
 
             // Retourner le chemin du fichier de la facture
     } else {
-        echo json_encode(['OK' => false, 'message' => "Format de fichier non supporté ou taille de fichier trop grande"]);
+        echo json_encode(["Format de fichier non supporté ou taille de fichier trop grande"]);
     }
 
                   $stmt = $db->prepare('INSERT INTO facture (etat_facture,date_ajout, montant_ht, montant_ttc, type_frais, editeur, addr, num_fac, tva, nom_facture) VALUES (:etat_facture, :dateV, :ht, :ttc, :type_frais, :editeur, :addr, :num_fac, :tva, :nom_facture)');
