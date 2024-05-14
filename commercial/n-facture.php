@@ -1604,7 +1604,7 @@
             $factureId = $db->lastInsertId();
 
              // Retourner le chemin du fichier de la facture
-             echo json_encode(['OK']);
+             echo json_encode('OK');
              exit; // Arrêter l'exécution du script après avoir renvoyé la réponse
          } else {
              echo json_encode(['Erreur' => false, 'message' => "Erreur lors de l'enregistrement du fichier"]);
