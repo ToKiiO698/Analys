@@ -2979,8 +2979,7 @@ if(isset($_GET['id'])) {
 }
 ?>
 
-
-
+    </form>
 
     <footer class="footer">
       <div class="text-center">

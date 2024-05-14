@@ -2939,19 +2939,21 @@
 
 
     // Connexion à la base de données
-    $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
 
-    // Requête pour récupérer toutes les données de la table user
-    $stmt = $db->query('SELECT * FROM user');
-    $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    foreach ($users as $user): ?>
-      <tr>
-        <td><?php echo $user['nom']; ?></td>
-        <td><?php echo $user['roles']; ?></td>
-        <td><button type="submit" class="btn btn-primary delete-btn" data-id="<?php echo $user['id']; ?>">Supprimer</button></td>
-        <td><a href="m-utilisateur.php?id=<?php echo $user['id']; ?>" class="btn btn-primary">Modifier</a></td>
-      </tr>
-    <?php endforeach; ?>
+// Requête pour récupérer toutes les données de la table user et les noms des rôles correspondants
+$stmt = $db->query('SELECT user.nom, user.id, roles.nom_roles FROM user INNER JOIN roles ON user.roles = roles.id_roles');
+$users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+foreach ($users as $user):
+?>
+  <tr>
+    <td><?php echo htmlspecialchars($user['nom']); ?></td>
+    <td><?php echo htmlspecialchars($user['nom_roles']); ?></td>
+    <td><button type="submit" class="btn btn-primary delete-btn" data-id="<?php echo $user['id']; ?>">Supprimer</button></td>
+    <td><a href="m-utilisateur.php?id=<?php echo $user['id']; ?>" class="btn btn-primary">Modifier</a></td>
+  </tr>
+<?php endforeach; ?>
+
   </tbody>
 </table>
 
