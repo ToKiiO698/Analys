@@ -2976,25 +2976,7 @@ if(isset($_GET['id'])) {
 }
 ?>
 
-
-
-<<<<<<< HEAD
-                  <div class="mb-3">
-    <label for="role" class="form-label">Rôle</label>
-    <select class="form-select form-select-sm" id="role" name="role">
-        <?php
-        $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'qcrxdvrj', '5nKa4$54f@a7w');
-        $data = $db->query('SELECT * FROM roles');
-        while($row = $data->fetch()){
-            echo '<option value="'.$row['nom_roles'].'">'.$row['nom_roles'].'</option>'; // Utiliser 'nom_roles' pour la valeur et l'affichage
-        }
-        ?>
-    </select>
-</div>
-
     </form>
-=======
->>>>>>> 4fa634e2993a54400f2abe451aefbba6cf155b7d
 
     <footer class="footer">
       <div class="text-center">
