@@ -17,30 +17,30 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="../assets/img/favicons/apple-touch-icon.png"
+      href="../assets/icon/analys.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="../assets/img/favicons/favicon-32x32.png"
+      href="../assets/icon/analys.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="../assets/img/favicons/favicon-16x16.png"
+      href="../assets/icon/analys.png"
     />
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="../assets/img/favicons/favicon.ico"
+      href="../assets/icon/analys.png"
     />
     <link rel="manifest" href="../assets/img/favicons/manifest.json" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <meta
       name="msapplication-TileImage"
-      content="../assets/img/favicons/mstile-150x150.png"
+      content="../assets/icon/analys.png"
     />
     <meta name="theme-color" content="#ffffff" />
     <script src="../assets/js/config.js"></script>
@@ -1483,51 +1483,45 @@
       <th scope="col">TVA</th>
       <th scope="col">Date</th>
       <th scope="col">Type Frais</th>
-      <th scope="col">editeur</th>
-      <th scope="col">nom_facture</th>
+      <th scope="col">Editeur</th>
+      <th scope="col">Nom Facture</th>
     </tr>
   </thead>
   <tbody>
-    <?php
-    // Connexion à la base de données
-    $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+  <?php
+require './bdd.php'; // Connexion à la base de données
 
-    // Requête pour récupérer toutes les données de la table facture
-    // Requête pour récupérer toutes les données de la table facture
-$stmt = $db->query('SELECT f.addr, f.tva, f.type_frais, f.id_facture, f.date_ajout, f.montant_ht, f.montant_ttc, f.justificatif, f.num_fac, f.editeur, f.nom_facture FROM facture f INNER JOIN etat_facture e ON f.etat_facture = e.id_etat WHERE f.etat_facture = 3');
-    $factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    foreach ($factures as $facture): ?>
-      <tr>
+$stmt = $db->query('SELECT f.addr, f.date_ajout, f.num_fac, f.montant_ht, f.montant_ttc, 
+                   tva.taux as nom_tva, 
+                   type_frais.type as nom_type_frais, 
+                   u.nom as nom_editeur,
+                   z.name as nom_facture, z.id as file_id
+                   FROM facture f 
+                   INNER JOIN file z ON f.nom_facture = z.id 
+                   INNER JOIN user u ON f.editeur = u.id 
+                   INNER JOIN tva ON f.tva = tva.id
+                   INNER JOIN type_frais ON f.type_frais = type_frais.id_frais
+                   WHERE f.etat_facture = 3');
+
+$factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
+foreach ($factures as $facture): ?>
+    <tr>
         <td><?php echo $facture['addr']; ?></td>
         <td><?php echo $facture['num_fac']; ?></td>
         <td><?php echo $facture['montant_ht']; ?></td>
         <td><?php echo $facture['montant_ttc']; ?></td>
-        <td><?php echo $facture['tva']; ?></td>
+        <td><?php echo $facture['nom_tva']; ?></td>
         <td><?php echo $facture['date_ajout']; ?></td>
-        <td><?php echo $facture['type_frais']; ?></td>
-        <td><?php echo $facture['editeur']; ?></td>
-        <td><?php echo $facture['nom_facture']; ?></td>
-      </tr>
-    <?php endforeach; ?>
+        <td><?php echo $facture['nom_type_frais']; ?></td>
+        <td><?php echo $facture['nom_editeur']; ?></td>
+        <td><a href="recup_facture_file.php?editeur=<?php echo $facture['file_id']; ?>" target="_blank"><?php echo $facture['nom_facture']; ?></a></td>
+    </tr>
+<?php endforeach; ?>
+
+
   </tbody>
 </table>
 
-<h1>Liste des Clients</h1>
-<ul>
-        <?php
-        // Connexion à la base de données
-        require './bdd.php';
-
-        // Récupération des clients depuis la base de données
-        $query = "SELECT * FROM file";
-        $result = $db->query($query);
-
-        // Affichage des clients avec liens vers leurs factures
-        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-            echo '<li><a href="recup_facture_file.php?editeur=' . $row['id'] . '">' . $row['name'] . '</a></li>';
-        }
-        ?>
-    </ul>
 
 
 <!-- Inclure les fichiers JavaScript de DataTables -->

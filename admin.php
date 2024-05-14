@@ -20,29 +20,29 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="assets/img/favicons/apple-touch-icon.png"
+      href="assets/icon/analys.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="assets/img/favicons/favicon-32x32.png"
+      href="assets/icon/analys.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="assets/img/favicons/favicon-16x16.png"
+      href="assets/icon/analys.png"
     />
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="assets/img/favicons/favicon.ico"
+      href="assets/icon/analys.png"
     />
     <link rel="manifest" href="assets/img/favicons/manifest.json" />
     <meta
       name="msapplication-TileImage"
-      content="assets/img/favicons/mstile-150x150.png"
+      content="assets/icon/analys.png"
     />
     <meta name="theme-color" content="#ffffff" />
     <script src="assets/js/config.js"></script>
@@ -527,7 +527,7 @@
                     </li>
                     
                     <li class="nav-item">
-                      <a class="nav-link" href="administration/utilisateur.php">
+                      <a class="nav-link" href="admin.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Utilisateurs</span>
                         </div> </a>
@@ -2564,7 +2564,7 @@
                   </span>
                   <span class="fw-normal text-600"><?php
 // Connexion à la base de données
-$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
 
 // Nom de la table à compter
 $table_name = 'user';
@@ -2590,7 +2590,7 @@ echo "$count Administrateur(s)";
                     ></span>  
                   <span class="fw-normal text-600"><?php
 // Connexion à la base de données
-$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
 
 // Nom de la table à compter
 $table_name = 'user';
@@ -2616,7 +2616,7 @@ echo "$count Comptable(s)";
                     ></span> 
                   <span class="fw-normal text-600"> <?php
 // Connexion à la base de données
-$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
 
 // Nom de la table à compter
 $table_name = 'user';

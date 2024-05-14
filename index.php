@@ -59,7 +59,7 @@ if (isset($_POST['nom']) && isset($_POST['mdp'])) {
     $_nom = $_POST['nom'];
     $_mdp = $_POST['mdp'];
 
-    $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'root', '');
+    $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
 
     // Préparez une requête pour sélectionner l'utilisateur en fonction de son nom
     $stmt = $db->prepare("SELECT * FROM user WHERE nom = :nom");

@@ -12,12 +12,12 @@
     <title>Commercial - Analys</title>
 
     <!-- ===============================================--><!--    Favicons--><!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/analys.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/analys.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/analys.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/icon/analys.png">
     <link rel="manifest" href="assets/img/favicons/manifest.json">
-    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+    <meta name="msapplication-TileImage" content="assets/icon/analys.png">
     <meta name="theme-color" content="#ffffff">
     <script src="assets/js/config.js"></script>
     <script src="vendors/simplebar/simplebar.min.js"></script>
@@ -1100,7 +1100,7 @@
                     data-countup='{"endValue":"4968"}' 
                     ><?php
 // Connexion à la base de données
-$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
 
 // Nom de la table à compter
 $table_name = 'facture';
@@ -1132,7 +1132,7 @@ echo "$count";
                     data-countup='{"endValue":"4968"}' 
                     ><?php
 // Connexion à la base de données
-$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
 
 // Nom de la table à compter
 $table_name = 'facture';
@@ -1160,7 +1160,7 @@ echo "$count";
                     data-countup='{"endValue":"1054"}'
                     ><?php
 // Connexion à la base de données
-$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
 
 // Nom de la table à compter
 $table_name = 'facture';

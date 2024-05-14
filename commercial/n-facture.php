@@ -18,29 +18,29 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="../assets/img/favicons/apple-touch-icon.png"
+      href="../assets/icon/analys.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="../assets/img/favicons/favicon-32x32.png"
+      href="../assets/icon/analys.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="../assets/img/favicons/favicon-16x16.png"
+      href="../assets/icon/analys.png"
     />
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="../assets/img/favicons/favicon.ico"
+      href="../assets/icon/analys.png"
     />
     <link rel="manifest" href="../assets/img/favicons/manifest.json" />
     <meta
       name="msapplication-TileImage"
-      content="../assets/img/favicons/mstile-150x150.png"
+      content="../assets/icon/analys.png"
     />
     <meta name="theme-color" content="#ffffff" />
     <script src="../assets/js/config.js"></script>
@@ -1513,7 +1513,7 @@
                         <label for="tva" class="form-label">TVA</label>
                         <select class="form-select form-select-sm" id="tva" name="tva">
                         <?php
-                          $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+                          $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'qcrxdvrj', '5nKa4$54f@a7w');
                           $data = $db->query('SELECT * FROM tva');
                             while($row = $data->fetch()){
                               echo '<option value="'.$row['id'].'">'.$row['taux'].'</option>';
@@ -1543,7 +1543,7 @@
                   <label for="type_frais" class="form-label">Type de Frais</label>
                   <select class="form-select form-select-sm" id="type_frais" name="type_frais">
                     <?php
-                      $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+                      $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'qcrxdvrj', '5nKa4$54f@a7w');
                       $data = $db->query('SELECT * FROM type_frais');
                         while($row = $data->fetch()){
                           echo '<option value="'.$row['id_frais'].'">'.$row['type'].'</option>';
@@ -1564,7 +1564,7 @@
 
 
                 <?php
-                if (isset($_POST['addr']) && isset($_POST['num_fac']) && isset($_POST['ht']) && isset($_POST['ttc']) && isset($_POST['tva']) && isset($_POST['date']) && isset($_POST['type_frais']) ){
+                if (isset($_POST['addr']) && isset($_POST['num_fac']) && isset($_POST['ht']) && isset($_POST['ttc']) && isset($_POST['tva']) && isset($_POST['date']) && isset($_POST['type_frais']) && isset($_FILES['file'])){
                   $ed = $_SESSION['roles'];
                   $addr = $_POST['addr'];
                   $num_fac = $_POST['num_fac'];
@@ -1574,10 +1574,42 @@
                   $date = $_POST['date'];
                   $type = $_POST['type_frais'];
                   $etat_facture = 3;
+                  $tmpName = $_FILES['file']['tmp_name'];
+                  $name = $_FILES['file']['name'];
+                  $size = $_FILES['file']['size'];
+                  $error = $_FILES['file']['error'];
 
-                  $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+                  $tabExtension = explode('.', $name);
+                  $extension = strtolower(end($tabExtension));
 
-                  $stmt = $db->prepare('INSERT INTO facture (etat_facture,date_ajout, montant_ht, montant_ttc, type_frais, editeur, addr, num_fac, tva) VALUES (:etat_facture, :dateV, :ht, :ttc, :type_frais, :editeur, :addr, :num_fac, :tva)');
+                  $extensions = ['pdf'];
+                  $maxSize = 400000;
+
+                  $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'qcrxdvrj', '5nKa4$54f@a7w');
+                  if (in_array($extension, $extensions) && $size <= $maxSize && $error == 0) {
+        $uniqueName = uniqid('', true);
+        $file = $uniqueName . "." . $extension;
+        $uploadPath = '../assets/facture/' . $file;
+
+        // Déplacer le fichier téléchargé vers le répertoire des factures
+        if (move_uploaded_file($tmpName, $uploadPath)) {
+            // Enregistrement du nom du fichier dans la base de données
+            $req = $db->prepare('INSERT INTO file (name) VALUES (?)');
+            $req->execute([$file]);
+
+            // Récupérer l'ID de la dernière facture insérée
+            $factureId = $db->lastInsertId();
+
+            // Retourner le chemin du fichier de la facture
+            echo json_encode(['OK' => true, 'facture_id' => $factureId, 'file_path' => $uploadPath]); 
+        } else {
+            echo json_encode(['OK' => false, 'message' => "Erreur lors de l'enregistrement du fichier"]);
+        }
+    } else {
+        echo json_encode(['OK' => false, 'message' => "Format de fichier non supporté ou taille de fichier trop grande"]);
+    }
+
+                  $stmt = $db->prepare('INSERT INTO facture (etat_facture,date_ajout, montant_ht, montant_ttc, type_frais, editeur, addr, num_fac, tva, nom_facture) VALUES (:etat_facture, :dateV, :ht, :ttc, :type_frais, :editeur, :addr, :num_fac, :tva, :nom_facture)');
                   $stmt->bindParam(':etat_facture',$etat_facture );
                   $stmt->bindParam(':dateV', $date);
                   $stmt->bindParam(':ht', $ht);
@@ -1587,6 +1619,7 @@
                   $stmt->bindParam(':addr', $addr);
                   $stmt->bindParam(':num_fac', $num_fac);
                   $stmt->bindParam(':tva', $tva);
+                  $stmt->bindParam(':nom_facture', $factureId);
                 
                   $stmt->execute();
 
@@ -1602,48 +1635,6 @@
                 </div>
               </div>
             </div>
-            <?php
-require './bdd.php';
-
-if (isset($_FILES['file'])) {
-    $tmpName = $_FILES['file']['tmp_name'];
-    $name = $_FILES['file']['name'];
-    $size = $_FILES['file']['size'];
-    $error = $_FILES['file']['error'];
-
-    $tabExtension = explode('.', $name);
-    $extension = strtolower(end($tabExtension));
-
-    $extensions = ['pdf'];
-    $maxSize = 400000;
-
-    if (in_array($extension, $extensions) && $size <= $maxSize && $error == 0) {
-        $uniqueName = uniqid('', true);
-        $file = $uniqueName . "." . $extension;
-        $uploadPath = '../assets/facture/' . $file;
-
-        // Déplacer le fichier téléchargé vers le répertoire des factures
-        if (move_uploaded_file($tmpName, $uploadPath)) {
-            // Enregistrement du nom du fichier dans la base de données
-            $req = $db->prepare('INSERT INTO file (name) VALUES (?)');
-            $req->execute([$file]);
-
-            // Récupérer l'ID de la dernière facture insérée
-            $factureId = $db->lastInsertId();
-
-            // Retourner le chemin du fichier de la facture
-            echo json_encode(['OK' => true, 'facture_id' => $factureId, 'file_path' => $uploadPath]);
-            exit; // Arrêter l'exécution du script après avoir renvoyé la réponse
-        } else {
-            echo json_encode(['OK' => false, 'message' => "Erreur lors de l'enregistrement du fichier"]);
-            exit; // Arrêter l'exécution du script après avoir renvoyé la réponse
-        }
-    } else {
-        echo json_encode(['OK' => false, 'message' => "Format de fichier non supporté ou taille de fichier trop grande"]);
-        exit; // Arrêter l'exécution du script après avoir renvoyé la réponse
-    }
-}
-?>
 
 
 
