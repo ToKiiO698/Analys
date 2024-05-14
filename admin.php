@@ -2486,7 +2486,42 @@
                 
               </div>
             </a>
-            <h1 class="menu-admin text-center">Bienvenue dans le menu Administrateur !</h1>
+            <h1 class="menu-admin text-center"><?php
+            if(isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id'];
+
+    // Connexion à la base de données
+    $conn = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
+
+    // Vérifiez la connexion
+    if ($conn->connect_error) {
+        die("Connexion échouée: " . $conn->connect_error);
+    }
+
+    // Préparez la requête SQL
+    $stmt = $conn->prepare("SELECT nom FROM user WHERE id = ?");
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+
+    // Récupérez le résultat
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        // Affichez le nom de l'utilisateur
+        while($row = $result->fetch_assoc()) {
+            echo "Bonjour, " . htmlspecialchars($row['nom']) . "!";
+        }
+    } else {
+        echo "Utilisateur non trouvé.";
+    }
+
+    // Fermez la connexion
+    $stmt->close();
+    $conn->close();
+} else {
+    echo "Vous n'êtes pas connecté.";
+}
+?></h1>
 
             
 
