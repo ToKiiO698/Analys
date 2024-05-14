@@ -116,7 +116,7 @@
             <div class="d-flex flex-between-center">
               <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDoubleTop" aria-controls="navbarDoubleTop" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
               <a class="navbar-brand me-1 me-sm-3" href="index.html">
-                <div class="d-flex align-items-center"><img class="me-2" src="assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span class="font-sans-serif text-primary">falcon</span></div>
+                <div class="d-flex align-items-center"><img class="me-2" src="assets/assets/icon/analys.png" alt="" width="40" /><span class="font-sans-serif text-primary">nalys</span></div>
               </a>
               <ul class="navbar-nav align-items-center d-none d-lg-block">
                 <li class="nav-item">
@@ -124,7 +124,7 @@
                     <form class="position-relative" data-bs-toggle="search" data-bs-display="static"><input class="form-control search-input fuzzy-search" type="search" placeholder="Search..." aria-label="Search" />
                       <span class="fas fa-search search-box-icon"></span>
                     </form>
-                    <div class="btn-close-falcon-container position-absolute end-0 top-50 translate-middle shadow-none" data-bs-dismiss="search"><button class="btn btn-link btn-close-falcon p-0" aria-label="Close"></button></div>
+                    <div class="btn-close-nalys-container position-absolute end-0 top-50 translate-middle shadow-none" data-bs-dismiss="search"><button class="btn btn-link btn-close-nalys p-0" aria-label="Close"></button></div>
                     <div class="dropdown-menu border font-base start-0 mt-2 py-0 overflow-hidden w-100">
                       <div class="scrollbar list py-3" style="max-height: 24rem;">
                         <h6 class="dropdown-header fw-medium text-uppercase px-x1 fs-11 pt-0 pb-2">Recently Browsed</h6><a class="dropdown-item fs-10 px-x1 py-1 hover-primary" href="app/events/event-detail.html">
@@ -169,7 +169,7 @@
                           <div class="d-flex align-items-center">
                             <div class="file-thumbnail me-2"><img class="img-fluid" src="assets/img/icons/zip.png" alt="" /></div>
                             <div class="flex-1">
-                              <h6 class="mb-0 title">Falcon v1.8.2</h6>
+                              <h6 class="mb-0 title">nalys v1.8.2</h6>
                               <p class="fs-11 mb-0 d-flex"><span class="fw-semi-bold">John</span><span class="fw-medium text-600 ms-2">30 Sep at 12:30 PM</span></p>
                             </div>
                           </div>
@@ -592,7 +592,7 @@
           <div class="toggle-icon-wrapper">
               <button class="btn navbar-toggler-humburger-icon navbar-vertical-toggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
             </div><a class="navbar-brand" href="../commercial.php">
-              <div class="d-flex align-items-center py-3"><img class="me-2" src="../assets/icon/analys.png" alt="" width="40" /><span class="font-sans-serif text-primary">falcon</span></div>
+              <div class="d-flex align-items-center py-3"><img class="me-2" src="../assets/icon/analys.png" alt="" width="40" /><span class="font-sans-serif text-primary">nalys</span></div>
             </a>
           </div>
           <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
@@ -655,7 +655,7 @@
         <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand-lg" style="display: none;">
           <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
           <a class="navbar-brand me-1 me-sm-3" href="index.html">
-            <div class="d-flex align-items-center"><img class="me-2" src="assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span class="font-sans-serif text-primary">falcon</span></div>
+            <div class="d-flex align-items-center"><img class="me-2" src="assets/assets/icon/analys.png" alt="" width="40" /><span class="font-sans-serif text-primary">nalys</span></div>
           </a>
           <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
             <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns">
@@ -1023,7 +1023,7 @@
           <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand" style="display: none;">
             <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
             <a class="navbar-brand me-1 me-sm-3" href="index.html">
-              <div class="d-flex align-items-center"><img class="me-2" src="assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span class="font-sans-serif text-primary">falcon</span></div>
+              <div class="d-flex align-items-center"><img class="me-2" src="assets/assets/icon/analys.png" alt="" width="40" /><span class="font-sans-serif text-primary">nalys</span></div>
             </a>
             <ul class="navbar-nav align-items-center d-none d-lg-block">
               <li class="nav-item">
@@ -1031,7 +1031,7 @@
                   <form class="position-relative" data-bs-toggle="search" data-bs-display="static"><input class="form-control search-input fuzzy-search" type="search" placeholder="Search..." aria-label="Search" />
                     <span class="fas fa-search search-box-icon"></span>
                   </form>
-                  <div class="btn-close-falcon-container position-absolute end-0 top-50 translate-middle shadow-none" data-bs-dismiss="search"><button class="btn btn-link btn-close-falcon p-0" aria-label="Close"></button></div>
+                  <div class="btn-close-nalys-container position-absolute end-0 top-50 translate-middle shadow-none" data-bs-dismiss="search"><button class="btn btn-link btn-close-nalys p-0" aria-label="Close"></button></div>
                   <div class="dropdown-menu border font-base start-0 mt-2 py-0 overflow-hidden w-100">
                     <div class="scrollbar list py-3" style="max-height: 24rem;">
                       <h6 class="dropdown-header fw-medium text-uppercase px-x1 fs-11 pt-0 pb-2">Recently Browsed</h6><a class="dropdown-item fs-10 px-x1 py-1 hover-primary" href="app/events/event-detail.html">
@@ -1076,7 +1076,7 @@
                         <div class="d-flex align-items-center">
                           <div class="file-thumbnail me-2"><img class="img-fluid" src="assets/img/icons/zip.png" alt="" /></div>
                           <div class="flex-1">
-                            <h6 class="mb-0 title">Falcon v1.8.2</h6>
+                            <h6 class="mb-0 title">nalys v1.8.2</h6>
                             <p class="fs-11 mb-0 d-flex"><span class="fw-semi-bold">John</span><span class="fw-medium text-600 ms-2">30 Sep at 12:30 PM</span></p>
                           </div>
                         </div>
@@ -1332,7 +1332,7 @@
           <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand-lg" style="display: none;" data-move-target="#navbarVerticalNav" data-navbar-top="combo">
             <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
             <a class="navbar-brand me-1 me-sm-3" href="index.html">
-              <div class="d-flex align-items-center"><img class="me-2" src="assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span class="font-sans-serif text-primary">falcon</span></div>
+              <div class="d-flex align-items-center"><img class="me-2" src="assets/assets/icon/analys.png" alt="" width="40" /><span class="font-sans-serif text-primary">nalys</span></div>
             </a>
             <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
               <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns">

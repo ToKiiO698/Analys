@@ -9,7 +9,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Falcon | Dashboard &amp; Web App Template</title>
+    <title>nalys | Dashboard &amp; Web App Template</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -135,7 +135,7 @@
                 <div class="d-flex align-items-center">
                   <img
                     class="me-2"
-                    src="../assets/img/icons/spot-illustrations/falcon.png"
+                    src="../assets/assets/icon/analys.png"
                     alt=""
                     width="40"
                   /><span class="font-sans-serif text-primary">nalys</span>
@@ -158,11 +158,11 @@
                       <span class="fas fa-search search-box-icon"></span>
                     </form>
                     <div
-                      class="btn-close-falcon-container position-absolute end-0 top-50 translate-middle shadow-none"
+                      class="btn-close-nalys-container position-absolute end-0 top-50 translate-middle shadow-none"
                       data-bs-dismiss="search"
                     >
                       <button
-                        class="btn btn-link btn-close-falcon p-0"
+                        class="btn btn-link btn-close-nalys p-0"
                         aria-label="Close"
                       ></button>
                     </div>
@@ -298,7 +298,7 @@
                               />
                             </div>
                             <div class="flex-1">
-                              <h6 class="mb-0 title">Falcon v1.8.2</h6>
+                              <h6 class="mb-0 title">nalys v1.8.2</h6>
                               <p class="fs-11 mb-0 d-flex">
                                 <span class="fw-semi-bold">John</span
                                 ><span class="fw-medium text-600 ms-2"
@@ -2310,7 +2310,7 @@
           <div class="toggle-icon-wrapper">
               <button class="btn navbar-toggler-humburger-icon navbar-vertical-toggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
             </div><a class="navbar-brand" href="../commercial.php">
-              <div class="d-flex align-items-center py-3"><img class="me-2" src="../assets/icon/analys.png" alt="" width="40" /><span class="font-sans-serif text-primary">falcon</span></div>
+              <div class="d-flex align-items-center py-3"><img class="me-2" src="../assets/icon/analys.png" alt="" width="40" /><span class="font-sans-serif text-primary">nalys</span></div>
             </a>
           </div>
           <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
@@ -2420,10 +2420,10 @@
             <div class="d-flex align-items-center">
               <img
                 class="me-2"
-                src="../assets/img/icons/spot-illustrations/falcon.png"
+                src="../assets/assets/icon/analys.png"
                 alt=""
                 width="40"
-              /><span class="font-sans-serif text-primary">falcon</span>
+              /><span class="font-sans-serif text-primary">nalys</span>
             </div>
           </a>
           <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
@@ -4306,10 +4306,10 @@
               <div class="d-flex align-items-center">
                 <img
                   class="me-2"
-                  src="../assets/img/icons/spot-illustrations/falcon.png"
+                  src="../assets/assets/icon/analys.png"
                   alt=""
                   width="40"
-                /><span class="font-sans-serif text-primary">falcon</span>
+                /><span class="font-sans-serif text-primary">nalys</span>
               </div>
             </a>
             <ul class="navbar-nav align-items-center d-none d-lg-block">
@@ -4329,11 +4329,11 @@
                     <span class="fas fa-search search-box-icon"></span>
                   </form>
                   <div
-                    class="btn-close-falcon-container position-absolute end-0 top-50 translate-middle shadow-none"
+                    class="btn-close-nalys-container position-absolute end-0 top-50 translate-middle shadow-none"
                     data-bs-dismiss="search"
                   >
                     <button
-                      class="btn btn-link btn-close-falcon p-0"
+                      class="btn btn-link btn-close-nalys p-0"
                       aria-label="Close"
                     ></button>
                   </div>
@@ -4466,7 +4466,7 @@
                             />
                           </div>
                           <div class="flex-1">
-                            <h6 class="mb-0 title">Falcon v1.8.2</h6>
+                            <h6 class="mb-0 title">nalys v1.8.2</h6>
                             <p class="fs-11 mb-0 d-flex">
                               <span class="fw-semi-bold">John</span
                               ><span class="fw-medium text-600 ms-2"
@@ -5304,10 +5304,10 @@
               <div class="d-flex align-items-center">
                 <img
                   class="me-2"
-                  src="../assets/img/icons/spot-illustrations/falcon.png"
+                  src="../assets/assets/icon/analys.png"
                   alt=""
                   width="40"
-                /><span class="font-sans-serif text-primary">falcon</span>
+                /><span class="font-sans-serif text-primary">nalys</span>
               </div>
             </a>
             <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
@@ -7263,7 +7263,7 @@
             <div class="row g-0 justify-content-between fs-10 mt-4 mb-3">
               <div class="col-12 col-sm-auto text-center">
                 <p class="mb-0 text-600">
-                  Thank you for creating with Falcon
+                  Thank you for creating with nalys
                   <span class="d-none d-sm-inline-block">| </span
                   ><br class="d-sm-none" />
                   2024 &copy; <a href="https://themewagon.com/">Themewagon</a>
@@ -7293,7 +7293,7 @@
                     Register
                   </h4>
                   <p class="fs-10 mb-0 text-white">
-                    Please create your free Falcon account
+                    Please create your free nalys account
                   </p>
                 </div>
                 <button
@@ -7467,7 +7467,7 @@
                 <span class="hover-overlay mb-2 rounded d-block"
                   ><img
                     class="img-fluid img-prototype mb-0"
-                    src="../assets/img/generic/falcon-mode-default.jpg"
+                    src="../assets/img/generic/nalys-mode-default.jpg"
                     alt="" /></span
                 ><span class="label-text">Light</span></label
               >
@@ -7487,7 +7487,7 @@
                 <span class="hover-overlay mb-2 rounded d-block"
                   ><img
                     class="img-fluid img-prototype mb-0"
-                    src="../assets/img/generic/falcon-mode-dark.jpg"
+                    src="../assets/img/generic/nalys-mode-dark.jpg"
                     alt="" /></span
                 ><span class="label-text"> Dark</span></label
               >
@@ -7507,7 +7507,7 @@
                 <span class="hover-overlay mb-2 rounded d-block"
                   ><img
                     class="img-fluid img-prototype mb-0"
-                    src="../assets/img/generic/falcon-mode-auto.jpg"
+                    src="../assets/img/generic/nalys-mode-auto.jpg"
                     alt="" /></span
                 ><span class="label-text"> Auto</span></label
               >
@@ -7696,12 +7696,12 @@
           />
           <h5>Like What You See?</h5>
           <p class="fs-10">
-            Get Falcon now and create beautiful dashboards with hundreds of
+            Get nalys now and create beautiful dashboards with hundreds of
             widgets.
           </p>
           <a
             class="mb-3 btn btn-primary"
-            href="https://themes.getbootstrap.com/product/falcon-admin-dashboard-webapp-template/"
+            href="https://themes.getbootstrap.com/product/nalys-admin-dashboard-webapp-template/"
             target="_blank"
             >Purchase</a
           >

@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- ===============================================--><!--    Document Title--><!-- ===============================================-->
-    <title>Falcon | Dashboard &amp; Web App Template</title>
+    <title>nalys | Dashboard &amp; Web App Template</title>
 
     <!-- ===============================================--><!--    Favicons--><!-- ===============================================-->
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicons/apple-touch-icon.png">
@@ -67,7 +67,7 @@
             <div class="d-flex flex-between-center">
               <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDoubleTop" aria-controls="navbarDoubleTop" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
               <a class="navbar-brand me-1 me-sm-3" href="../index.html">
-                <div class="d-flex align-items-center"><img class="me-2" src="../assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span class="font-sans-serif text-primary">falcon</span></div>
+                <div class="d-flex align-items-center"><img class="me-2" src="../assets/assets/icon/analys.png" alt="" width="40" /><span class="font-sans-serif text-primary">nalys</span></div>
               </a>
               <ul class="navbar-nav align-items-center d-none d-lg-block">
                 <li class="nav-item">
@@ -75,7 +75,7 @@
                     <form class="position-relative" data-bs-toggle="search" data-bs-display="static"><input class="form-control search-input fuzzy-search" type="search" placeholder="Search..." aria-label="Search" />
                       <span class="fas fa-search search-box-icon"></span>
                     </form>
-                    <div class="btn-close-falcon-container position-absolute end-0 top-50 translate-middle shadow-none" data-bs-dismiss="search"><button class="btn btn-link btn-close-falcon p-0" aria-label="Close"></button></div>
+                    <div class="btn-close-nalys-container position-absolute end-0 top-50 translate-middle shadow-none" data-bs-dismiss="search"><button class="btn btn-link btn-close-nalys p-0" aria-label="Close"></button></div>
                     <div class="dropdown-menu border font-base start-0 mt-2 py-0 overflow-hidden w-100">
                       <div class="scrollbar list py-3" style="max-height: 24rem;">
                         <h6 class="dropdown-header fw-medium text-uppercase px-x1 fs-11 pt-0 pb-2">Recently Browsed</h6><a class="dropdown-item fs-10 px-x1 py-1 hover-primary" href="../app/events/event-detail.html">
@@ -120,7 +120,7 @@
                           <div class="d-flex align-items-center">
                             <div class="file-thumbnail me-2"><img class="img-fluid" src="../assets/img/icons/zip.png" alt="" /></div>
                             <div class="flex-1">
-                              <h6 class="mb-0 title">Falcon v1.8.2</h6>
+                              <h6 class="mb-0 title">nalys v1.8.2</h6>
                               <p class="fs-11 mb-0 d-flex"><span class="fw-semi-bold">John</span><span class="fw-medium text-600 ms-2">30 Sep at 12:30 PM</span></p>
                             </div>
                           </div>
@@ -543,7 +543,7 @@
             <div class="toggle-icon-wrapper">
               <button class="btn navbar-toggler-humburger-icon navbar-vertical-toggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
             </div><a class="navbar-brand" href="../index.html">
-              <div class="d-flex align-items-center py-3"><img class="me-2" src="../assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span class="font-sans-serif text-primary">falcon</span></div>
+              <div class="d-flex align-items-center py-3"><img class="me-2" src="../assets/assets/icon/analys.png" alt="" width="40" /><span class="font-sans-serif text-primary">nalys</span></div>
             </a>
           </div>
           <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
@@ -1427,10 +1427,10 @@
               <div class="settings my-3">
                 <div class="card shadow-none">
                   <div class="card-body alert mb-0" role="alert">
-                    <div class="btn-close-falcon-container"><button class="btn btn-link btn-close-falcon p-0" aria-label="Close" data-bs-dismiss="alert"></button></div>
+                    <div class="btn-close-nalys-container"><button class="btn btn-link btn-close-nalys p-0" aria-label="Close" data-bs-dismiss="alert"></button></div>
                     <div class="text-center"><img src="../assets/img/icons/spot-illustrations/navbar-vertical.png" alt="" width="80" />
-                      <p class="fs-11 mt-2">Loving what you see? <br />Get your copy of <a href="#!">Falcon</a></p>
-                      <div class="d-grid"><a class="btn btn-sm btn-primary" href="https://themes.getbootstrap.com/product/falcon-admin-dashboard-webapp-template/" target="_blank">Purchase</a></div>
+                      <p class="fs-11 mt-2">Loving what you see? <br />Get your copy of <a href="#!">nalys</a></p>
+                      <div class="d-grid"><a class="btn btn-sm btn-primary" href="https://themes.getbootstrap.com/product/nalys-admin-dashboard-webapp-template/" target="_blank">Purchase</a></div>
                     </div>
                   </div>
                 </div>
@@ -1441,7 +1441,7 @@
         <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand-lg" style="display: none;">
           <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
           <a class="navbar-brand me-1 me-sm-3" href="../index.html">
-            <div class="d-flex align-items-center"><img class="me-2" src="../assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span class="font-sans-serif text-primary">falcon</span></div>
+            <div class="d-flex align-items-center"><img class="me-2" src="../assets/assets/icon/analys.png" alt="" width="40" /><span class="font-sans-serif text-primary">nalys</span></div>
           </a>
           <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
             <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns">
@@ -1809,7 +1809,7 @@
           <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand" style="display: none;">
             <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
             <a class="navbar-brand me-1 me-sm-3" href="../index.html">
-              <div class="d-flex align-items-center"><img class="me-2" src="../assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span class="font-sans-serif text-primary">falcon</span></div>
+              <div class="d-flex align-items-center"><img class="me-2" src="../assets/assets/icon/analys.png" alt="" width="40" /><span class="font-sans-serif text-primary">nalys</span></div>
             </a>
             <ul class="navbar-nav align-items-center d-none d-lg-block">
               <li class="nav-item">
@@ -1817,7 +1817,7 @@
                   <form class="position-relative" data-bs-toggle="search" data-bs-display="static"><input class="form-control search-input fuzzy-search" type="search" placeholder="Search..." aria-label="Search" />
                     <span class="fas fa-search search-box-icon"></span>
                   </form>
-                  <div class="btn-close-falcon-container position-absolute end-0 top-50 translate-middle shadow-none" data-bs-dismiss="search"><button class="btn btn-link btn-close-falcon p-0" aria-label="Close"></button></div>
+                  <div class="btn-close-nalys-container position-absolute end-0 top-50 translate-middle shadow-none" data-bs-dismiss="search"><button class="btn btn-link btn-close-nalys p-0" aria-label="Close"></button></div>
                   <div class="dropdown-menu border font-base start-0 mt-2 py-0 overflow-hidden w-100">
                     <div class="scrollbar list py-3" style="max-height: 24rem;">
                       <h6 class="dropdown-header fw-medium text-uppercase px-x1 fs-11 pt-0 pb-2">Recently Browsed</h6><a class="dropdown-item fs-10 px-x1 py-1 hover-primary" href="../app/events/event-detail.html">
@@ -1862,7 +1862,7 @@
                         <div class="d-flex align-items-center">
                           <div class="file-thumbnail me-2"><img class="img-fluid" src="../assets/img/icons/zip.png" alt="" /></div>
                           <div class="flex-1">
-                            <h6 class="mb-0 title">Falcon v1.8.2</h6>
+                            <h6 class="mb-0 title">nalys v1.8.2</h6>
                             <p class="fs-11 mb-0 d-flex"><span class="fw-semi-bold">John</span><span class="fw-medium text-600 ms-2">30 Sep at 12:30 PM</span></p>
                           </div>
                         </div>
@@ -2118,7 +2118,7 @@
           <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand-lg" style="display: none;" data-move-target="#navbarVerticalNav" data-navbar-top="combo">
             <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
             <a class="navbar-brand me-1 me-sm-3" href="../index.html">
-              <div class="d-flex align-items-center"><img class="me-2" src="../assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span class="font-sans-serif text-primary">falcon</span></div>
+              <div class="d-flex align-items-center"><img class="me-2" src="../assets/assets/icon/analys.png" alt="" width="40" /><span class="font-sans-serif text-primary">nalys</span></div>
             </a>
             <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
               <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns">
@@ -2597,9 +2597,9 @@
                     <div class="col">
                       <div class="row align-items-center">
                         <div class="col col-lg-8">
-                          <h5 class="fs-9 mb-3 mb-sm-0 text-primary">Connect your domain to your website and get things done faster with Falcon</h5>
+                          <h5 class="fs-9 mb-3 mb-sm-0 text-primary">Connect your domain to your website and get things done faster with nalys</h5>
                         </div>
-                        <div class="col-12 col-sm-auto ms-auto"><button class="btn btn-falcon-primary" type="button">Connect</button></div>
+                        <div class="col-12 col-sm-auto ms-auto"><button class="btn btn-nalys-primary" type="button">Connect</button></div>
                       </div>
                     </div>
                   </div>
@@ -2634,7 +2634,7 @@
                         <p class="mb-0">2</p>
                       </div>
                       <div class="px-3 bg-transparent text-white d-xxl-flex justify-content-between px-0 py-1 d-none" style="border-bottom:1px solid rgba(255, 255, 255, 0.05)">
-                        <p class="mb-0">/preview/falcon/dashboard/</p>
+                        <p class="mb-0">/preview/nalys/dashboard/</p>
                         <p class="mb-0">2</p>
                       </div>
                       <div class="px-3 bg-transparent text-white d-flex justify-content-between px-0 py-1" style="border-bottom:1px solid rgba(255, 255, 255, 0.05)">
@@ -2642,7 +2642,7 @@
                         <p class="mb-0">1</p>
                       </div>
                       <div class="px-3 bg-transparent text-white d-flex justify-content-between px-0 py-1" style="border-bottom:1px solid rgba(255, 255, 255, 0.05)">
-                        <p class="mb-0">/product/falcon-admin-dashboard/</p>
+                        <p class="mb-0">/product/nalys-admin-dashboard/</p>
                         <p class="mb-0">1</p>
                       </div>
                     </div>
@@ -2766,7 +2766,7 @@
               <div class="card h-100">
                 <div class="card-header">
                   <div class="d-flex align-items-center"><img class="me-2" src="../assets/img/icons/signal.png" alt="" height="35" />
-                    <h5 class="fs-9 fw-normal text-800 mb-0">Ask Falcon Intelligence</h5>
+                    <h5 class="fs-9 fw-normal text-800 mb-0">Ask nalys Intelligence</h5>
                   </div>
                 </div>
                 <div class="card-body p-0">
@@ -3024,13 +3024,13 @@
                           <td class="align-middle text-end exitRate text-end pe-x1">20.4%</td>
                         </tr>
                         <tr class="btn-reveal-trigger">
-                          <td class="align-middle white-space-nowrap path"><a class="text-primary fw-semi-bold" href="#!">/falcon/pages/starter.html</a></td>
+                          <td class="align-middle white-space-nowrap path"><a class="text-primary fw-semi-bold" href="#!">/nalys/pages/starter.html</a></td>
                           <td class="align-middle white-space-nowrap views text-end">1422</td>
                           <td class="align-middle white-space-nowrap time text-end">2m:14s</td>
                           <td class="align-middle text-end exitRate text-end pe-x1">52.4%</td>
                         </tr>
                         <tr class="btn-reveal-trigger">
-                          <td class="align-middle white-space-nowrap path"><a class="text-primary fw-semi-bold" href="#!">/pages/falcon-webapp-theme</a></td>
+                          <td class="align-middle white-space-nowrap path"><a class="text-primary fw-semi-bold" href="#!">/pages/nalys-webapp-theme</a></td>
                           <td class="align-middle white-space-nowrap views text-end">1378</td>
                           <td class="align-middle white-space-nowrap time text-end">2m:23s</td>
                           <td class="align-middle text-end exitRate text-end pe-x1">25.1%</td>
@@ -3042,7 +3042,7 @@
                           <td class="align-middle text-end exitRate text-end pe-x1">6.3%</td>
                         </tr>
                         <tr class="btn-reveal-trigger">
-                          <td class="align-middle white-space-nowrap path"><a class="text-primary fw-semi-bold" href="#!">/themes/falcon/components</a></td>
+                          <td class="align-middle white-space-nowrap path"><a class="text-primary fw-semi-bold" href="#!">/themes/nalys/components</a></td>
                           <td class="align-middle white-space-nowrap views text-end">11047</td>
                           <td class="align-middle white-space-nowrap time text-end">1m:16s</td>
                           <td class="align-middle text-end exitRate text-end pe-x1">49.3%</td>
@@ -3164,7 +3164,7 @@
           <footer class="footer">
             <div class="row g-0 justify-content-between fs-10 mt-4 mb-3">
               <div class="col-12 col-sm-auto text-center">
-                <p class="mb-0 text-600">Thank you for creating with Falcon <span class="d-none d-sm-inline-block">| </span><br class="d-sm-none" /> 2024 &copy; <a href="https://themewagon.com/">Themewagon</a></p>
+                <p class="mb-0 text-600">Thank you for creating with nalys <span class="d-none d-sm-inline-block">| </span><br class="d-sm-none" /> 2024 &copy; <a href="https://themewagon.com/">Themewagon</a></p>
               </div>
               <div class="col-12 col-sm-auto text-center">
                 <p class="mb-0 text-600">v3.20.0</p>
@@ -3178,7 +3178,7 @@
               <div class="modal-header px-5 position-relative modal-shape-header bg-shape">
                 <div class="position-relative z-1">
                   <h4 class="mb-0 text-white" id="authentication-modal-label">Register</h4>
-                  <p class="fs-10 mb-0 text-white">Please create your free Falcon account</p>
+                  <p class="fs-10 mb-0 text-white">Please create your free nalys account</p>
                 </div><button class="btn-close position-absolute top-0 end-0 mt-2 me-2" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body py-4 px-5">
@@ -3222,9 +3222,9 @@
         <p class="fs-10">Choose the perfect color mode for your app.</p>
         <div class="btn-group d-block w-100 btn-group-navbar-style">
           <div class="row gx-2">
-            <div class="col-4"><input class="btn-check" id="themeSwitcherLight" name="theme-color" type="radio" value="light" data-theme-control="theme" /><label class="btn d-inline-block btn-navbar-style fs-10" for="themeSwitcherLight"> <span class="hover-overlay mb-2 rounded d-block"><img class="img-fluid img-prototype mb-0" src="../assets/img/generic/falcon-mode-default.jpg" alt=""/></span><span class="label-text">Light</span></label></div>
-            <div class="col-4"><input class="btn-check" id="themeSwitcherDark" name="theme-color" type="radio" value="dark" data-theme-control="theme" /><label class="btn d-inline-block btn-navbar-style fs-10" for="themeSwitcherDark"> <span class="hover-overlay mb-2 rounded d-block"><img class="img-fluid img-prototype mb-0" src="../assets/img/generic/falcon-mode-dark.jpg" alt=""/></span><span class="label-text"> Dark</span></label></div>
-            <div class="col-4"><input class="btn-check" id="themeSwitcherAuto" name="theme-color" type="radio" value="auto" data-theme-control="theme" /><label class="btn d-inline-block btn-navbar-style fs-10" for="themeSwitcherAuto"> <span class="hover-overlay mb-2 rounded d-block"><img class="img-fluid img-prototype mb-0" src="../assets/img/generic/falcon-mode-auto.jpg" alt=""/></span><span class="label-text"> Auto</span></label></div>
+            <div class="col-4"><input class="btn-check" id="themeSwitcherLight" name="theme-color" type="radio" value="light" data-theme-control="theme" /><label class="btn d-inline-block btn-navbar-style fs-10" for="themeSwitcherLight"> <span class="hover-overlay mb-2 rounded d-block"><img class="img-fluid img-prototype mb-0" src="../assets/img/generic/nalys-mode-default.jpg" alt=""/></span><span class="label-text">Light</span></label></div>
+            <div class="col-4"><input class="btn-check" id="themeSwitcherDark" name="theme-color" type="radio" value="dark" data-theme-control="theme" /><label class="btn d-inline-block btn-navbar-style fs-10" for="themeSwitcherDark"> <span class="hover-overlay mb-2 rounded d-block"><img class="img-fluid img-prototype mb-0" src="../assets/img/generic/nalys-mode-dark.jpg" alt=""/></span><span class="label-text"> Dark</span></label></div>
+            <div class="col-4"><input class="btn-check" id="themeSwitcherAuto" name="theme-color" type="radio" value="auto" data-theme-control="theme" /><label class="btn d-inline-block btn-navbar-style fs-10" for="themeSwitcherAuto"> <span class="hover-overlay mb-2 rounded d-block"><img class="img-fluid img-prototype mb-0" src="../assets/img/generic/nalys-mode-auto.jpg" alt=""/></span><span class="label-text"> Auto</span></label></div>
           </div>
         </div>
         <hr />
@@ -3274,7 +3274,7 @@
         </div>
         <div class="text-center mt-5"><img class="mb-4" src="../assets/img/icons/spot-illustrations/47.png" alt="" width="120" />
           <h5>Like What You See?</h5>
-          <p class="fs-10">Get Falcon now and create beautiful dashboards with hundreds of widgets.</p><a class="mb-3 btn btn-primary" href="https://themes.getbootstrap.com/product/falcon-admin-dashboard-webapp-template/" target="_blank">Purchase</a>
+          <p class="fs-10">Get nalys now and create beautiful dashboards with hundreds of widgets.</p><a class="mb-3 btn btn-primary" href="https://themes.getbootstrap.com/product/nalys-admin-dashboard-webapp-template/" target="_blank">Purchase</a>
         </div>
       </div>
     </div><a class="card setting-toggle" href="#settings-offcanvas" data-bs-toggle="offcanvas">

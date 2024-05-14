@@ -204,10 +204,10 @@
             <div class="d-flex align-items-center">
               <img
                 class="me-2"
-                src="../assets/img/icons/spot-illustrations/falcon.png"
+                src="../assets/assets/icon/analys.png"
                 alt=""
                 width="40"
-              /><span class="font-sans-serif text-primary">falcon</span>
+              /><span class="font-sans-serif text-primary">nalys</span>
             </div>
           </a>
           
@@ -243,10 +243,10 @@
               <div class="d-flex align-items-center">
                 <img
                   class="me-2"
-                  src="../assets/img/icons/spot-illustrations/falcon.png"
+                  src="../assets/assets/icon/analys.png"
                   alt=""
                   width="40"
-                /><span class="font-sans-serif text-primary">falcon</span>
+                /><span class="font-sans-serif text-primary">nalys</span>
               </div>
             </a>
             <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
@@ -2265,7 +2265,7 @@
                     Register
                   </h4>
                   <p class="fs-10 mb-0 text-white">
-                    Please create your free Falcon account
+                    Please create your free nalys account
                   </p>
                 </div>
                 <button
@@ -2439,7 +2439,7 @@
                 <span class="hover-overlay mb-2 rounded d-block"
                   ><img
                     class="img-fluid img-prototype mb-0"
-                    src="../assets/img/generic/falcon-mode-default.jpg"
+                    src="../assets/img/generic/nalys-mode-default.jpg"
                     alt="" /></span
                 ><span class="label-text">Light</span></label
               >
@@ -2459,7 +2459,7 @@
                 <span class="hover-overlay mb-2 rounded d-block"
                   ><img
                     class="img-fluid img-prototype mb-0"
-                    src="../assets/img/generic/falcon-mode-dark.jpg"
+                    src="../assets/img/generic/nalys-mode-dark.jpg"
                     alt="" /></span
                 ><span class="label-text"> Dark</span></label
               >
@@ -2479,7 +2479,7 @@
                 <span class="hover-overlay mb-2 rounded d-block"
                   ><img
                     class="img-fluid img-prototype mb-0"
-                    src="../assets/img/generic/falcon-mode-auto.jpg"
+                    src="../assets/img/generic/nalys-mode-auto.jpg"
                     alt="" /></span
                 ><span class="label-text"> Auto</span></label
               >
@@ -2668,12 +2668,12 @@
           />
           <h5>Like What You See?</h5>
           <p class="fs-10">
-            Get Falcon now and create beautiful dashboards with hundreds of
+            Get nalys now and create beautiful dashboards with hundreds of
             widgets.
           </p>
           <a
             class="mb-3 btn btn-primary"
-            href="https://themes.getbootstrap.com/product/falcon-admin-dashboard-webapp-template/"
+            href="https://themes.getbootstrap.com/product/nalys-admin-dashboard-webapp-template/"
             target="_blank"
             >Purchase</a
           >
@@ -2729,5 +2729,5 @@
     <script src="../assets/js/theme.js"></script>
   </body>
 
-  <!-- Mirrored from prium.github.io/falcon/v3.20.0/dashboard/support-desk.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:08:06 GMT -->
+  <!-- Mirrored from prium.github.io/nalys/v3.20.0/dashboard/support-desk.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:08:06 GMT -->
 </html>

@@ -86,8 +86,8 @@
                   class="toggle-line"></span></span></button>
             <a class="navbar-brand me-1 me-sm-3" href="../index.html">
               <div class="d-flex align-items-center"><img class="me-2"
-                  src="../assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span
-                  class="font-sans-serif text-primary">falcon</span></div>
+                  src="../assets/assets/icon/analys.png" alt="" width="40" /><span
+                  class="font-sans-serif text-primary">nalys</span></div>
             </a>
             <ul class="navbar-nav align-items-center d-none d-lg-block">
               <li class="nav-item">
@@ -97,8 +97,8 @@
                       aria-label="Search" />
                     <span class="fas fa-search search-box-icon"></span>
                   </form>
-                  <div class="btn-close-falcon-container position-absolute end-0 top-50 translate-middle shadow-none"
-                    data-bs-dismiss="search"><button class="btn btn-link btn-close-falcon p-0"
+                  <div class="btn-close-nalys-container position-absolute end-0 top-50 translate-middle shadow-none"
+                    data-bs-dismiss="search"><button class="btn btn-link btn-close-nalys p-0"
                       aria-label="Close"></button></div>
                   <div class="dropdown-menu border font-base start-0 mt-2 py-0 overflow-hidden w-100">
                     <div class="scrollbar list py-3" style="max-height: 24rem;">
@@ -155,7 +155,7 @@
                           <div class="file-thumbnail me-2"><img class="img-fluid" src="../assets/img/icons/zip.png"
                               alt="" /></div>
                           <div class="flex-1">
-                            <h6 class="mb-0 title">Falcon v1.8.2</h6>
+                            <h6 class="mb-0 title">nalys v1.8.2</h6>
                             <p class="fs-11 mb-0 d-flex"><span class="fw-semi-bold">John</span><span
                                 class="fw-medium text-600 ms-2">30 Sep at 12:30 PM</span></p>
                           </div>
@@ -1155,8 +1155,8 @@
               class="toggle-line"></span></span></button>
         <a class="navbar-brand me-1 me-sm-3" href="../index.html">
           <div class="d-flex align-items-center"><img class="me-2"
-              src="../assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span
-              class="font-sans-serif text-primary">falcon</span></div>
+              src="../assets/assets/icon/analys.png" alt="" width="40" /><span
+              class="font-sans-serif text-primary">nalys</span></div>
         </a>
         <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
           <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns">
@@ -1995,8 +1995,8 @@
                 class="toggle-line"></span></span></button>
           <a class="navbar-brand me-1 me-sm-3" href="../index.html">
             <div class="d-flex align-items-center"><img class="me-2"
-                src="../assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span
-                class="font-sans-serif text-primary">falcon</span></div>
+                src="../assets/assets/icon/analys.png" alt="" width="40" /><span
+                class="font-sans-serif text-primary">nalys</span></div>
           </a>
           <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
             <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns">
@@ -3037,7 +3037,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="modal-header px-5 position-relative modal-shape-header bg-shape">
               <div class="position-relative z-1">
                 <h4 class="mb-0 text-white" id="authentication-modal-label">Register</h4>
-                <p class="fs-10 mb-0 text-white">Please create your free Falcon account</p>
+                <p class="fs-10 mb-0 text-white">Please create your free nalys account</p>
               </div><button class="btn-close position-absolute top-0 end-0 mt-2 me-2" data-bs-dismiss="modal"
                 aria-label="Close"></button>
             </div>
@@ -3102,17 +3102,17 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="col-4"><input class="btn-check" id="themeSwitcherLight" name="theme-color" type="radio"
               value="light" data-theme-control="theme" /><label class="btn d-inline-block btn-navbar-style fs-10"
               for="themeSwitcherLight"> <span class="hover-overlay mb-2 rounded d-block"><img
-                  class="img-fluid img-prototype mb-0" src="../assets/img/generic/falcon-mode-default.jpg"
+                  class="img-fluid img-prototype mb-0" src="../assets/img/generic/nalys-mode-default.jpg"
                   alt="" /></span><span class="label-text">Light</span></label></div>
           <div class="col-4"><input class="btn-check" id="themeSwitcherDark" name="theme-color" type="radio"
               value="dark" data-theme-control="theme" /><label class="btn d-inline-block btn-navbar-style fs-10"
               for="themeSwitcherDark"> <span class="hover-overlay mb-2 rounded d-block"><img
-                  class="img-fluid img-prototype mb-0" src="../assets/img/generic/falcon-mode-dark.jpg"
+                  class="img-fluid img-prototype mb-0" src="../assets/img/generic/nalys-mode-dark.jpg"
                   alt="" /></span><span class="label-text"> Dark</span></label></div>
           <div class="col-4"><input class="btn-check" id="themeSwitcherAuto" name="theme-color" type="radio"
               value="auto" data-theme-control="theme" /><label class="btn d-inline-block btn-navbar-style fs-10"
               for="themeSwitcherAuto"> <span class="hover-overlay mb-2 rounded d-block"><img
-                  class="img-fluid img-prototype mb-0" src="../assets/img/generic/falcon-mode-auto.jpg"
+                  class="img-fluid img-prototype mb-0" src="../assets/img/generic/nalys-mode-auto.jpg"
                   alt="" /></span><span class="label-text"> Auto</span></label></div>
         </div>
       </div>
@@ -3188,9 +3188,9 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="text-center mt-5"><img class="mb-4" src="../assets/img/icons/spot-illustrations/47.png" alt=""
           width="120" />
         <h5>Like What You See?</h5>
-        <p class="fs-10">Get Falcon now and create beautiful dashboards with hundreds of widgets.</p><a
+        <p class="fs-10">Get nalys now and create beautiful dashboards with hundreds of widgets.</p><a
           class="mb-3 btn btn-primary"
-          href="https://themes.getbootstrap.com/product/falcon-admin-dashboard-webapp-template/"
+          href="https://themes.getbootstrap.com/product/nalys-admin-dashboard-webapp-template/"
           target="_blank">Purchase</a>
       </div>
     </div>

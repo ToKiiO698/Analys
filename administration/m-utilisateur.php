@@ -76,8 +76,8 @@
                   class="toggle-line"></span></span></button>
             <a class="navbar-brand me-1 me-sm-3" href="../index.html">
               <div class="d-flex align-items-center"><img class="me-2"
-                  src="../assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span
-                  class="font-sans-serif text-primary">falcon</span></div>
+                  src="../assets/assets/icon/analys.png" alt="" width="40" /><span
+                  class="font-sans-serif text-primary">nalys</span></div>
             </a>
             <ul class="navbar-nav align-items-center d-none d-lg-block">
               <li class="nav-item">
@@ -87,8 +87,8 @@
                       aria-label="Search" />
                     <span class="fas fa-search search-box-icon"></span>
                   </form>
-                  <div class="btn-close-falcon-container position-absolute end-0 top-50 translate-middle shadow-none"
-                    data-bs-dismiss="search"><button class="btn btn-link btn-close-falcon p-0"
+                  <div class="btn-close-nalys-container position-absolute end-0 top-50 translate-middle shadow-none"
+                    data-bs-dismiss="search"><button class="btn btn-link btn-close-nalys p-0"
                       aria-label="Close"></button></div>
                   <div class="dropdown-menu border font-base start-0 mt-2 py-0 overflow-hidden w-100">
                     <div class="scrollbar list py-3" style="max-height: 24rem;">
@@ -145,7 +145,7 @@
                           <div class="file-thumbnail me-2"><img class="img-fluid" src="../assets/img/icons/zip.png"
                               alt="" /></div>
                           <div class="flex-1">
-                            <h6 class="mb-0 title">Falcon v1.8.2</h6>
+                            <h6 class="mb-0 title">nalys v1.8.2</h6>
                             <p class="fs-11 mb-0 d-flex"><span class="fw-semi-bold">John</span><span
                                 class="fw-medium text-600 ms-2">30 Sep at 12:30 PM</span></p>
                           </div>
@@ -1143,8 +1143,8 @@
               class="toggle-line"></span></span></button>
         <a class="navbar-brand me-1 me-sm-3" href="../index.html">
           <div class="d-flex align-items-center"><img class="me-2"
-              src="../assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span
-              class="font-sans-serif text-primary">falcon</span></div>
+              src="../assets/assets/icon/analys.png" alt="" width="40" /><span
+              class="font-sans-serif text-primary">nalys</span></div>
         </a>
         <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
           <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns">
@@ -1983,8 +1983,8 @@
                 class="toggle-line"></span></span></button>
           <a class="navbar-brand me-1 me-sm-3" href="../index.html">
             <div class="d-flex align-items-center"><img class="me-2"
-                src="../assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span
-                class="font-sans-serif text-primary">falcon</span></div>
+                src="../assets/assets/icon/analys.png" alt="" width="40" /><span
+                class="font-sans-serif text-primary">nalys</span></div>
           </a>
           <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
             <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns">
@@ -3014,5 +3014,5 @@ if(isset($_GET['id'])) {
   </body>
 
 
-<!-- Mirrored from prium.github.io/falcon/v3.20.0/dashboard/e-commerce.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:07:58 GMT -->
+<!-- Mirrored from prium.github.io/nalys/v3.20.0/dashboard/e-commerce.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Mar 2024 23:07:58 GMT -->
 </html>
