@@ -9,10 +9,9 @@ echo "<h1>Liste des Tickets</h1>";
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo "<div>";
-        echo "<h3>" . $row['subject'] . "</h3>";
-        echo "<p>Status: " . $row['status'] . "</p>";
-        echo "<p>Créé le: " . $row['created_at'] . "</p>";
-        echo "<p><a href='ticket.php?id=" . $row['ticket_id'] . "'>Voir le ticket</a></p>";
+        echo "<h3>" . $row['sujet'] . "</h3>";
+        echo "<p>Status: " . $row['Status'] . "</p>";
+        echo "<p><a href='ticket.php?id=" . $row['id'] . "'>Voir le ticket</a></p>";
         echo "</div>";
     }
 } else {
@@ -22,7 +21,7 @@ if ($result->num_rows > 0) {
 // Formulaire de création de ticket
 echo "<h2>Créer un Nouveau Ticket</h2>";
 echo "<form action='create_ticket.php' method='post'>";
-echo "<input type='text' name='subject' placeholder='Sujet' required><br>";
+echo "<input type='text' name='sujet' placeholder='Sujet' required><br>";
 echo "<textarea name='message' placeholder='Message' required></textarea><br>";
 echo "<input type='submit' value='Soumettre'>";
 echo "</form>";
