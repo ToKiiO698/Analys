@@ -1594,24 +1594,24 @@
         $file = $uniqueName . "." . $extension;
         $uploadPath = '../assets/facture/' . $file;
 
-        // Déplacer le fichier téléchargé vers le répertoire des factures
-        if (move_uploaded_file($tmpName, $uploadPath)) {
-            // Enregistrement du nom du fichier dans la base de données
-            $req = $db->prepare('INSERT INTO file (name) VALUES (?)');
-            $req->execute([$file]);
+        // Initialisation de la réponse sous forme de tableau
+$response = [];
 
-            // Récupérer l'ID de la dernière facture insérée
-            $factureId = $db->lastInsertId();
+if ($fileSupported && $fileSizeOK) { // Assurez-vous que les variables $fileSupported et $fileSizeOK sont correctement définies avant cette condition
+    if (move_uploaded_file($tmpName, $uploadPath)) {
+        // Enregistrement du nom du fichier dans la base de données
+        $req = $db->prepare('INSERT INTO file (name) VALUES (?)');
+        $req->execute([$file]);
 
              // Retourner le chemin du fichier de la facture
-             echo json_encode(['success' => true, 'facture_id' => $factureId, 'file_path' => $uploadPath]);
+             echo json_encode(['OK']);
              exit; // Arrêter l'exécution du script après avoir renvoyé la réponse
          } else {
-             echo json_encode(['success' => false, 'message' => "Erreur lors de l'enregistrement du fichier"]);
+             echo json_encode(['Erreur' => false, 'message' => "Erreur lors de l'enregistrement du fichier"]);
              exit; // Arrêter l'exécution du script après avoir renvoyé la réponse
          }
      } else {
-         echo json_encode(['success' => false, 'message' => "Format de fichier non supporté ou taille de fichier trop grande"]);
+         echo json_encode(['Erreur' => false, 'message' => "Format de fichier non supporté ou taille de fichier trop grande"]);
      }
 
                   $stmt = $db->prepare('INSERT INTO facture (etat_facture,date_ajout, montant_ht, montant_ttc, type_frais, editeur, addr, num_fac, tva, nom_facture) VALUES (:etat_facture, :dateV, :ht, :ttc, :type_frais, :editeur, :addr, :num_fac, :tva, :nom_facture)');
