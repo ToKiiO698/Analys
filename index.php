@@ -52,7 +52,7 @@
           </div>
           </div>
         </div>
-          <button type="submit" class="btn btn-primary index-btn">Comnexion</button>
+          <button type="submit" class="btn btn-primary index-btn">Connexion</button>
         <?php
 
 if (isset($_POST['nom']) && isset($_POST['mdp'])) {
