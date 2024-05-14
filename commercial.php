@@ -1087,7 +1087,7 @@
         <div>
         <h2 class="menu-admin text-center">
             <?php
-                echo 'Bonjour et bienvenue,' . $_SESSION['nom'];
+                echo 'Bonjour et bienvenue, ' . $_SESSION['nom'];
         ?>
         </h2>
         </div>
