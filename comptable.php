@@ -1080,7 +1080,11 @@
         </header>
 
         <div>
-          <h1 class="text-center">Bienvenue dans le menu Comptable !</h1>
+        <h2 class="menu-admin text-center">
+            <?php
+                echo 'Bonjour et bienvenue,' . $_SESSION['nom'];
+        ?>
+        </h2>
         </div>
 
         <div class="card mb-3">
