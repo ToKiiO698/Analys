@@ -549,7 +549,11 @@
                             
                           </li>
           </ul>
-   
+            <li class="nav-item">
+          <button type="submit" name="logout12" id="logout12" class="btn btn-danger nav-link"><div class="d-flex align-items-center">
+                        <span class="nav-link-text ps-1"><a href="assets/supprime.php" class="btn btn-danger ">Déconnexion</a></span>
+                        </div> </button>
+          </li>
                 </li>
               </ul>
 
@@ -2484,11 +2488,7 @@
             </a>
             <h1 class="menu-admin text-center">Bienvenue dans le menu Administrateur !</h1>
 
-            <button type="submit" name="logout12" id="logout12" class="btn btn-danger decos"><div class="d-flex align-items-center">
-                        <span class="nav-link-text ps-1"><a href="assets/supprime.php" class="btn btn-danger ">Déconnexion</a></span>
-                        </div> </button>
-                         
-                        
+            
 
           </nav>
           <script>

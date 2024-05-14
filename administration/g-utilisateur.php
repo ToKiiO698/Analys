@@ -62,7 +62,7 @@
     }
     ?> 
 
-</head>
+
 
 <body>
   <!-- ===============================================--><!--    Main Content--><!-- ===============================================-->
@@ -1045,9 +1045,7 @@
             </ul>
           </div>
         </div>
-        <button type="submit" name="logout12" id="logout12" class="btn btn-danger decos"><div class="d-flex align-items-center">
-                        <span class="nav-link-text ps-1"><a href="assets/supprime.php" class="btn btn-danger ">Déconnexion</a></span>
-                        </div> </button>
+        
 
       </nav>
       <nav class="navbar navbar-light navbar-vertical navbar-expand-xl" style="display: none">
@@ -1140,7 +1138,10 @@
                           </li>
                         </ul>
                     </li>
-                    
+                    <li class="nav-item">
+          <button type="submit" name="logout12" id="logout12" class="btn btn-danger nav-link"><div class="d-flex align-items-center">
+                        <span class="nav-link-text ps-1"><a href="assets/supprime.php" class="btn btn-danger ">Déconnexion</a></span>
+                        </div> </button>
                   </ul>
                 </li>
               </ul>
@@ -2874,6 +2875,7 @@
             navbarTopCombo.remove(navbarTopCombo);
           }
         </script>
+
         <div class="row mb-3">
           <div class="col">
             <div class="card bg-100 shadow-none border">
