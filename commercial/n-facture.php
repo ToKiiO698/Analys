@@ -18,29 +18,29 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="../assets/img/favicons/apple-touch-icon.png"
+      href="../assets/icon/analys.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="../assets/img/favicons/favicon-32x32.png"
+      href="../assets/icon/analys.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="../assets/img/favicons/favicon-16x16.png"
+      href="../assets/icon/analys.png"
     />
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="../assets/img/favicons/favicon.ico"
+      href="../assets/icon/analys.png"
     />
     <link rel="manifest" href="../assets/img/favicons/manifest.json" />
     <meta
       name="msapplication-TileImage"
-      content="../assets/img/favicons/mstile-150x150.png"
+      content="../assets/icon/analys.png"
     />
     <meta name="theme-color" content="#ffffff" />
     <script src="../assets/js/config.js"></script>
@@ -1513,7 +1513,7 @@
                         <label for="tva" class="form-label">TVA</label>
                         <select class="form-select form-select-sm" id="tva" name="tva">
                         <?php
-                          $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+                          $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'qcrxdvrj', '5nKa4$54f@a7w');
                           $data = $db->query('SELECT * FROM tva');
                             while($row = $data->fetch()){
                               echo '<option value="'.$row['id'].'">'.$row['taux'].'</option>';
@@ -1543,7 +1543,7 @@
                   <label for="type_frais" class="form-label">Type de Frais</label>
                   <select class="form-select form-select-sm" id="type_frais" name="type_frais">
                     <?php
-                      $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+                      $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'qcrxdvrj', '5nKa4$54f@a7w');
                       $data = $db->query('SELECT * FROM type_frais');
                         while($row = $data->fetch()){
                           echo '<option value="'.$row['id_frais'].'">'.$row['type'].'</option>';
@@ -1585,7 +1585,7 @@
                   $extensions = ['pdf'];
                   $maxSize = 400000;
 
-                  $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+                  $db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'qcrxdvrj', '5nKa4$54f@a7w');
                   if (in_array($extension, $extensions) && $size <= $maxSize && $error == 0) {
         $uniqueName = uniqid('', true);
         $file = $uniqueName . "." . $extension;

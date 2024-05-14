@@ -20,29 +20,29 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="assets/img/favicons/apple-touch-icon.png"
+      href="assets/icon/analys.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="assets/img/favicons/favicon-32x32.png"
+      href="assets/icon/analys.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="assets/img/favicons/favicon-16x16.png"
+      href="assets/icon/analys.png"
     />
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="assets/img/favicons/favicon.ico"
+      href="assets/icon/analys.png"
     />
     <link rel="manifest" href="assets/img/favicons/manifest.json" />
     <meta
       name="msapplication-TileImage"
-      content="assets/img/favicons/mstile-150x150.png"
+      content="assets/icon/analys.png"
     />
     <meta name="theme-color" content="#ffffff" />
     <script src="assets/js/config.js"></script>
@@ -508,11 +508,7 @@
                     </div>
                     
                   </a>
-                  <li class="nav-item">
-                        <button type="submit" name="logout12" id="logout12"><div class="d-flex align-items-center">
-                        <span class="nav-link-text ps-1"><a href="assets/supprime.php">Déconnexion</a></span>
-                        </div> </button>
-                        </li>
+
                   <ul class="nav collapse show" id="dashboard">
                     <li class="nav-item">
                       <a class="nav-link active" href="admin.php">
@@ -531,7 +527,7 @@
                     </li>
                     
                     <li class="nav-item">
-                      <a class="nav-link" href="administration/utilisateur.php">
+                      <a class="nav-link" href="admin.php">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text ps-1">Utilisateurs</span>
                         </div> </a>
@@ -2460,6 +2456,7 @@
             class="navbar navbar-light navbar-glass navbar-top navbar-expand"
             style="display: none"
           >
+          
             <button
               class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3"
               type="button"
@@ -2472,8 +2469,9 @@
               <span class="navbar-toggle-icon"
                 ><span class="toggle-line"></span
               ></span>
+              
             </button>
-            <a class="navbar-brand me-1 me-sm-3" href="admin.html">
+            <a class="navbar-brand me-1 me-sm-3" href="admin.php">
               <div class="d-flex align-items-center">
                 <img
                   class="me-2"
@@ -2481,9 +2479,17 @@
                   alt=""
                   width="40"
                 /><span class="font-sans-serif text-primary">falcon</span>
+                
               </div>
             </a>
             <h1 class="menu-admin text-center">Bienvenue dans le menu Administrateur !</h1>
+
+            <button type="submit" name="logout12" id="logout12" class="btn btn-danger decos"><div class="d-flex align-items-center">
+                        <span class="nav-link-text ps-1"><a href="assets/supprime.php" class="btn btn-danger ">Déconnexion</a></span>
+                        </div> </button>
+                         
+                        
+
           </nav>
           <script>
             var navbarPosition = localStorage.getItem("navbarPosition");
@@ -2558,7 +2564,7 @@
                   </span>
                   <span class="fw-normal text-600"><?php
 // Connexion à la base de données
-$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
 
 // Nom de la table à compter
 $table_name = 'user';
@@ -2584,7 +2590,7 @@ echo "$count Administrateur(s)";
                     ></span>  
                   <span class="fw-normal text-600"><?php
 // Connexion à la base de données
-$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
 
 // Nom de la table à compter
 $table_name = 'user';
@@ -2610,7 +2616,7 @@ echo "$count Comptable(s)";
                     ></span> 
                   <span class="fw-normal text-600"> <?php
 // Connexion à la base de données
-$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8mb4', 'root', '');
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
 
 // Nom de la table à compter
 $table_name = 'user';
@@ -2661,9 +2667,7 @@ echo "$count Commercial(s)";
           </div>
           </div>
 
-          <form action="logout.php" method="post">
-    <button type="submit" name="logout">Déconnexion</button>
-</form>
+          
 
 
           <!-- ===============================================--><!--    Footer--><!-- ===============================================-->
