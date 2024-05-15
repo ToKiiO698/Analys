@@ -1474,9 +1474,10 @@
           </script>
         </header>
 
-<h2 class="text-center">Liste des factures en attente</h2>
-
-<table id="factureTable" class="table table-striped table-hover">
+        <div>
+        <h2 class="text-center">Liste des factures en attente</h2>
+        </div>
+        <table id="factureTable" class="table table-striped table-hover">
   <thead>
     <tr>
       <th scope="col">Adresse</th>
@@ -1487,7 +1488,7 @@
       <th scope="col">Date</th>
       <th scope="col">Type Frais</th>
       <th scope="col">Editeur</th>
-      <th scope="col">Nom Facture</th>
+      <th scope="col">Factures</th>
     </tr>
   </thead>
   <tbody>
@@ -1505,11 +1506,6 @@ $stmt = $db->query('SELECT f.addr, f.date_ajout, f.num_fac, f.montant_ht, f.mont
                    INNER JOIN tva ON f.tva = tva.id
                    INNER JOIN type_frais ON f.type_frais = type_frais.id_frais
                    WHERE f.etat_facture = 3');
-          if (!$stmt) {
-    die('Erreur dans la requête SQL : ' . print_r($db->errorInfo(), true));
-}
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
 $factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach ($factures as $facture): ?>
@@ -1524,10 +1520,7 @@ foreach ($factures as $facture): ?>
         <td><?php echo $facture['nom_editeur']; ?></td>
         <td><a href="recup_facture_file.php?editeur=<?php echo $facture['file_id']; ?>" target="_blank"><?php echo $facture['nom_facture']; ?></a></td>
     </tr>
-    echo '<a href="recup_facture_file.php?editeur='.$facture['file_id'].'" target="_blank">'.$facture['nom_facture'].'</a>';
 <?php endforeach; ?>
-
-
   </tbody>
 </table>
 
