@@ -1505,6 +1505,11 @@ $stmt = $db->query('SELECT f.addr, f.date_ajout, f.num_fac, f.montant_ht, f.mont
                    INNER JOIN tva ON f.tva = tva.id
                    INNER JOIN type_frais ON f.type_frais = type_frais.id_frais
                    WHERE f.etat_facture = 3');
+          if (!$stmt) {
+    die('Erreur dans la requête SQL : ' . print_r($db->errorInfo(), true));
+}
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 $factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach ($factures as $facture): ?>
