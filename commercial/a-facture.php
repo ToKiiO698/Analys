@@ -1494,8 +1494,6 @@
   <tbody>
   <?php
 require './bdd.php'; // Connexion à la base de données
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
 
 $stmt = $db->query('SELECT f.addr, f.date_ajout, f.num_fac, f.montant_ht, f.montant_ttc, 
                    tva.taux as nom_tva, 
@@ -1510,6 +1508,9 @@ $stmt = $db->query('SELECT f.addr, f.date_ajout, f.num_fac, f.montant_ht, f.mont
                    WHERE f.etat_facture = 3');
 
 $factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 foreach ($factures as $facture): ?>
     <tr>
         <td><?php 
