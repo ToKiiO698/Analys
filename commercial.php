@@ -1179,6 +1179,22 @@ $count = $stmt->fetch(PDO::FETCH_ASSOC)['count'];
 echo "$count";
 ?></span> 
                   <span class="fw-normal text-600">facture(s) non-remboursé</span>
+                  <?php
+// Connexion à la base de données
+$db = new PDO('mysql:host=localhost;dbname=analys;charset=utf8', 'qcrxdvrj', '5nKa4$54f@a7w');
+
+// Nom de la table
+$table_name = 'facture';
+
+// Requête pour sélectionner les montants des factures avec un état spécifique
+$stmt = $db->query("SELECT montant FROM $table_name WHERE etat_facture = 5");
+
+// Parcourir les résultats et afficher les montants
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    echo $row['montant'] . "<br>";
+}
+?>
+
                 </h4>
                 <a class="btn btn-outline-warning btn-sm btn-facture" href="commercial/ref-facture.php">Voir les factures refusée</a>
               </div>
