@@ -1498,7 +1498,7 @@ $stmt = $db->query('SELECT f.addr, f.date_ajout, f.num_fac, f.montant_ht, f.mont
                    tva.taux as nom_tva, 
                    type_frais.type as nom_type_frais, 
                    u.nom as nom_editeur,
-                   z.name as nom_facture, z.id as file_id
+                   z.name as nom_facture, z.id as id
                    FROM facture f 
                    INNER JOIN file z ON f.nom_facture = z.id 
                    INNER JOIN user u ON f.editeur = u.id 
@@ -1517,7 +1517,7 @@ foreach ($factures as $facture): ?>
         <td><?php echo $facture['date_ajout']; ?></td>
         <td><?php echo $facture['nom_type_frais']; ?></td>
         <td><?php echo $facture['nom_editeur']; ?></td>
-        <td><a href="recup_facture_file.php?editeur=<?php echo $facture['file_id']; ?>" target="_blank"><?php echo $facture['nom_facture']; ?></a></td>
+        <td><a href="recup_facture_file.php?editeur=<?php echo $facture['id']; ?>" target="_blank"><?php echo $facture['nom_facture']; ?></a></td>
     </tr>
 <?php endforeach; ?>
 
