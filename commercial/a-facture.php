@@ -1494,6 +1494,8 @@
   <tbody>
   <?php
 require './bdd.php'; // Connexion à la base de données
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
 $stmt = $db->query('SELECT f.addr, f.date_ajout, f.num_fac, f.montant_ht, f.montant_ttc, 
                    tva.taux as nom_tva, 
@@ -1510,7 +1512,8 @@ $stmt = $db->query('SELECT f.addr, f.date_ajout, f.num_fac, f.montant_ht, f.mont
 $factures = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach ($factures as $facture): ?>
     <tr>
-        <td><?php echo $facture['addr']; ?></td>
+        <td><?php 
+        echo $facture['addr']; ?></td>
         <td><?php echo $facture['num_fac']; ?></td>
         <td><?php echo $facture['montant_ht']; ?></td>
         <td><?php echo $facture['montant_ttc']; ?></td>
@@ -1520,6 +1523,7 @@ foreach ($factures as $facture): ?>
         <td><?php echo $facture['nom_editeur']; ?></td>
         <td><a href="recup_facture_file.php?editeur=<?php echo $facture['file_id']; ?>" target="_blank"><?php echo $facture['nom_facture']; ?></a></td>
     </tr>
+    
 <?php endforeach; ?>
   </tbody>
 </table>

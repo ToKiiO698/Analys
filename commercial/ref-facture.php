@@ -1466,10 +1466,6 @@
           </script>
         </header>
 
-        <div>
-        <h2 class="text-center">Liste des factures en attente</h2>
-        </div>
-
 <h2 class="text-center">Liste des factures Refusée</h2>
 
 <table id="factureTable" class="table table-striped table-hover">
